@@ -2,6 +2,9 @@ import "server-only";
 export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
+// @ts-expect-error - @sparticuz/chromium does not provide TypeScript types out of the box
+import chromium from "@sparticuz/chromium";
+import puppeteerCore from "puppeteer-core";
 import { products } from "@/lib/data/products";
 import { industries } from "@/lib/data/industries";
 
@@ -351,15 +354,29 @@ export async function GET(request: Request) {
   try {
     const html = buildProfileHtml();
 
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-gpu",
-      ],
-    });
+    const isLocal = !!process.env.NEXT_PUBLIC_VERCEL_URL === false;
+
+    let browser;
+    if (isLocal) {
+      // Local development on Windows/Mac
+      browser = await puppeteer.launch({
+        headless: true,
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-gpu",
+        ],
+      });
+    } else {
+      // Vercel Serverless environment
+      browser = await puppeteerCore.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+      });
+    }
 
     const page = await browser.newPage();
 
