@@ -2,7 +2,7 @@ import "server-only";
 export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
-// @ts-expect-error - @sparticuz/chromium does not provide TypeScript types out of the box
+
 import chromium from "@sparticuz/chromium";
 import puppeteerCore from "puppeteer-core";
 import { products } from "@/lib/data/products";
