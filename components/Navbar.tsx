@@ -138,14 +138,20 @@ export default function Navbar() {
 
       {/* ── Main header ─────────────────────────────── */}
       <header ref={navRef}
-        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-lg" : "bg-brand-primary"}`}>
+        className={`sticky top-0 z-50 transition-all duration-300 bg-brand-primary ${scrolled ? "shadow-lg" : ""}`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16 xl:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <Link href="/" className="flex items-center bg-white h-16 xl:h-20 pl-4 pr-6 xl:pr-10 flex-shrink-0 relative z-10">
+              {/* Solid white fill extending to the left edge of the screen */}
+              <div className="absolute top-0 right-full w-[50vw] h-full bg-white"></div>
+              {/* Premium slanted edge */}
+              <div className="absolute top-0 -right-6 w-6 h-full bg-white hidden sm:block" style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 0)' }}></div>
+              <div className="absolute top-0 -right-4 w-4 h-full bg-white sm:hidden" style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 0)' }}></div>
+              
               <Image src="/images/logo-2.png" alt="AEX International Engineering"
-                width={160} height={60} className="h-10 xl:h-14 w-auto object-contain" priority />
+                width={160} height={60} className="h-10 xl:h-14 w-auto object-contain relative z-10" priority />
             </Link>
 
             {/* ── Desktop nav ───────────────────────── */}
@@ -155,8 +161,7 @@ export default function Navbar() {
                   <div key={item.label} className="relative group"
                     onMouseEnter={() => setActiveDropdown(item.label)}
                     onMouseLeave={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
-                    <Link href={item.href} className={`flex items-center gap-1 px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 ${
-                      scrolled ? "text-gray-800 hover:text-brand-primary hover:bg-red-50" : "text-white hover:text-yellow-400"}`}>
+                    <Link href={item.href} className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 text-white hover:text-yellow-400">
                       {item.label}
                       <FontAwesomeIcon icon={faChevronDown} className="text-[10px] mt-0.5" />
                     </Link>
@@ -199,8 +204,7 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <Link key={item.label} href={item.href}
-                    className={`px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 ${
-                      scrolled ? "text-gray-800 hover:text-brand-primary hover:bg-red-50" : "text-white hover:text-yellow-400"}`}>
+                    className="px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 text-white hover:text-yellow-400">
                     {item.label}
                   </Link>
                 )
@@ -209,20 +213,14 @@ export default function Navbar() {
               {/* ── Desktop Inline Search ── */}
               <div className="hidden xl:block relative ml-2 group">
                 <FontAwesomeIcon icon={faSearch}
-                  className={`absolute left-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none z-10 ${
-                    scrolled ? "text-gray-500" : "text-white/70"
-                  }`} />
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none z-10 text-white/70" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Search..."
-                  className={`w-40 xl:w-56 pl-9 pr-4 py-2 rounded-full text-xs font-medium border transition-all focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                    scrolled 
-                      ? "bg-gray-100 border-gray-200 text-gray-800 placeholder-gray-500 focus:bg-white" 
-                      : "bg-white/10 border-white/20 text-white placeholder-white/70 focus:bg-white/20"
-                  }`}
+                  className="w-40 xl:w-56 pl-9 pr-4 py-2 rounded-full text-xs font-medium border transition-all focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/10 border-white/20 text-white placeholder-white/70 focus:bg-white/20"
                 />
                 
                 {/* Desktop Results Dropdown */}
@@ -264,11 +262,11 @@ export default function Navbar() {
             {/* ── Mobile right buttons ──────────────── */}
             <div className="flex items-center gap-2 xl:hidden">
               <button onClick={() => setSearchOpen(!searchOpen)} aria-label="Search"
-                className={`p-2 rounded-md transition-colors ${scrolled ? "text-gray-800" : "text-white"}`}>
+                className="p-2 rounded-md transition-colors text-white">
                 <FontAwesomeIcon icon={searchOpen ? faTimes : faSearch} />
               </button>
               <button
-                className={`p-2 rounded-md transition-colors ${scrolled ? "text-gray-800" : "text-white"}`}
+                className="p-2 rounded-md transition-colors text-white"
                 onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
                 <FontAwesomeIcon icon={mobileOpen ? faTimes : faBars} className="text-xl" />
               </button>
@@ -277,8 +275,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Mobile Search Panel ──────────────────────────── */}
-        <div className={`xl:hidden overflow-hidden transition-all duration-300 ${searchOpen ? "max-h-[400px]" : "max-h-0"}`}
-          style={{ backgroundColor: scrolled ? "#fff" : "#cc0000" }}>
+        <div className={`xl:hidden overflow-hidden transition-all duration-300 bg-brand-primary ${searchOpen ? "max-h-[400px]" : "max-h-0"}`}>
           <div className="max-w-3xl mx-auto px-4 py-4">
             {/* Search input */}
             <div className="relative">
