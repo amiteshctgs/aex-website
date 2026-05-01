@@ -10,6 +10,7 @@ interface FormState {
   phone: string;
   subject: string;
   message: string;
+  _hp: string;
 }
 
 const initialState: FormState = {
@@ -18,6 +19,7 @@ const initialState: FormState = {
   phone: "",
   subject: "",
   message: "",
+  _hp: "",
 };
 
 export default function ContactForm() {
@@ -134,6 +136,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      {/* Honeypot — hidden from real users, bots fill it */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        <input
+          type="text"
+          name="_hp"
+          value={form._hp}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       {/* Name + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>

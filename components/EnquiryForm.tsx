@@ -16,6 +16,7 @@ interface EnquiryFormState {
   product: string;
   quantity: string;
   requirement: string;
+  _hp: string;
 }
 
 const initialState: EnquiryFormState = {
@@ -26,6 +27,7 @@ const initialState: EnquiryFormState = {
   product: "",
   quantity: "",
   requirement: "",
+  _hp: "",
 };
 
 export default function EnquiryForm() {
@@ -139,6 +141,17 @@ export default function EnquiryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      {/* Honeypot — hidden from real users, bots fill it */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        <input
+          type="text"
+          name="_hp"
+          value={form._hp}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       {/* Name + Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
