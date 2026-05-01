@@ -169,15 +169,15 @@ export default function Navbar() {
                             onMouseLeave={() => child.children ? setActiveSubDropdown(null) : undefined}>
                             {child.children ? (
                               <>
-                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150">
+                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
                                   {child.label}
-                                  <FontAwesomeIcon icon={faChevronRight} className="text-xs" />
+                                  <FontAwesomeIcon icon={faChevronRight} className="text-xs ml-4" />
                                 </Link>
                                 {activeSubDropdown === child.label && (
-                                  <div className="absolute top-0 left-full min-w-[240px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2 overflow-hidden">
+                                  <div className="absolute top-0 left-full min-w-[260px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2 overflow-hidden">
                                     {child.children.map((sub) => (
                                       <Link key={sub.label} href={sub.href}
-                                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150"
+                                        className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
                                         onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
                                         {sub.label}
                                       </Link>
@@ -187,7 +187,7 @@ export default function Navbar() {
                               </>
                             ) : (
                               <Link href={child.href}
-                                className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150"
+                                className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
                                 onClick={() => setActiveDropdown(null)}>
                                 {child.label}
                               </Link>

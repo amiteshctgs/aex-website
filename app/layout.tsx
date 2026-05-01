@@ -73,9 +73,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.png" type="image/png" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen overflow-x-hidden`} suppressHydrationWarning>
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
         <BackToTop />
         <WhatsAppButton />

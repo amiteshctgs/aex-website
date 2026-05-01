@@ -14,7 +14,12 @@
     text-align: justify;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
 }
@@ -24,26 +29,22 @@
 
   /* Primary CTA — Red */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-brand-primary text-white font-semibold px-6 py-3 rounded-md
-           hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply inline-flex items-center gap-2 bg-brand-primary text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg;
   }
 
   /* Outline — white border on dark BG */
   .btn-outline {
-    @apply inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-6 py-3 rounded-md
-           hover:bg-white hover:text-brand-primary transition-all duration-200;
+    @apply inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-brand-primary transition-all duration-200;
   }
 
   /* Secondary — Navy blue */
   .btn-secondary {
-    @apply inline-flex items-center gap-2 bg-[#1a2b5f] text-white font-semibold px-6 py-3 rounded-md
-           hover:bg-[#0d1b3e] transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply inline-flex items-center gap-2 bg-[#1a2b5f] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#0d1b3e] transition-all duration-200 shadow-md hover:shadow-lg;
   }
 
   /* Accent — Amber */
   .btn-accent {
-    @apply inline-flex items-center gap-2 bg-brand-accent text-white font-semibold px-6 py-3 rounded-md
-           hover:bg-yellow-500 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply inline-flex items-center gap-2 bg-brand-accent text-white font-semibold px-6 py-3 rounded-md hover:bg-yellow-500 transition-all duration-200 shadow-md hover:shadow-lg;
   }
 
   /* ── Section headings ────────────────────── */
@@ -75,9 +76,7 @@
 
   /* ── Forms ───────────────────────────────── */
   .form-input {
-    @apply w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-800 placeholder-gray-400
-           focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent
-           bg-gray-50 transition-all duration-200;
+    @apply w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-gray-50 transition-all duration-200;
   }
 
   .form-label {
@@ -85,17 +84,26 @@
   }
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* ── Custom scrollbar ────────────────────── */
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f5f5f5;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #cc0000;
 }
