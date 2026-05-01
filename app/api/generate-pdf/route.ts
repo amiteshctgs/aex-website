@@ -1,5 +1,5 @@
 import "server-only";
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 import { products } from "@/lib/data/products";
