@@ -18,31 +18,40 @@ import {
 import PageTitle from "@/components/PageTitle";
 import StatsCounter from "@/components/StatsCounter";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About AEX Heat Shrink — Global Manufacturer | AEX International Engineering",
+  title: "About AEX — Heat Shrink Manufacturer Since 1989 | AEX",
   description:
-    "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers. 200,000 sq ft facility, 400+ workforce, ISO certified, export to 50+ countries.",
+    "AEX International Engineering Works Pvt. Ltd. — 35+ years in heat shrink products & cable accessories. 200,000 sq ft facility, 400+ workforce, ISO certified, exported to 50+ countries.",
   keywords: [
-    "about AEX",
-    "heat shrink company profile",
-    "polymer engineering India",
-    "Apple International Engineering group",
-    "Jamnagar manufacturing facility",
+    "about AEX International Engineering",
+    "heat shrink company India",
+    "polymer engineering manufacturer",
+    "cable accessories company profile",
+    "Jamnagar polymer factory",
+    "heat shrink product range",
+    "ISO 9001 cable accessories manufacturer",
+    "heat shrink exporter Jamnagar",
+    "RoHS compliant heat shrink",
+    "AEX group of companies",
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/about",
   },
   openGraph: {
-    title: "About AEX Heat Shrink — Global Manufacturer",
+    title: "About AEX — Heat Shrink Manufacturer Since 1989",
     description:
-      "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers.",
+      "35+ years in heat shrink & cable accessories manufacturing. 200K sq ft plant, 400+ team, ISO certified, trusted in 50+ countries.",
     url: "https://www.aexheatshrink.com/about",
+    type: "website",
+    siteName: "AEX International Engineering",
   },
   twitter: {
-    title: "About AEX Heat Shrink — Global Manufacturer",
+    card: "summary_large_image",
+    title: "About AEX — Heat Shrink Manufacturer Since 1989",
     description:
-      "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers.",
+      "35+ years in heat shrink & cable accessories. ISO certified. 50+ export countries. Jamnagar, Gujarat.",
   },
 };
 
@@ -99,8 +108,31 @@ const keyStrengths = [
 ];
 
 export default function AboutPage() {
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About AEX International Engineering Works Pvt. Ltd.",
+    "url": "https://www.aexheatshrink.com/about",
+    "description": "AEX International Engineering Works Pvt. Ltd. is a leading manufacturer of heat shrink products and cable accessories, with 35+ years of experience, 200,000 sq ft facility in Jamnagar, and ISO 9001:2015 certification.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "AEX International Engineering Works Pvt. Ltd.",
+      "foundingDate": "1989",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 400 },
+      "url": "https://www.aexheatshrink.com",
+      "logo": "https://www.aexheatshrink.com/images/logo-2.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jamnagar",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
       <PageTitle
         title="About AEX"
         breadcrumbs={[{ label: "About AEX" }]}
@@ -234,7 +266,7 @@ export default function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-80 min-h-[400px]">
               <Image
                 src="/images/resource/feature52.jpg"
-                alt="AEX Solutions"
+                alt="AEX Cable Accessories and Heat Shrink Solutions"
                 fill
                 className="object-cover"
               />

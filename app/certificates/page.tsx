@@ -4,36 +4,42 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Certificates & Quality Assurance",
+  title: "ISO Certifications & Quality Standards | AEX International",
   description:
-    "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+    "AEX holds ISO 9001:2015, ISO 14001:2015 & ISO 45001:2018 certifications. View our quality assurance, environmental & safety standards for heat shrink products.",
   keywords: [
-    "AEX certificates",
-    "ISO 9001:2015 AEX",
-    "ISO 14001:2015",
-    "ISO 45001:2018",
-    "quality assurance certificates",
-    "heat shrink manufacturer certifications",
-    "AEX quality management",
+    "AEX ISO certification",
+    "ISO 9001:2015 heat shrink manufacturer",
+    "ISO 14001:2015 polymer company",
+    "ISO 45001:2018 safety standard",
+    "quality assurance cable accessories",
+    "certified heat shrink supplier India",
+    "AEX quality management system",
+    "accredited heat shrink manufacturer",
+    "international standards cable accessories",
+    "RoHS compliant manufacturer India",
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/certificates",
   },
   openGraph: {
-    title: "Certificates & Quality Assurance",
-    description: "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+    title: "ISO Certifications & Quality Standards | AEX International",
+    description: "AEX is certified with ISO 9001:2015, ISO 14001:2015 & ISO 45001:2018. View our quality assurance, environmental & safety certifications for heat shrink products.",
     url: "https://www.aexheatshrink.com/certificates",
     type: "website",
     siteName: "AEX International Engineering",
+    images: [{ url: "/images/logo-2.png", width: 400, height: 150, alt: "AEX ISO Certified Heat Shrink Manufacturer" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certificates & Quality Assurance",
-    description: "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+    title: "ISO Certifications & Quality Standards | AEX International",
+    description: "AEX certified: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018. Quality heat shrink products from Jamnagar, India.",
   },
 };
+
 
 const certsList = [
   {
@@ -51,8 +57,31 @@ const certsList = [
 ];
 
 export default function CertificatesPage() {
+  const certificationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AEX International Engineering ISO Certifications",
+    "url": "https://www.aexheatshrink.com/certificates",
+    "description": "AEX International Engineering Works Pvt. Ltd. holds ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications for quality, environment, and occupational health & safety management.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ISO 9001:2015 — Quality Management System",
+        "url": "https://www.aexheatshrink.com/certificates/iso-9001"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CE Marking — European Conformity",
+        "url": "https://www.aexheatshrink.com/certificates/ce-marking"
+      }
+    ]
+  };
+
   return (
     <>
+      <JsonLd data={certificationSchema} />
       <PageTitle
         title="Certificates"
         breadcrumbs={[{ label: "Certificates" }]}

@@ -4,35 +4,62 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
+import JsonLd from "@/components/JsonLd";
 import { products } from "@/lib/data/products";
 
 export const metadata: Metadata = {
-  title: "Products | Heat Shrink Cable Accessories | AEX International Engineering",
+  title: "Heat Shrink Products & Cable Accessories | AEX",
   description:
-    "Explore AEX's complete range of heat shrinkable moulded components, tubing, power cable accessories, busbar insulation, wrap-around sleeves, and wildlife protection products.",
+    "Browse AEX's full range of heat shrink products — moulded components, tubing, cable joints, busbar sleeves, wrap-around sleeves & pipeline protection. Request a quote today.",
   keywords: [
-    "heat shrink accessories",
-    "moulded components",
-    "heat shrink tubes",
-    "cable accessories",
-    "busbar insulation",
-    "wrap around sleeves",
-    "wildlife protection covers",
-    "AEX products",
+    "heat shrink products India",
+    "heat shrinkable moulded components",
+    "heat shrink cable accessories",
+    "busbar insulating sleeves",
+    "heat shrink wrap around sleeves",
+    "cable jointing kits India",
+    "heat shrink tubing manufacturer",
+    "pipeline protection products",
+    "wildlife protection heat shrink",
+    "power cable accessories supplier",
   ],
   alternates: { canonical: "https://www.aexheatshrink.com/products" },
   openGraph: {
-    title: "Products | AEX International Engineering",
-    description: "Explore AEX's complete range of heat shrinkable products and cable accessories.",
+    title: "Heat Shrink Products & Cable Accessories | AEX International",
+    description: "Explore AEX's complete range of heat shrinkable products, cable accessories, busbar insulation and pipeline protection solutions.",
     url: "https://www.aexheatshrink.com/products",
     type: "website",
     siteName: "AEX International Engineering",
+    images: [{ url: "/images/logo-2.png", width: 400, height: 150, alt: "AEX Heat Shrink Products" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Heat Shrink Products & Cable Accessories | AEX International",
+    description: "Explore AEX's complete range of heat shrinkable products and cable accessories.",
   },
 };
 
 export default function ProductsPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AEX Heat Shrink Products",
+    "description": "Complete range of heat shrinkable products, cable accessories, and industrial insulation solutions by AEX International Engineering.",
+    "url": "https://www.aexheatshrink.com/products",
+    "numberOfItems": products.length,
+    "itemListElement": products.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": product.title,
+      "url": `https://www.aexheatshrink.com/products/${product.slug}`,
+      "image": `https://www.aexheatshrink.com${product.image}`,
+      "description": product.description,
+    }))
+  };
+
   return (
     <>
+      <JsonLd data={itemListSchema} />
       <PageTitle title="Our Products" breadcrumbs={[{ label: "Products" }]} />
 
       <section className="py-20 bg-brand-light">

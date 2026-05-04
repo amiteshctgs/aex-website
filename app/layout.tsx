@@ -80,18 +80,32 @@ export default function RootLayout({
     name: "AEX International Engineering Works Pvt. Ltd.",
     url: "https://www.aexheatshrink.com",
     logo: "https://www.aexheatshrink.com/images/logo-2.png",
-    description: "Leading manufacturer of heat shrink products, cable accessories, and pipeline protection.",
+    image: "https://www.aexheatshrink.com/images/logo-2.png",
+    description: "Leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection. ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 certified.",
+    foundingDate: "1989",
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 400 },
+    telephone: "+91-93211-98038",
+    email: "tech@aexheatshrink.com",
+    areaServed: "Worldwide",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Plot No. B/10-11, Road No. 1, GIDC Lodhika, Metoda",
       addressLocality: "Jamnagar",
       addressRegion: "Gujarat",
+      postalCode: "360021",
       addressCountry: "IN"
     },
     contactPoint: {
       "@type": "ContactPoint",
+      telephone: "+91-93211-98038",
       contactType: "customer service",
       availableLanguage: ["English", "Hindi"]
-    }
+    },
+    sameAs: [
+      "https://www.youtube.com/@aexheatshrink",
+      "https://www.linkedin.com",
+      "https://www.facebook.com"
+    ]
   };
 
   return (

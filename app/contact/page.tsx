@@ -18,28 +18,38 @@ import {
 import PageTitle from "@/components/PageTitle";
 import ContactForm from "@/components/ContactForm";
 import GoogleMap from "@/components/GoogleMap";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact Us | AEX International Engineering",
+  title: "Contact AEX International Engineering — Jamnagar, India",
   description:
-    "Contact AEX International Engineering Works Pvt. Ltd. for heat shrink product enquiries, technical support, and business partnerships. Jamnagar, Gujarat, India.",
+    "Contact AEX International Engineering Works Pvt. Ltd. in Jamnagar, Gujarat for heat shrink product enquiries, technical support, and business partnerships. We respond within 24 hours.",
   keywords: [
-    "contact AEX",
-    "heat shrink supplier contact",
-    "AEX International Jamnagar address",
-    "heat shrink enquiries",
+    "contact AEX International Engineering",
+    "AEX Jamnagar address",
+    "heat shrink supplier contact India",
+    "AEX phone number email",
+    "cable accessories company contact",
+    "AEX Gujarat office",
+    "heat shrink technical support",
+    "AEX business partnership",
+    "heat shrink distributor enquiry",
+    "AEX International contact details",
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/contact",
   },
   openGraph: {
-    title: "Contact Us | AEX International Engineering",
+    title: "Contact AEX International Engineering — Jamnagar, India",
     description:
-      "Get in touch with AEX — India's leading heat shrink manufacturer. We respond within 24 business hours.",
+      "Get in touch with AEX — India's leading heat shrink manufacturer. Phone, email & address in Jamnagar, Gujarat. We respond within 24 business hours.",
     url: "https://www.aexheatshrink.com/contact",
+    type: "website",
+    siteName: "AEX International Engineering",
   },
   twitter: {
-    title: "Contact Us | AEX International Engineering",
+    card: "summary_large_image",
+    title: "Contact AEX International Engineering — Jamnagar, India",
     description:
       "Get in touch with AEX — India's leading heat shrink manufacturer. We respond within 24 business hours.",
   },
@@ -73,8 +83,57 @@ const contactInfo = [
 ];
 
 export default function ContactPage() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AEX International Engineering Works Pvt. Ltd.",
+    "url": "https://www.aexheatshrink.com",
+    "logo": "https://www.aexheatshrink.com/images/logo-2.png",
+    "image": "https://www.aexheatshrink.com/images/logo-2.png",
+    "description": "Leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection. ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 certified.",
+    "telephone": "+91-93211-98038",
+    "email": "tech@aexheatshrink.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. B/10-11, Road No. 1, GIDC Lodhika, Metoda",
+      "addressLocality": "Jamnagar",
+      "addressRegion": "Gujarat",
+      "postalCode": "360021",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.4707,
+      "longitude": 70.0577
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com",
+      "https://www.linkedin.com",
+      "https://www.youtube.com/@aexheatshrink"
+    ],
+    "hasMap": "https://maps.google.com/?q=AEX+International+Engineering+Jamnagar"
+  };
+
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact AEX International Engineering",
+    "url": "https://www.aexheatshrink.com/contact",
+    "description": "Contact page for AEX International Engineering Works Pvt. Ltd. — heat shrink and cable accessories manufacturer in Jamnagar, Gujarat, India."
+  };
+
   return (
     <>
+      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={contactPageSchema} />
       <PageTitle
         title="Contact Us"
         breadcrumbs={[{ label: "Contact Us" }]}

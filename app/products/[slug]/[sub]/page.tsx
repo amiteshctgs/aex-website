@@ -20,16 +20,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product || !subProduct) return { title: "Product Not Found" };
 
   return {
-    title: `${subProduct.title} | ${product.shortTitle} | AEX International Engineering`,
+    title: `${subProduct.title} - ${product.shortTitle} Solutions | AEX`,
     description: subProduct.description,
-    keywords: [subProduct.title, product.title, "AEX", "heat shrink", "cable accessories"],
+    keywords: [
+      subProduct.title,
+      product.title,
+      `${subProduct.title} manufacturer`,
+      `${subProduct.title} specifications`,
+      "AEX heat shrink",
+      "industrial cable accessories",
+      "electrical insulation",
+      `${product.shortTitle} components`
+    ],
     alternates: { canonical: `https://www.aexheatshrink.com/products/${slug}/${sub}` },
     openGraph: {
-      title: `${subProduct.title} | AEX International Engineering`,
+      title: `${subProduct.title} - ${product.shortTitle} Solutions | AEX`,
       description: subProduct.description,
       url: `https://www.aexheatshrink.com/products/${slug}/${sub}`,
       type: "website",
       siteName: "AEX International Engineering",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${subProduct.title} - ${product.shortTitle} Solutions | AEX`,
+      description: subProduct.description,
     },
   };
 }
@@ -48,6 +62,18 @@ export default async function ProductSubPage({ params }: Props) {
     "brand": {
       "@type": "Brand",
       "name": "AEX International Engineering"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "AEX International Engineering"
+    },
+    "category": product.title,
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "price": "0",
+      "url": "https://www.aexheatshrink.com/enquiry"
     }
   };
 

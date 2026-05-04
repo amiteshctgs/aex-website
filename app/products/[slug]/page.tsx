@@ -27,17 +27,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
   return {
-    title: `${product.title} | AEX International Engineering`,
+    title: `${product.title} Manufacturer & Supplier | AEX`,
     description: product.description,
-    keywords: [product.title, product.shortTitle, "AEX products", "heat shrink", "cable accessories"],
+    keywords: [
+      product.title,
+      product.shortTitle,
+      `${product.title} manufacturer`,
+      `${product.shortTitle} supplier`,
+      "industrial heat shrink products",
+      "AEX heat shrink solutions",
+      "cable accessories manufacturer",
+      "electrical insulation products",
+      "heat shrink technology"
+    ],
     alternates: { canonical: `https://www.aexheatshrink.com/products/${product.slug}` },
     openGraph: {
-      title: `${product.title} | AEX International Engineering`,
+      title: `${product.title} Manufacturer & Supplier | AEX`,
       description: product.description,
       url: `https://www.aexheatshrink.com/products/${product.slug}`,
       type: "website",
       siteName: "AEX International Engineering",
       images: [{ url: product.image, width: 800, height: 600, alt: product.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.title} Manufacturer & Supplier | AEX`,
+      description: product.description,
+      images: [product.image],
     },
   };
 }
@@ -54,10 +70,22 @@ export default async function ProductCategoryPage({ params }: Props) {
     "@type": "Product",
     "name": product.title,
     "image": `https://www.aexheatshrink.com${product.image}`,
-    "description": product.description,
+    "description": product.longDescription || product.description,
     "brand": {
       "@type": "Brand",
       "name": "AEX International Engineering"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "AEX International Engineering"
+    },
+    "category": "Industrial Insulation",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "price": "0",
+      "url": "https://www.aexheatshrink.com/enquiry"
     }
   };
 

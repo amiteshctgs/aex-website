@@ -9,30 +9,40 @@ import {
   faFlag
 } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Our Strength | AEX International Engineering",
+  title: "Our Strengths — Why Choose AEX Heat Shrink Products",
   description:
-    "Discover the team strengths and leadership that drive AEX International Engineering Works Pvt. Ltd.",
+    "Discover why AEX is trusted globally: 35+ year legacy, 400+ skilled workforce, in-house R&D, widest machine range in India, ISO 9001:2015 certified. Exporting to 50+ countries.",
   keywords: [
     "AEX company strengths",
+    "why choose AEX heat shrink",
     "ISO certified heat shrink manufacturer",
-    "quality assurance heat shrink",
-    "global export heat shrink",
+    "heat shrink global exporter",
+    "AEX 35 years experience",
+    "in-house R&D polymer company",
+    "400 skilled workforce India",
+    "widest machine range heat shrink India",
+    "AEX manufacturing capabilities",
+    "heat shrink quality assurance India",
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/strength",
   },
   openGraph: {
-    title: "Our Strength | AEX International Engineering",
+    title: "Our Strengths — Why Choose AEX Heat Shrink Products",
     description:
-      "Discover the team strengths and leadership that drive AEX International Engineering.",
+      "35+ year legacy, 400+ workforce, ISO certified, widest machine range in India. Discover what makes AEX International Engineering a global leader.",
     url: "https://www.aexheatshrink.com/strength",
+    type: "website",
+    siteName: "AEX International Engineering",
   },
   twitter: {
-    title: "Our Strength | AEX International Engineering",
+    card: "summary_large_image",
+    title: "Our Strengths — Why Choose AEX Heat Shrink Products",
     description:
-      "Discover the team strengths and leadership that drive AEX International Engineering.",
+      "35+ year legacy, 400+ workforce, ISO certified. Discover what makes AEX International Engineering a global leader.",
   },
 };
 
@@ -55,8 +65,24 @@ const strengths = [
 ];
 
 export default function StrengthPage() {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Our Strengths — AEX International Engineering",
+    "url": "https://www.aexheatshrink.com/strength",
+    "description": "AEX International Engineering has 35+ years of experience, 400+ skilled workforce, in-house R&D, and the widest machine range in India for heat shrink products.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "AEX International Engineering Works Pvt. Ltd.",
+      "foundingDate": "1989",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 400 },
+      "url": "https://www.aexheatshrink.com"
+    }
+  };
+
   return (
     <>
+      <JsonLd data={aboutSchema} />
       <PageTitle
         title="Our Strength"
         breadcrumbs={[{ label: "About", href: "/about" }, { label: "Our Strength" }]}

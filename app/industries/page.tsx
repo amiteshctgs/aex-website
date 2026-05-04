@@ -1,26 +1,30 @@
 import type { Metadata } from "next";
 import PageTitle from "@/components/PageTitle";
 import IndustryCard from "@/components/IndustryCard";
+import JsonLd from "@/components/JsonLd";
 import { industries } from "@/lib/data/industries";
 
 export const metadata: Metadata = {
-  title: "Industries Served",
+  title: "Industrial Heat Shrink Solutions | AEX International Engineering",
   description:
-    "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
+    "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally with premium insulation.",
   keywords: [
     "industries served",
+    "industrial heat shrink",
     "cable industry solutions",
     "switchgear insulation",
     "transformer protection",
     "renewable energy products",
     "telecom heat shrink",
     "AEX industries",
+    "electrical insulation applications",
+    "power distribution components"
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/industries",
   },
   openGraph: {
-    title: "Industries Served",
+    title: "Industrial Heat Shrink Solutions | AEX",
     description: "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
     url: "https://www.aexheatshrink.com/industries",
     type: "website",
@@ -28,14 +32,27 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries Served",
+    title: "Industrial Heat Shrink Solutions | AEX",
     description: "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
   },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": industries.map((industry, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "url": `https://www.aexheatshrink.com/industries/${industry.slug}`,
+    "name": industry.title,
+    "description": industry.description
+  }))
 };
 
 export default function IndustriesPage() {
   return (
     <>
+      <JsonLd data={itemListSchema} />
       <PageTitle
         title="Industries We Serve"
         breadcrumbs={[{ label: "Industries" }]}

@@ -14,6 +14,7 @@ import HeroSlider from "@/components/HeroSlider";
 import StatsCounter from "@/components/StatsCounter";
 import ProductCard from "@/components/ProductCard";
 import IndustryCard from "@/components/IndustryCard";
+import JsonLd from "@/components/JsonLd";
 import { featuredProducts } from "@/lib/data/products";
 import { industries } from "@/lib/data/industries";
 
@@ -22,12 +23,18 @@ export const metadata: Metadata = {
   description:
     "AEX International Engineering — India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection. ISO certified. 35+ years legacy. Export to 50+ countries.",
   keywords: [
-    "heat shrink manufacturer",
-    "cable accessories India",
-    "busbar insulation",
+    "heat shrink manufacturer India",
+    "heat shrink tubing supplier",
+    "cable accessories manufacturer",
+    "busbar insulation India",
     "pipeline protection heat shrink",
+    "heat shrinkable moulded products",
     "AEX International Engineering",
-    "Jamnagar manufacturer",
+    "Jamnagar heat shrink factory",
+    "ISO certified heat shrink company",
+    "heat shrink exporter India",
+    "cable joint manufacturer India",
+    "heat shrink terminations",
   ],
   alternates: {
     canonical: "https://www.aexheatshrink.com/",
@@ -37,8 +44,12 @@ export const metadata: Metadata = {
     description:
       "India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection.",
     url: "https://www.aexheatshrink.com/",
+    type: "website",
+    siteName: "AEX International Engineering",
+    images: [{ url: "/images/logo-2.png", width: 400, height: 150, alt: "AEX International Engineering" }],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Heat Shrink Products Manufacturer India | AEX International Engineering",
     description:
       "India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection.",
@@ -80,8 +91,69 @@ const galleryImages = [
 ];
 
 export default function HomePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What heat shrink products does AEX manufacture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AEX manufactures a comprehensive range of heat shrink products including heat shrink tubing, moulded components, cable end caps, breakouts, busbar insulating sleeves, wrap-around sleeves, cable joints, terminations, pipeline protection products, and wildlife protection covers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AEX International Engineering ISO certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AEX International Engineering Works Pvt. Ltd. holds ISO 9001:2015 (Quality Management), ISO 14001:2015 (Environmental Management), and ISO 45001:2018 (Occupational Health & Safety) certifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is AEX International Engineering located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AEX International Engineering is located at Plot No. B/10-11, Road No. 1, GIDC Lodhika, Metoda, Jamnagar – 360021, Gujarat, India. Our 200,000 sq ft manufacturing facility is equipped with state-of-the-art machinery and an in-house R&D laboratory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does AEX export heat shrink products internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AEX exports to 50+ countries across the Americas, Asia/Pacific, and EMEA regions. We have clients, distributors, and international branches worldwide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I request a quote for AEX heat shrink products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can submit a product enquiry through our online enquiry form at https://www.aexheatshrink.com/enquiry, or contact us directly at tech@aexheatshrink.com or +91 93211 98038."
+        }
+      }
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AEX International Engineering",
+    "url": "https://www.aexheatshrink.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.aexheatshrink.com/products?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <>
+      <JsonLd data={faqSchema} />
+      <JsonLd data={websiteSchema} />
       {/* Hero */}
       <HeroSlider />
 
