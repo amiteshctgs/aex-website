@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
+import JsonLd from "@/components/JsonLd";
 import { getProductBySlug, getProductSlugs, products } from "@/lib/data/products";
 
 interface Props {
@@ -48,8 +49,21 @@ export default async function ProductCategoryPage({ params }: Props) {
 
   const relatedProducts = products.filter((p) => p.slug !== product.slug).slice(0, 3);
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.title,
+    "image": `https://www.aexheatshrink.com${product.image}`,
+    "description": product.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "AEX International Engineering"
+    }
+  };
+
   return (
     <>
+      <JsonLd data={productSchema} />
       <PageTitle
         title={product.title}
         breadcrumbs={[

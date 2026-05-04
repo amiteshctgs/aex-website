@@ -15,7 +15,21 @@ import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
   title: "Values We Live By | AEX International Engineering",
-  description: "Discover the 6 core values that drive AEX International Engineering.",
+  description: "Discover the 6 core values that drive AEX International Engineering Works Pvt. Ltd., including Collaboration, Transparency, and Sustainability.",
+  keywords: [
+    "AEX core values",
+    "heat shrink company ethics",
+    "AEX sustainability",
+    "corporate transparency",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/values-we-live-by",
+  },
+  openGraph: {
+    title: "Values We Live By | AEX International Engineering",
+    description: "Discover the 6 core values that drive AEX International Engineering.",
+    url: "https://www.aexheatshrink.com/values-we-live-by",
+  },
 };
 
 const values = [

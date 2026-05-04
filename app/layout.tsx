@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["30
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aex.in"),
+  metadataBase: new URL("https://www.aexheatshrink.com"),
   title: {
     template: "%s | AEX International Engineering",
     default: "AEX International Engineering Works Pvt. Ltd.",
@@ -23,8 +23,12 @@ export const metadata: Metadata = {
     "AEX International Engineering Works Pvt. Ltd. — 35+ years manufacturing Heat Shrink products, Cable Accessories, Pipeline Protection, and Switchgear Insulation. ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 certified. Export to 50+ countries. Based in Jamnagar, India.",
   keywords: [
     "heat shrink",
+    "heat shrink tubing",
     "heat shrinkable",
+    "heat shrink sleeves",
     "cable accessories",
+    "cable joints",
+    "cable terminations",
     "AEX",
     "Jamnagar",
     "busbar insulation",
@@ -63,15 +67,38 @@ export const metadata: Metadata = {
   },
 };
 
+import JsonLd from "@/components/JsonLd";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AEX International Engineering Works Pvt. Ltd.",
+    url: "https://www.aexheatshrink.com",
+    logo: "https://www.aexheatshrink.com/images/logo-2.png",
+    description: "Leading manufacturer of heat shrink products, cable accessories, and pipeline protection.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Jamnagar",
+      addressRegion: "Gujarat",
+      addressCountry: "IN"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: ["English", "Hindi"]
+    }
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <JsonLd data={orgSchema} />
       </head>
       <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <Navbar />

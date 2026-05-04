@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faHome } from "@fortawesome/free-solid-svg-icons";
+import JsonLd from "@/components/JsonLd";
 
 interface Breadcrumb {
   label: string;
@@ -18,7 +19,27 @@ export default function PageTitle({
   breadcrumbs = [],
   backgroundImage = "/images/background/9.jpg",
 }: PageTitleProps) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.aexheatshrink.com"
+      },
+      ...breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": crumb.label,
+        ...(crumb.href ? { "item": `https://www.aexheatshrink.com${crumb.href}` } : {})
+      }))
+    ]
+  };
+
   return (
+    <>
     <section
       className="relative py-20 md:py-28 overflow-hidden"
       style={{
@@ -69,5 +90,7 @@ export default function PageTitle({
         </nav>
       </div>
     </section>
+      <JsonLd data={breadcrumbSchema} />
+    </>
   );
 }

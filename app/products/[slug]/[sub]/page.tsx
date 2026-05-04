@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageTitle from "@/components/PageTitle";
 import ProductSubPageContent from "@/components/ProductSubPageContent";
+import JsonLd from "@/components/JsonLd";
 import { getProductBySlug, getSubProductBySlug, getAllSubProductParams } from "@/lib/data/products";
 
 interface Props {
@@ -39,8 +40,20 @@ export default async function ProductSubPage({ params }: Props) {
   const subProduct = getSubProductBySlug(slug, sub);
   if (!product || !subProduct) notFound();
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": subProduct.title,
+    "description": subProduct.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "AEX International Engineering"
+    }
+  };
+
   return (
     <>
+      <JsonLd data={productSchema} />
       <PageTitle
         title={subProduct.title}
         breadcrumbs={[

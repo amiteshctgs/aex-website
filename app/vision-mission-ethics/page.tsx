@@ -17,7 +17,21 @@ import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
   title: "Vision, Mission and Ethics | AEX International Engineering",
-  description: "Discover the vision, mission, and ethics that drive AEX International Engineering Works Pvt. Ltd.",
+  description: "Discover the vision, mission, and ethics that drive AEX International Engineering Works Pvt. Ltd. to be the most reliable global network for customers.",
+  keywords: [
+    "AEX vision",
+    "AEX mission statement",
+    "heat shrink company ethics",
+    "corporate responsibility AEX",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/vision-mission-ethics",
+  },
+  openGraph: {
+    title: "Vision, Mission and Ethics | AEX International Engineering",
+    description: "Discover the vision, mission, and ethics that drive AEX International Engineering Works Pvt. Ltd.",
+    url: "https://www.aexheatshrink.com/vision-mission-ethics",
+  },
 };
 
 const visionPoints = [

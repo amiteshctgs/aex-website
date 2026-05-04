@@ -353,7 +353,7 @@ export default function HomePage() {
               <div key={idx} className="relative group overflow-hidden rounded-xl h-40">
                 <Image
                   src={img}
-                  alt={`AEX Project ${idx + 1}`}
+                  alt={`AEX Heat Shrink Products Application ${idx + 1}`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
@@ -391,7 +391,7 @@ export default function HomePage() {
               <div key={n} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                 <Image
                   src={`/images/clients/${n}.png`}
-                  alt={`Client ${n}`}
+                  alt={`AEX Trusted Corporate Client ${n}`}
                   width={120}
                   height={60}
                   className="object-contain h-12 w-auto"
