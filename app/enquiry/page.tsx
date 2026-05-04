@@ -70,12 +70,12 @@ export default function EnquiryPage() {
                   </div>
                 </a>
                 <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-3 text-gray-200 hover:text-brand-accent transition-colors">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FontAwesomeIcon icon={faEnvelope} />
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <FontAwesomeIcon icon={faEnvelope} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">Email Us</p>
-                    <p className="font-semibold text-sm">tech@aexheatshrink.com</p>
+                    <p className="text-xs text-gray-400 mb-0.5">Email</p>
+                    <p className="font-semibold text-sm lowercase">tech@aexheatshrink.com</p>
                   </div>
                 </a>
               </div>

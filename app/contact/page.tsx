@@ -18,6 +18,7 @@ import {
 import PageTitle from "@/components/PageTitle";
 import ContactForm from "@/components/ContactForm";
 import GoogleMap from "@/components/GoogleMap";
+import { resolveProductUrl } from "@/lib/data/products";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -168,7 +169,7 @@ export default function ContactPage() {
                     {href ? (
                       <a
                         href={href}
-                        className="text-gray-500 text-sm hover:text-brand-primary transition-colors"
+                        className={`text-gray-500 text-sm hover:text-brand-primary transition-colors ${label === 'Email' ? 'lowercase' : ''}`}
                       >
                         {value}
                       </a>
@@ -274,7 +275,7 @@ export default function ContactPage() {
             <Link href="/enquiry" className="btn-primary text-sm px-8 py-4">
               Submit Enquiry <FontAwesomeIcon icon={faArrowRight} />
             </Link>
-            <Link href="/products/heat-shrink-moulded-components" className="btn-outline text-sm px-8 py-4">
+            <Link href={resolveProductUrl("heat-shrink-moulded-components")} className="btn-outline text-sm px-8 py-4">
               Browse Products
             </Link>
           </div>

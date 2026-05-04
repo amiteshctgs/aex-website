@@ -18,6 +18,7 @@ import {
 import PageTitle from "@/components/PageTitle";
 import StatsCounter from "@/components/StatsCounter";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
+import { resolveProductUrl } from "@/lib/data/products";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -225,7 +226,7 @@ export default function AboutPage() {
                 ))}
               </div>
               <div className="mt-8">
-                <Link href="/products/heat-shrink-moulded-components" className="btn-primary">
+                <Link href={resolveProductUrl("heat-shrink-moulded-components")} className="btn-primary">
                   View All Products <FontAwesomeIcon icon={faArrowRight} />
                 </Link>
               </div>
@@ -259,7 +260,7 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 AEX is one of the most experienced companies focussing solely on the Energy sectors and providing customised solutions to Electrical Insulating Industries. We provide a wide range of products, which are designed and produced to the highest International Standards.
               </p>
-              <Link href="/products/heat-shrink-moulded-components" className="btn-primary">
+              <Link href={resolveProductUrl("heat-shrink-moulded-components")} className="btn-primary">
                 Explore Solutions <FontAwesomeIcon icon={faArrowRight} />
               </Link>
             </div>

@@ -454,3 +454,75 @@ export function getAllSubProductParams(): { category: string; sub: string }[] {
 
 // Featured products shown on the home page
 export const featuredProducts = products.slice(0, 6);
+
+/**
+ * Searches for a product or sub-product by its title and returns its URL.
+ * Used to link industry product strings to their respective pages.
+ */
+export function getProductUrlByName(name: string): string | null {
+  const searchName = name.toLowerCase().trim();
+  
+  // Try exact matches first
+  for (const p of products) {
+    if (p.title.toLowerCase() === searchName || p.shortTitle.toLowerCase() === searchName) {
+      return `/products/${p.slug}`;
+    }
+    if (p.subProducts) {
+      for (const s of p.subProducts) {
+        if (s.title.toLowerCase() === searchName) {
+          return resolveProductUrl(p.slug, s.slug);
+        }
+      }
+    }
+  }
+
+  // Try partial/fuzzy matches (e.g. "Heat Shrink Cable End Sealing Caps" matching "Cable End Sealing Caps")
+  // We remove common prefixes like "Heat Shrink", "Heat Shrinkable", etc.
+  const normalized = searchName.replace(/^heat shrink(able)?\s+/i, "");
+  
+  for (const p of products) {
+    if (p.title.toLowerCase().includes(normalized) || normalized.includes(p.title.toLowerCase())) {
+      return `/products/${p.slug}`;
+    }
+    if (p.subProducts) {
+      for (const s of p.subProducts) {
+        const sTitle = s.title.toLowerCase();
+        if (sTitle.includes(normalized) || normalized.includes(sTitle)) {
+          return resolveProductUrl(p.slug, s.slug);
+        }
+      }
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Resolves a product or subproduct URL to an industry URL if a mapping exists,
+ * otherwise returns the standard /products/ URL.
+ */
+export function resolveProductUrl(categorySlug: string, subSlug?: string): string {
+  // Asset & Wildlife Protection mapping
+  if (categorySlug === "asset-wildlife-protection" && subSlug) {
+    return `/products/asset-and-wildlife-protection/${subSlug}`;
+  }
+
+  // District Heating & Cooling mapping
+  if (categorySlug === "heat-shrink-moulded-components" && subSlug === "pre-insulated-pipe-seals") {
+    return `/products/heat-shrink-moulded-components/pre-insulated-pipe-seals`;
+  }
+
+  // Utility Pole Industry mapping
+  if (categorySlug === "heat-shrink-moulded-components" && subSlug === "cable-end-caps") {
+    return `/products/heat-shrink-moulded-components/cable-end-caps`;
+  }
+  if (categorySlug === "heat-shrink-wrap-around-sleeves" && subSlug === "for-poles") {
+    return `/products/heat-shrink-wrap-around-sleeves/for-poles`;
+  }
+
+  // Fallback to standard product URLs
+  if (subSlug) {
+    return `/products/${categorySlug}/${subSlug}`;
+  }
+  return `/products/${categorySlug}`;
+}

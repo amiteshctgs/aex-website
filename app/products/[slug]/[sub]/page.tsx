@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import PageTitle from "@/components/PageTitle";
 import ProductSubPageContent from "@/components/ProductSubPageContent";
 import JsonLd from "@/components/JsonLd";
-import { getProductBySlug, getSubProductBySlug, getAllSubProductParams } from "@/lib/data/products";
+import { getProductBySlug, getSubProductBySlug, getAllSubProductParams, resolveProductUrl } from "@/lib/data/products";
 
 interface Props {
   params: Promise<{ slug: string; sub: string }>;
@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "electrical insulation",
       `${product.shortTitle} components`
     ],
-    alternates: { canonical: `https://www.aexheatshrink.com/products/${slug}/${sub}` },
+    alternates: { canonical: `https://www.aexheatshrink.com${resolveProductUrl(slug, sub)}` },
     openGraph: {
       title: `${subProduct.title} - ${product.shortTitle} Solutions | AEX`,
       description: subProduct.description,
-      url: `https://www.aexheatshrink.com/products/${slug}/${sub}`,
+      url: `https://www.aexheatshrink.com${resolveProductUrl(slug, sub)}`,
       type: "website",
       siteName: "AEX International Engineering",
     },
@@ -84,7 +84,7 @@ export default async function ProductSubPage({ params }: Props) {
         title={subProduct.title}
         breadcrumbs={[
           { label: "Products", href: "/products" },
-          { label: product.shortTitle, href: `/products/${product.slug}` },
+          { label: product.shortTitle, href: resolveProductUrl(product.slug) },
           { label: subProduct.title },
         ]}
       />

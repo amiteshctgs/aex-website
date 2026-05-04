@@ -4,8 +4,9 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
+import DownloadPdfButton from "@/components/DownloadPdfButton";
 import JsonLd from "@/components/JsonLd";
-import { products } from "@/lib/data/products";
+import { products, resolveProductUrl } from "@/lib/data/products";
 
 export const metadata: Metadata = {
   title: "Heat Shrink Products & Cable Accessories | AEX",
@@ -71,15 +72,12 @@ export default function ProductsPage() {
               We manufacture a wide range of heat shrinkable products, cable jointing kits, and
               accessories designed for electrical, power, telecom, and pipeline industries.
             </p>
-            <a
-              href="/pdfs/ALL_PRODUCT_CATALOGUES.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <DownloadPdfButton
+              label="ALL PRODUCT CATALOGUES (PDF)"
               className="btn-primary inline-flex items-center gap-2"
-            >
-              <FontAwesomeIcon icon={faDownload} className="w-4 h-4" />
-              ALL PRODUCT CATALOGUES (PDF)
-            </a>
+              fileName="ALL_PRODUCT_CATALOGUES.pdf"
+              pdfUrl="/pdfs/ALL_PRODUCT_CATALOGUES.pdf"
+            />
           </div>
 
           {/* Category Grid */}
@@ -87,7 +85,7 @@ export default function ProductsPage() {
             {products.map((product) => (
               <Link
                 key={product.slug}
-                href={`/products/${product.slug}`}
+                href={resolveProductUrl(product.slug)}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-primary/30 transition-all duration-300 flex flex-col"
               >
                 {/* Image */}

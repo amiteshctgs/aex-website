@@ -121,11 +121,11 @@ export const industries: Industry[] = [
     ],
     icon: "shield-alt",
     subItems: [
-      { label: "Wildlife Protection Covers", href: "/products/overhead-line-covers" },
-      { label: "Overhead Line Covers", href: "/products/overhead-line-covers" },
-      { label: "Overhead Line Tubes", href: "/products/overhead-line-covers" },
-      { label: "Busbar Sleeves", href: "/products/heat-shrink-tubes" },
-      { label: "Heat Shrink Tape", href: "/products/tapes-and-sealants" },
+      { label: "Wildlife Protection Covers", href: "/products/asset-and-wildlife-protection/wildlife-protection-covers" },
+      { label: "Overhead Line Covers", href: "/products/asset-and-wildlife-protection/overhead-line-covers" },
+      { label: "Overhead Line Tubes", href: "/products/asset-and-wildlife-protection/overhead-line-tubes" },
+      { label: "Busbar Sleeves", href: "/products/asset-and-wildlife-protection/busbar-sleeves" },
+      { label: "Heat Shrink Tape", href: "/products/asset-and-wildlife-protection/busbar-tape" },
     ],
   },
   {
@@ -212,9 +212,9 @@ export const industries: Industry[] = [
     ],
     icon: "fire-alt",
     subItems: [
-      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/pre-insulated-pipe-management" },
-      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubes" },
-      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrinkable-wrap-around-sleeves" },
+      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/heat-shrink-moulded-components/pre-insulated-pipe-seals" },
+      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubing" },
+      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrink-wrap-around-sleeves" },
       { label: "Mastic Tapes", href: "/products/tapes-and-sealants" },
     ],
   },
@@ -232,8 +232,8 @@ export const industries: Industry[] = [
     ],
     icon: "lightbulb",
     subItems: [
-      { label: "Heat Shrink Pole Caps", href: "/products/pole-protection-products" },
-      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/pole-protection-products" },
+      { label: "Heat Shrink Pole Caps", href: "/products/heat-shrink-moulded-components/cable-end-caps" },
+      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/heat-shrink-wrap-around-sleeves/for-poles" },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { products } from "@/lib/data/products";
+import { products, resolveProductUrl } from "@/lib/data/products";
 import { industries } from "@/lib/data/industries";
 import { navigation } from "@/lib/data/navigation";
 
@@ -67,7 +67,7 @@ function buildResults(query: string): SearchResult[] {
         title: p.title,
         subtitle: p.shortTitle,
         category: "Product",
-        href: `/products/${p.slug}`,
+        href: resolveProductUrl(p.slug),
         score: s,
       });
     }
@@ -82,7 +82,7 @@ function buildResults(query: string): SearchResult[] {
           title: sub.title,
           subtitle: p.shortTitle,
           category: "Product",
-          href: `/products/${p.slug}/${sub.slug}`,
+          href: resolveProductUrl(p.slug, sub.slug),
           score: ss,
         });
       }

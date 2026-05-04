@@ -12,7 +12,7 @@ import {
 import PageTitle from "@/components/PageTitle";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
 import JsonLd from "@/components/JsonLd";
-import { getProductBySlug, getProductSlugs, products } from "@/lib/data/products";
+import { getProductBySlug, getProductSlugs, resolveProductUrl, products } from "@/lib/data/products";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -40,11 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "electrical insulation products",
       "heat shrink technology"
     ],
-    alternates: { canonical: `https://www.aexheatshrink.com/products/${product.slug}` },
+    alternates: { canonical: `https://www.aexheatshrink.com${resolveProductUrl(product.slug)}` },
     openGraph: {
       title: `${product.title} Manufacturer & Supplier | AEX`,
       description: product.description,
-      url: `https://www.aexheatshrink.com/products/${product.slug}`,
+      url: `https://www.aexheatshrink.com${resolveProductUrl(product.slug)}`,
       type: "website",
       siteName: "AEX International Engineering",
       images: [{ url: product.image, width: 800, height: 600, alt: product.title }],
@@ -143,7 +143,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                   {product.subProducts.map((sub) => (
                     <Link
                       key={sub.slug}
-                      href={`/products/${product.slug}/${sub.slug}`}
+                      href={resolveProductUrl(product.slug, sub.slug)}
                       className="group flex flex-col p-5 rounded-xl border border-gray-100 hover:border-brand-primary hover:shadow-lg transition-all duration-200"
                     >
                       <div className="flex items-start justify-between mb-3">
@@ -186,6 +186,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                     label="Technical Datasheet"
                     className="btn-secondary flex-1"
                     fileName={`AEX_Datasheet_${product.slug}.pdf`}
+                    pdfUrl={product.pdfUrl}
                   />
                 )}
                 <DownloadPdfButton
@@ -223,7 +224,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                   </div>
                   <div>
                     <p className="text-white/70 text-xs mb-0.5">Email Us</p>
-                    <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base hover:text-brand-accent transition-colors break-all">
+                    <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base hover:text-brand-accent transition-colors break-all lowercase">
                       tech@aexheatshrink.com
                     </a>
                   </div>
@@ -238,7 +239,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                 {relatedProducts.map((rp) => (
                   <Link
                     key={rp.slug}
-                    href={`/products/${rp.slug}`}
+                    href={resolveProductUrl(rp.slug)}
                     className="flex items-center gap-4 p-3 rounded-xl border border-gray-100 hover:border-brand-accent hover:shadow-md transition-all duration-200 group"
                   >
                     <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">

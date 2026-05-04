@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser, faEnvelope, faPhone, faBuilding,
@@ -30,8 +31,16 @@ const initialState: EnquiryFormState = {
   _hp: "",
 };
 
-export default function EnquiryForm() {
+function EnquiryFormInner() {
+  const searchParams = useSearchParams();
   const [form, setForm] = useState<EnquiryFormState>(initialState);
+
+  useEffect(() => {
+    const product = searchParams.get("product");
+    if (product) {
+      setForm(prev => ({ ...prev, product }));
+    }
+  }, [searchParams]);
   const [errors, setErrors] = useState<Partial<EnquiryFormState>>({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -63,7 +72,7 @@ export default function EnquiryForm() {
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    
+
     if (errors[name as keyof EnquiryFormState]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -318,5 +327,13 @@ export default function EnquiryForm() {
         )}
       </button>
     </form>
+  );
+}
+
+export default function EnquiryForm() {
+  return (
+    <Suspense fallback={<div className="animate-pulse bg-gray-100 h-96 rounded-2xl" />}>
+      <EnquiryFormInner />
+    </Suspense>
   );
 }

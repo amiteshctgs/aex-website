@@ -8,7 +8,7 @@ import {
   faLayerGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
-import { Product, SubProduct } from "@/lib/data/products";
+import { Product, SubProduct, resolveProductUrl } from "@/lib/data/products";
 
 interface Props {
   product: Product;
@@ -67,7 +67,7 @@ export default function ProductSubPageContent({ product, sub }: Props) {
                 {product.subProducts.filter((s) => s.slug !== sub.slug).map((sibling) => (
                   <Link
                     key={sibling.slug}
-                    href={`/products/${product.slug}/${sibling.slug}`}
+                    href={resolveProductUrl(product.slug, sibling.slug)}
                     className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-brand-primary hover:shadow-md transition-all duration-200 group"
                   >
                     <FontAwesomeIcon icon={faArrowRight} className="text-brand-primary text-xs flex-shrink-0 group-hover:translate-x-1 transition-transform" />
@@ -88,7 +88,8 @@ export default function ProductSubPageContent({ product, sub }: Props) {
               <DownloadPdfButton
                 label="ALL CATALOGUES"
                 className="btn-primary flex-1"
-                fileName="AEX_ALL_CATALOGUES.pdf"
+                fileName="ALL_PRODUCT_CATALOGUES.pdf"
+                pdfUrl="/pdfs/ALL_PRODUCT_CATALOGUES.pdf"
               />
             </div>
           </div>
@@ -120,7 +121,7 @@ export default function ProductSubPageContent({ product, sub }: Props) {
                 </div>
                 <div>
                   <p className="text-white/70 text-xs mb-0.5">Email Us</p>
-                  <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base hover:text-brand-accent transition-colors break-all">
+                  <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base hover:text-brand-accent transition-colors break-all lowercase">
                     tech@aexheatshrink.com
                   </a>
                 </div>
@@ -132,7 +133,7 @@ export default function ProductSubPageContent({ product, sub }: Props) {
           <div className="bg-brand-light rounded-xl p-5">
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Product Category</p>
             <Link
-              href={`/products/${product.slug}`}
+              href={resolveProductUrl(product.slug)}
               className="flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-accent transition-colors"
             >
               <FontAwesomeIcon icon={faArrowRight} className="text-xs -rotate-180" />

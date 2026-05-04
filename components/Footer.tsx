@@ -46,13 +46,13 @@ const solutionLinks: SolutionLink[] = [
   { label: "Electric Utilities (Power T&D)", href: "/industries/power-transmission-and-distribution" },
   {
     label: "Asset & Wildlife Protection",
-    href: "/industries/asset-and-wildlife-protection",
+    href: "/products/asset-and-wildlife-protection",
     children: [
-      { label: "Wildlife Protection Covers", href: "/products/overhead-line-covers" },
-      { label: "Overhead Line Covers", href: "/products/overhead-line-covers" },
-      { label: "Overhead Line Tubes", href: "/products/overhead-line-covers" },
-      { label: "Busbar Sleeves", href: "/products/heat-shrink-tubes" },
-      { label: "Heat Shrink Tape", href: "/products/tapes-and-sealants" },
+      { label: "Wildlife Protection Covers", href: "/products/asset-and-wildlife-protection/wildlife-protection-covers" },
+      { label: "Overhead Line Covers", href: "/products/asset-and-wildlife-protection/overhead-line-covers" },
+      { label: "Overhead Line Tubes", href: "/products/asset-and-wildlife-protection/overhead-line-tubes" },
+      { label: "Busbar Sleeves", href: "/products/asset-and-wildlife-protection/busbar-sleeves" },
+      { label: "Heat Shrink Tape", href: "/products/asset-and-wildlife-protection/busbar-tape" },
     ],
   },
   { label: "Renewable Energy — Wind", href: "/industries/wind-energy-solutions" },
@@ -62,18 +62,18 @@ const solutionLinks: SolutionLink[] = [
     label: "Pre-Insulated Pipe / District Heating",
     href: "/industries/district-heating-cooling",
     children: [
-      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/pre-insulated-pipe-management" },
-      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubes" },
-      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrinkable-wrap-around-sleeves" },
-      { label: "Mastic Tapes", href: "/products/tapes-and-sealants" },
+      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/heat-shrink-moulded-components/pre-insulated-pipe-seals" },
+      { label: "Heat Shrink Tubing", href: "/industries/district-heating-cooling/heat-shrink-tubing" },
+      { label: "Heat Shrink Wrap Around Sleeves", href: "/industries/district-heating-cooling/heat-shrink-wrap-around-sleeves" },
+      { label: "Mastic Tapes", href: "/industries/district-heating-cooling/mastic-tapes" },
     ],
   },
   {
     label: "Utility Pole / Street Pole",
     href: "/industries/utility-pole-industry",
     children: [
-      { label: "Heat Shrink Pole Caps", href: "/products/pole-protection-products" },
-      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/pole-protection-products" },
+      { label: "Heat Shrink Pole Caps", href: "/products/heat-shrink-moulded-components/cable-end-caps" },
+      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/heat-shrink-wrap-around-sleeves/for-poles" },
     ],
   },
   { label: "Oil & Gas / Corrosion Protection", href: "/industries/oil-gas-corrosion-protection" },
@@ -82,14 +82,85 @@ const solutionLinks: SolutionLink[] = [
   { label: "Telecom Industry", href: "/industries/telecom-industry" },
 ];
 
-const productLinks = [
-  { label: "Heat Shrink Moulded Components", href: "/products/heat-shrink-moulded-components" },
-  { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubing" },
-  { label: "Power Cable Accessories", href: "/products/power-cable-accessories" },
-  { label: "Busbar / Switchgear Insulation", href: "/products/busbar-switchgear-insulation" },
-  { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrink-wrap-around-sleeves" },
-  { label: "Asset & Wildlife Protection", href: "/products/asset-wildlife-protection" },
-  { label: "Tapes & Sealants", href: "/products/tapes-and-sealants" },
+const productLinks: SolutionLink[] = [
+  {
+    label: "Heat Shrink Moulded Components",
+    href: "/products/heat-shrink-moulded-components",
+    children: [
+      { label: "Cable End Sealing Caps", href: "/products/heat-shrink-moulded-components/cable-end-caps" },
+      { label: "Low Voltage Breakouts", href: "/products/heat-shrink-moulded-components/lv-breakouts" },
+      { label: "Non-Tracking Breakouts", href: "/products/heat-shrink-moulded-components/non-tracking-breakouts" },
+      { label: "Semi Conductive Breakouts", href: "/products/heat-shrink-moulded-components/semi-conductive-breakouts" },
+      { label: "Right Angle & Straight Boots", href: "/products/heat-shrink-moulded-components/right-angle-boots" },
+      { label: "Creepage Extension Skirts", href: "/products/heat-shrink-moulded-components/creepage-extension-skirts" },
+      { label: "Anode Caps", href: "/products/heat-shrink-moulded-components/anode-caps" },
+      { label: "Pre-Insulated Pipe Seals", href: "/products/heat-shrink-moulded-components/pre-insulated-pipe-seals" },
+    ],
+  },
+  {
+    label: "Heat Shrink Tubing",
+    href: "/products/heat-shrink-tubing",
+    children: [
+      { label: "Medium & Heavy Wall Tubing", href: "/products/heat-shrink-tubing/medium-heavy-wall" },
+      { label: "Busbar Insulation Sleeves", href: "/products/heat-shrink-tubing/busbar-insulation-sleeves" },
+      { label: "Non-Tracking Tubing", href: "/products/heat-shrink-tubing/non-tracking-tubing" },
+      { label: "Thin Wall Tubing", href: "/products/heat-shrink-tubing/thin-wall" },
+      { label: "Dual Wall Tubing", href: "/products/heat-shrink-tubing/dual-wall" },
+      { label: "Stress Control Tubing", href: "/products/heat-shrink-tubing/stress-control" },
+      { label: "Double Layer Tubing", href: "/products/heat-shrink-tubing/double-layer" },
+    ],
+  },
+  {
+    label: "Power Cable Accessories",
+    href: "/products/power-cable-accessories",
+    children: [
+      { label: "Cable Jointing Kits", href: "/products/power-cable-accessories/cable-jointing-kits" },
+      { label: "Termination Kits", href: "/products/power-cable-accessories/termination-kits" },
+    ],
+  },
+  {
+    label: "Busbar / Switchgear Insulation",
+    href: "/products/busbar-switchgear-insulation",
+    children: [
+      { label: "Busbar Insulating Sleeves", href: "/products/busbar-switchgear-insulation/busbar-insulating-sleeves" },
+      { label: "Polyolefin Busbar Covers", href: "/products/busbar-switchgear-insulation/polyolefin-busbar-covers" },
+      { label: "PVC Busbar Covers", href: "/products/busbar-switchgear-insulation/pvc-busbar-covers" },
+      { label: "Heat Shrink Tapes", href: "/products/busbar-switchgear-insulation/heat-shrink-tapes" },
+      { label: "Insulated Adapters", href: "/products/busbar-switchgear-insulation/insulated-adapters" },
+      { label: "Right Angle & Straight Boots", href: "/products/busbar-switchgear-insulation/right-angle-boots" },
+      { label: "Bushing Boots", href: "/products/busbar-switchgear-insulation/bushing-boots" },
+    ],
+  },
+  {
+    label: "Heat Shrink Wrap Around Sleeves",
+    href: "/products/heat-shrink-wrap-around-sleeves",
+    children: [
+      { label: "Sleeves for Cables", href: "/products/heat-shrink-wrap-around-sleeves/for-cables" },
+      { label: "Sleeves for Pipes", href: "/products/heat-shrink-wrap-around-sleeves/for-pipes" },
+      { label: "Sleeves for Poles", href: "/products/heat-shrink-wrap-around-sleeves/for-poles" },
+    ],
+  },
+  {
+    label: "Asset & Wildlife Protection",
+    href: "/products/asset-and-wildlife-protection",
+    children: [
+      { label: "Wildlife Protection Covers", href: "/products/asset-and-wildlife-protection/wildlife-protection-covers" },
+      { label: "Overhead Line Covers", href: "/products/asset-and-wildlife-protection/overhead-line-covers" },
+      { label: "Overhead Line Tubes", href: "/products/asset-and-wildlife-protection/overhead-line-tubes" },
+      { label: "Busbar Sleeves", href: "/products/asset-and-wildlife-protection/busbar-sleeves" },
+      { label: "Busbar Tape", href: "/products/asset-and-wildlife-protection/busbar-tape" },
+    ],
+  },
+  {
+    label: "Tapes & Sealants",
+    href: "/products/tapes-and-sealants",
+    children: [
+      { label: "Busbar Insulating Tapes", href: "/products/tapes-and-sealants/busbar-insulating-tapes" },
+      { label: "Black Mastic Tapes", href: "/products/tapes-and-sealants/black-mastic-tapes" },
+      { label: "Red Mastic Tapes", href: "/products/tapes-and-sealants/red-mastic-tapes" },
+      { label: "Stress Control Mastic Tapes", href: "/products/tapes-and-sealants/stress-control-mastic-tapes" },
+    ],
+  },
   { label: "Other Products", href: "/products/other-products" },
 ];
 
@@ -105,6 +176,7 @@ const socialLinks = [
 export default function Footer() {
   const year = new Date().getFullYear();
   const [expandedSolution, setExpandedSolution] = useState<string | null>(null);
+  const [expandedProduct, setExpandedProduct] = useState<string | null>(null);
 
   return (
     <footer className="bg-white text-gray-600 border-t border-gray-100">
@@ -216,9 +288,8 @@ export default function Footer() {
                       </span>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`text-[10px] text-brand-primary transition-transform duration-200 flex-shrink-0 ${
-                          expandedSolution === link.label ? "rotate-180" : ""
-                        }`}
+                        className={`text-[10px] text-brand-primary transition-transform duration-200 flex-shrink-0 ${expandedSolution === link.label ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {expandedSolution === link.label && (
@@ -266,19 +337,63 @@ export default function Footer() {
           <h3 className="text-gray-900 font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
             Our Products
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-1">
             {productLinks.map((link) => (
               <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="flex items-center gap-2 text-sm hover:text-brand-primary transition-colors duration-200 group"
-                >
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    className="text-brand-primary text-xs group-hover:translate-x-1 transition-transform"
-                  />
-                  {link.label}
-                </Link>
+                {link.children ? (
+                  <>
+                    <button
+                      onClick={() => setExpandedProduct(expandedProduct === link.label ? null : link.label)}
+                      className="w-full flex items-center justify-between gap-2 text-sm py-0.5 hover:text-brand-primary transition-colors duration-200 group text-left"
+                    >
+                      <span className="flex items-center gap-2">
+                        <FontAwesomeIcon
+                          icon={faChevronRight}
+                          className="text-brand-primary text-xs group-hover:translate-x-1 transition-transform"
+                        />
+                        {link.label}
+                      </span>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`text-[10px] text-brand-primary transition-transform duration-200 flex-shrink-0 ${expandedProduct === link.label ? "rotate-180" : ""
+                          }`}
+                      />
+                    </button>
+                    {expandedProduct === link.label && (
+                      <ul className="ml-4 mt-1 mb-1 border-l-2 border-brand-primary/20 pl-3 space-y-1">
+                        <li>
+                          <Link
+                            href={link.href}
+                            className="block text-xs text-brand-primary font-semibold py-0.5 hover:underline"
+                          >
+                            View All →
+                          </Link>
+                        </li>
+                        {link.children.map((sub) => (
+                          <li key={sub.label}>
+                            <Link
+                              href={sub.href}
+                              className="block text-xs text-gray-500 py-0.5 hover:text-brand-primary transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-2 text-sm py-0.5 hover:text-brand-primary transition-colors duration-200 group"
+                  >
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="text-brand-primary text-xs group-hover:translate-x-1 transition-transform"
+                    />
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -324,7 +439,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3 text-sm">
               <FontAwesomeIcon icon={faEnvelope} className="text-brand-primary flex-shrink-0" />
-              <a href="mailto:tech@aexheatshrink.com" className="hover:text-brand-primary transition-colors break-all">
+              <a href="mailto:tech@aexheatshrink.com" className="hover:text-brand-primary transition-colors break-all lowercase">
                 tech@aexheatshrink.com
               </a>
             </li>

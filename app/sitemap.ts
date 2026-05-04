@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getProductSlugs, getAllSubProductParams } from "@/lib/data/products";
+import { getProductSlugs, getAllSubProductParams, resolveProductUrl } from "@/lib/data/products";
 import { getIndustrySlugs } from "@/lib/data/industries";
 
 const BASE_URL = "https://www.aexheatshrink.com";
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Category-level product pages
   const productCategoryRoutes = getProductSlugs().map((slug) => ({
-    url: `${BASE_URL}/products/${slug}`,
+    url: `${BASE_URL}${resolveProductUrl(slug)}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Sub-product pages
   const subProductRoutes = getAllSubProductParams().map(({ category, sub }) => ({
-    url: `${BASE_URL}/products/${category}/${sub}`,
+    url: `${BASE_URL}${resolveProductUrl(category, sub)}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,

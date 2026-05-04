@@ -61,7 +61,7 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faPhone} className="text-[10px]" />
               +91 93211 98038
             </a>
-            <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-1.5 hover:text-brand-primary transition-colors">
+            <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-1.5 hover:text-brand-primary transition-colors lowercase">
               <FontAwesomeIcon icon={faEnvelope} className="text-[10px]" />
               tech@aexheatshrink.com
             </a>
