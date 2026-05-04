@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone, faEnvelope, faBars, faTimes,
@@ -12,44 +11,20 @@ import {
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { navigation } from "@/lib/data/navigation";
 import GoogleTranslate from "./GoogleTranslate";
-
-// ── Flat searchable index built from navigation ──────────────────────────────
-interface SearchItem { label: string; href: string; parent?: string }
-
-function buildSearchIndex(): SearchItem[] {
-  const items: SearchItem[] = [];
-  navigation.forEach((nav) => {
-    items.push({ label: nav.label, href: nav.href });
-    nav.children?.forEach((child) => {
-      items.push({ label: child.label, href: child.href, parent: nav.label });
-      child.children?.forEach((sub) => {
-        items.push({ label: sub.label, href: sub.href, parent: child.label });
-      });
-    });
-  });
-  return items;
-}
-
-const SEARCH_INDEX = buildSearchIndex();
+import GlobalSearch from "./GlobalSearch";
 
 // ── Component ────────────────────────────────────────────────────────────────
 export default function Navbar() {
-  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
-
-  // Search state
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<SearchItem[]>([]);
-  const [resultIndex, setResultIndex] = useState(-1);
 
   const navRef = useRef<HTMLDivElement>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -70,32 +45,10 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Focus input when search opens
+  // Focus mobile search input when panel opens
   useEffect(() => {
     if (searchOpen) setTimeout(() => searchInputRef.current?.focus(), 80);
   }, [searchOpen]);
-
-  // Live search
-  const handleSearch = useCallback((q: string) => {
-    setSearchQuery(q);
-    setResultIndex(-1);
-    if (q.trim().length < 2) { setSearchResults([]); return; }
-    const lower = q.toLowerCase();
-    setSearchResults(
-      SEARCH_INDEX.filter((i) => i.label.toLowerCase().includes(lower)).slice(0, 8)
-    );
-  }, []);
-
-  // Keyboard navigation in results
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") { setSearchOpen(false); setSearchQuery(""); setSearchResults([]); }
-    if (e.key === "ArrowDown") setResultIndex((i) => Math.min(i + 1, searchResults.length - 1));
-    if (e.key === "ArrowUp") setResultIndex((i) => Math.max(i - 1, -1));
-    if (e.key === "Enter" && resultIndex >= 0) {
-      router.push(searchResults[resultIndex].href);
-      setSearchOpen(false); setSearchQuery(""); setSearchResults([]);
-    }
-  };
 
   return (
     <>
@@ -210,46 +163,9 @@ export default function Navbar() {
                 )
               )}
 
-              {/* ── Desktop Inline Search ── */}
-              <div className="hidden xl:block relative ml-2 group">
-                <FontAwesomeIcon icon={faSearch}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none z-10 text-white/70" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Search..."
-                  className="w-40 xl:w-56 pl-9 pr-4 py-2 rounded-full text-xs font-medium border transition-all focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/10 border-white/20 text-white placeholder-white/70 focus:bg-white/20"
-                />
-                
-                {/* Desktop Results Dropdown */}
-                {searchQuery.length >= 2 && (
-                  <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50">
-                    {searchResults.length > 0 ? (
-                      searchResults.map((item, idx) => (
-                        <Link key={idx} href={item.href}
-                          onClick={() => { setSearchQuery(""); setSearchResults([]); }}
-                          className={`flex items-center justify-between px-4 py-3 text-sm border-b border-gray-50 last:border-0 transition-colors ${
-                            idx === resultIndex ? "bg-brand-primary text-white" : "text-gray-700 hover:bg-red-50 hover:text-brand-primary"
-                          }`}>
-                          <span className="truncate">{item.label}</span>
-                          {item.parent && (
-                            <span className={`text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ml-2 ${
-                              idx === resultIndex ? "bg-white/20 text-white" : "bg-gray-100 text-gray-400"
-                            }`}>
-                              {item.parent}
-                            </span>
-                          )}
-                        </Link>
-                      ))
-                    ) : (
-                      <div className="px-4 py-3 text-sm text-gray-500 text-center">
-                        No results found
-                      </div>
-                    )}
-                  </div>
-                )}
+              {/* ── Desktop Global Search ── */}
+              <div className="hidden xl:block ml-2">
+                <GlobalSearch variant="desktop" />
               </div>
 
               {/* Get Quote CTA */}
@@ -275,62 +191,12 @@ export default function Navbar() {
         </div>
 
         {/* ── Mobile Search Panel ──────────────────────────── */}
-        <div className={`xl:hidden overflow-hidden transition-all duration-300 bg-brand-primary ${searchOpen ? "max-h-[400px]" : "max-h-0"}`}>
-          <div className="max-w-3xl mx-auto px-4 py-4">
-            {/* Search input */}
-            <div className="relative">
-              <FontAwesomeIcon icon={faSearch}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none" />
-              <input ref={searchInputRef} type="text" value={searchQuery}
-                onChange={(e) => handleSearch(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder="Search products, solutions, pages…"
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-800 text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-brand-primary" />
-              {searchQuery && (
-                <button onClick={() => { setSearchQuery(""); setSearchResults([]); }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700">
-                  <FontAwesomeIcon icon={faTimes} className="text-xs" />
-                </button>
-              )}
-            </div>
-
-            {/* Results dropdown */}
-            {searchResults.length > 0 && (
-              <div className="mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
-                {searchResults.map((item, idx) => (
-                  <Link key={idx} href={item.href}
-                    onClick={() => { setSearchOpen(false); setSearchQuery(""); setSearchResults([]); }}
-                    className={`flex items-center justify-between px-4 py-3 text-sm border-b border-gray-50 last:border-0 transition-colors ${
-                      idx === resultIndex ? "bg-brand-primary text-white" : "text-gray-700 hover:bg-red-50 hover:text-brand-primary"}`}>
-                    <span>{item.label}</span>
-                    {item.parent && (
-                      <span className={`text-xs px-2 py-0.5 rounded-full ${idx === resultIndex ? "bg-white/20 text-white" : "bg-gray-100 text-gray-400"}`}>
-                        {item.parent}
-                      </span>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {searchQuery.length >= 2 && searchResults.length === 0 && (
-              <div className="mt-2 bg-white rounded-xl px-4 py-3 text-sm text-gray-500 text-center shadow">
-                No results found for &quot;<strong>{searchQuery}</strong>&quot;
-              </div>
-            )}
-
-            {/* Quick links shown when search is empty */}
-            {searchQuery.length < 2 && (
-              <div className="mt-3 flex flex-wrap gap-2">
-                {["Heat Shrink Tubes", "Cable End Caps", "LV Breakouts", "Busbar Sleeves", "Enquiry", "Downloads"].map((q) => (
-                  <button key={q} onClick={() => handleSearch(q)}
-                    className="text-xs bg-white/90 text-gray-700 px-3 py-1.5 rounded-full hover:bg-white hover:text-brand-primary border border-gray-200 transition-colors">
-                    {q}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+        <div className={`xl:hidden overflow-hidden transition-all duration-300 bg-brand-primary ${searchOpen ? "max-h-[500px]" : "max-h-0"}`}>
+          <GlobalSearch
+            variant="mobile"
+            inputRef={searchInputRef}
+            onClose={() => setSearchOpen(false)}
+          />
         </div>
 
         {/* ── Mobile menu ───────────────────────────── */}
