@@ -112,7 +112,7 @@ export default function IndustryPageContent({ industry }: Props) {
               {otherIndustries.map((ind) => (
                 <Link
                   key={ind.slug}
-                  href={ind.slug === "asset-and-wildlife-protection" ? "/products/asset-and-wildlife-protection" : `/industries/${ind.slug}`}
+                  href={`/industries/${ind.slug}`}
                   className="flex items-center gap-3 p-3 rounded-xl border border-gray-100 hover:border-brand-primary hover:bg-brand-light transition-all duration-200 group text-sm font-medium text-gray-700 group-hover:text-brand-primary"
                 >
                   <FontAwesomeIcon icon={faArrowRight} className="text-brand-accent text-xs" />

@@ -461,7 +461,7 @@ export const featuredProducts = products.slice(0, 6);
  */
 export function getProductUrlByName(name: string): string | null {
   const searchName = name.toLowerCase().trim();
-  
+
   // Try exact matches first
   for (const p of products) {
     if (p.title.toLowerCase() === searchName || p.shortTitle.toLowerCase() === searchName) {
@@ -478,15 +478,16 @@ export function getProductUrlByName(name: string): string | null {
 
   // Try partial/fuzzy matches (e.g. "Heat Shrink Cable End Sealing Caps" matching "Cable End Sealing Caps")
   // We remove common prefixes like "Heat Shrink", "Heat Shrinkable", etc.
-  const normalized = searchName.replace(/^heat shrink(able)?\s+/i, "");
-  
+  const normalized = searchName.replace(/^heat shrink(able)?\s+/i, "").replace(/[-\s]/g, "");
+
   for (const p of products) {
-    if (p.title.toLowerCase().includes(normalized) || normalized.includes(p.title.toLowerCase())) {
+    const pTitle = p.title.toLowerCase().replace(/[-\s]/g, "");
+    if (pTitle.includes(normalized) || normalized.includes(pTitle)) {
       return `/products/${p.slug}`;
     }
     if (p.subProducts) {
       for (const s of p.subProducts) {
-        const sTitle = s.title.toLowerCase();
+        const sTitle = s.title.toLowerCase().replace(/[-\s]/g, "");
         if (sTitle.includes(normalized) || normalized.includes(sTitle)) {
           return resolveProductUrl(p.slug, s.slug);
         }

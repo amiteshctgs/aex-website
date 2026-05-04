@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     "power cable solutions India",
   ],
   alternates: {
-    canonical: `https://www.aexheatshrink.com/products/asset-and-wildlife-protection`,
+    canonical: `https://www.aexheatshrink.com/industries/asset-and-wildlife-protection`,
   },
   openGraph: {
     title: `${industry.title} Solutions | AEX International Engineering`,
     description: industry.description,
-    url: `https://www.aexheatshrink.com/products/asset-and-wildlife-protection`,
+    url: `https://www.aexheatshrink.com/industries/asset-and-wildlife-protection`,
     type: "website",
     siteName: "AEX International Engineering",
     images: [{ url: industry.image, width: 800, height: 600, alt: industry.title }],

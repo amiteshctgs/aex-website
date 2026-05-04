@@ -1,6 +1,12 @@
 export interface IndustrySubItem {
   label: string;
   href: string;
+  slug?: string;
+  description?: string;
+  longDescription?: string;
+  image?: string;
+  features?: string[];
+  applications?: string[];
 }
 
 export interface Industry {
@@ -121,11 +127,47 @@ export const industries: Industry[] = [
     ],
     icon: "shield-alt",
     subItems: [
-      { label: "Wildlife Protection Covers", href: "/products/asset-and-wildlife-protection/wildlife-protection-covers" },
-      { label: "Overhead Line Covers", href: "/products/asset-and-wildlife-protection/overhead-line-covers" },
-      { label: "Overhead Line Tubes", href: "/products/asset-and-wildlife-protection/overhead-line-tubes" },
-      { label: "Busbar Sleeves", href: "/products/asset-and-wildlife-protection/busbar-sleeves" },
-      { label: "Heat Shrink Tape", href: "/products/asset-and-wildlife-protection/busbar-tape" },
+      { 
+        label: "Wildlife Protection Covers", 
+        slug: "wildlife-protection-covers",
+        href: "/industries/asset-and-wildlife-protection/wildlife-protection-covers",
+        description: "Specialized insulating covers to protect wildlife and prevent electrical faults on overhead equipment.",
+        longDescription: "AEX Wildlife Protection Covers are engineered to provide a reliable insulating barrier for transformer bushings, cross-arms, and other critical overhead equipment. These covers are essential for preventing accidental bridging by birds and animals, ensuring both wildlife safety and grid reliability. Manufactured from high-quality, UV-stabilized polyolefin, they offer exceptional weather resistance and a long service life in harsh outdoor environments.",
+        image: "/images/resource/p3m14.jpg",
+        features: ["UV stabilized material", "Easy snap-on installation", "Rated for 11kV to 33kV", "Weather resistant", "Flame retardant"],
+        applications: ["Transformer bushings", "Substation equipment", "Overhead cross-arms", "Jumper wire protection"]
+      },
+      { 
+        label: "Overhead Line Covers", 
+        slug: "overhead-line-covers",
+        href: "/industries/asset-and-wildlife-protection/overhead-line-covers",
+        description: "Flexible insulating covers for bare overhead conductors providing phase-to-phase protection.",
+        longDescription: "Our Overhead Line Covers provide a robust insulating layer for bare conductors in urban areas and wildlife corridors. They are designed for easy installation without the need for power outages, offering an immediate solution to reduce fault rates caused by environmental factors. The flexible design allows for application on various conductor sizes and configurations.",
+        image: "/images/resource/p3m14.jpg",
+        features: ["Retrofit installation", "Flexible design", "UV resistant", "High dielectric strength"],
+        applications: ["Urban distribution lines", "Wildlife corridors", "Temporary insulation"]
+      },
+      { 
+        label: "Overhead Line Tubes", 
+        slug: "overhead-line-tubes",
+        href: "/industries/asset-and-wildlife-protection/overhead-line-tubes",
+        description: "Continuous heat shrink insulation for bare overhead conductors.",
+        href_old: "/products/asset-and-wildlife-protection/overhead-line-tubes"
+      },
+      { 
+        label: "Busbar Sleeves", 
+        slug: "busbar-sleeves",
+        href: "/industries/asset-and-wildlife-protection/busbar-sleeves",
+        description: "Insulating sleeves for outdoor busbar connections.",
+        href_old: "/products/asset-and-wildlife-protection/busbar-sleeves"
+      },
+      { 
+        label: "Heat Shrink Tape", 
+        slug: "busbar-tape",
+        href: "/industries/asset-and-wildlife-protection/busbar-tape",
+        description: "Insulating tape for irregular busbar shapes and joints.",
+        href_old: "/products/asset-and-wildlife-protection/busbar-tape"
+      },
     ],
   },
   {
@@ -297,10 +339,27 @@ export const industries: Industry[] = [
   }
 ];
 
-export function getIndustryBySlug(slug: string): Industry | undefined {
+export function getIndustryBySlug(slug: string) {
   return industries.find((i) => i.slug === slug);
 }
 
-export function getIndustrySlugs(): string[] {
+export function getIndustrySlugs() {
   return industries.map((i) => i.slug);
+}
+
+export function getIndustrySubItem(industrySlug: string, subSlug: string) {
+  const industry = getIndustryBySlug(industrySlug);
+  return industry?.subItems?.find((s) => s.slug === subSlug);
+}
+
+export function getAllIndustrySubItemParams() {
+  const params: { slug: string; sub: string }[] = [];
+  industries.forEach((industry) => {
+    industry.subItems?.forEach((sub) => {
+      if (sub.slug) {
+        params.push({ slug: industry.slug, sub: sub.slug });
+      }
+    });
+  });
+  return params;
 }
