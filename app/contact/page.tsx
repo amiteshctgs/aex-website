@@ -8,6 +8,13 @@ import {
   faClock,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faLinkedin,
+  faInstagram,
+  faYoutube,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import PageTitle from "@/components/PageTitle";
 import ContactForm from "@/components/ContactForm";
 import GoogleMap from "@/components/GoogleMap";
@@ -120,13 +127,40 @@ export default function ContactPage() {
                 Our Certifications
               </p>
               <div className="flex flex-wrap gap-2">
-                {["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018"].map((cert) => (
+                {["ISO 9001", "CE"].map((cert) => (
                   <span
                     key={cert}
                     className="bg-brand-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
                   >
                     {cert}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Social media */}
+            <div className="mt-5 p-5 bg-brand-light rounded-xl border border-gray-100">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Follow Us</p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { icon: faFacebook, href: "https://facebook.com", label: "Facebook", color: "#1877F2" },
+                  { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0A66C2" },
+                  { icon: faInstagram, href: "https://instagram.com", label: "Instagram", color: "#E4405F" },
+                  { icon: faYoutube, href: "https://youtube.com", label: "YouTube", color: "#FF0000" },
+                  { icon: faWhatsapp, href: "https://wa.me/919321198038", label: "WhatsApp", color: "#25D366" },
+                ].map(({ icon, href, label, color }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    title={label}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                    style={{ backgroundColor: color }}
+                  >
+                    <FontAwesomeIcon icon={icon} className="text-sm" />
+                  </a>
                 ))}
               </div>
             </div>
@@ -167,7 +201,7 @@ export default function ContactPage() {
         }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-brand-accent font-semibold uppercase tracking-widest text-xs mb-4">
+          <p className="text-brand-accent text-center font-semibold uppercase tracking-widest text-xs mb-4">
             Ready to Reach New Heights?
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">

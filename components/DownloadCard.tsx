@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf, faDownload, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf, faDownload, faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface DownloadCardProps {
   cat: {
@@ -18,11 +18,24 @@ interface DownloadCardProps {
 
 export default function DownloadCard({ cat }: DownloadCardProps) {
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
 
-  const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If it's the dynamic API route, intercept the click and handle loading state
+  const handleDownloadClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Simulate form submission to CRM/DB
+    console.log("Form Submitted:", formData);
+
+    setIsModalOpen(false);
+    
+    // Proceed with download
     if (cat.pdf === "/api/generate-pdf") {
-      e.preventDefault();
       try {
         setIsGenerating(true);
         const response = await fetch("/api/generate-pdf");
@@ -47,8 +60,16 @@ export default function DownloadCard({ cat }: DownloadCardProps) {
       } finally {
         setIsGenerating(false);
       }
+    } else {
+      // Normal static PDF download
+      const a = document.createElement("a");
+      a.href = cat.pdf;
+      a.download = cat.title.replace(/\s+/g, "_") + ".pdf";
+      a.target = "_blank";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
-    // For normal static PDFs, let the default <a> tag behavior happen
   };
 
   return (
@@ -82,18 +103,77 @@ export default function DownloadCard({ cat }: DownloadCardProps) {
           <span className="text-xs text-gray-400">
             {cat.pages} &bull; {cat.size}
           </span>
-          <a
-            href={cat.pdf}
-            onClick={handleDownload}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleDownloadClick}
+            disabled={isGenerating}
             className={`inline-flex items-center gap-1.5 bg-brand-primary text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 ${isGenerating ? 'opacity-70 cursor-not-allowed pointer-events-none' : ''}`}
           >
             <FontAwesomeIcon icon={isGenerating ? faSpinner : faDownload} className={isGenerating ? 'animate-spin' : ''} />
             {isGenerating ? "Generating..." : "Download"}
-          </a>
+          </button>
         </div>
       </div>
+
+      {/* Lead Generation Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-fade-in relative">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close modal"
+            >
+              <FontAwesomeIcon icon={faTimes} className="text-xl" />
+            </button>
+            <div className="p-6 sm:p-8">
+              <h3 className="text-xl font-bold text-brand-dark mb-2">Request Download</h3>
+              <p className="text-sm text-gray-500 mb-6">
+                Please provide your contact details to download the <strong>{cat.title}</strong> catalogue.
+              </p>
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Full Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Email Address *</label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Phone Number</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-colors"
+                    placeholder="+91 98765 43210"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-brand-primary text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors duration-200 mt-2"
+                >
+                  Submit & Download
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -22,7 +22,7 @@ const slides = [
   {
     id: 2,
     image: "/images/main-slider/image-2.jpg",
-    tag: "ISO 9001 : 2015 Certified",
+    tag: "ISO 9001 & CE Certified",
     title: "Quality You Can Rely On",
     subtitle:
       "Our products conform to rigorous international quality standards, ensuring performance and longevity in every application.",
@@ -83,7 +83,7 @@ export default function HeroSlider() {
                 sizes="100vw"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/85 via-brand-secondary/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-transparent" />
 
               {/* Content */}
               <div className="relative h-full flex items-center">

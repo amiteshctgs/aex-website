@@ -1,3 +1,8 @@
+export interface IndustrySubItem {
+  label: string;
+  href: string;
+}
+
 export interface Industry {
   slug: string;
   title: string;
@@ -7,6 +12,7 @@ export interface Industry {
   image: string;
   products: string[];
   icon: string;
+  subItems?: IndustrySubItem[];
 }
 
 export const industries: Industry[] = [
@@ -114,6 +120,13 @@ export const industries: Industry[] = [
       "Heat Shrink Busbar Tapes"
     ],
     icon: "shield-alt",
+    subItems: [
+      { label: "Wildlife Protection Covers", href: "/products/overhead-line-covers" },
+      { label: "Overhead Line Covers", href: "/products/overhead-line-covers" },
+      { label: "Overhead Line Tubes", href: "/products/overhead-line-covers" },
+      { label: "Busbar Sleeves", href: "/products/heat-shrink-tubes" },
+      { label: "Heat Shrink Tape", href: "/products/tapes-and-sealants" },
+    ],
   },
   {
     slug: "wind-energy-solutions",
@@ -198,6 +211,12 @@ export const industries: Industry[] = [
       "Mastic Tape"
     ],
     icon: "fire-alt",
+    subItems: [
+      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/pre-insulated-pipe-management" },
+      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubes" },
+      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrinkable-wrap-around-sleeves" },
+      { label: "Mastic Tapes", href: "/products/tapes-and-sealants" },
+    ],
   },
   {
     slug: "utility-pole-industry",
@@ -212,6 +231,10 @@ export const industries: Industry[] = [
       "Heat Shrink Pole Protection Sleeves"
     ],
     icon: "lightbulb",
+    subItems: [
+      { label: "Heat Shrink Pole Caps", href: "/products/pole-protection-products" },
+      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/pole-protection-products" },
+    ],
   },
   {
     slug: "oil-gas-corrosion-protection",

@@ -86,7 +86,7 @@ export default function EnquiryPage() {
               <ul className="space-y-2 text-sm text-gray-600">
                 {[
                   "18+ years of manufacturing expertise",
-                  "ISO 9001:2015 certified quality",
+                  "ISO 9001 & CE certified quality",
                   "Custom sizes and specifications available",
                   "Competitive pricing for bulk orders",
                   "Fast turnaround and global shipping",

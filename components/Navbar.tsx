@@ -51,48 +51,50 @@ export default function Navbar() {
   }, [searchOpen]);
 
   return (
-    <>
-      {/* ── Top bar ─────────────────────────────────── */}
-      <div className="text-white text-xs" style={{ backgroundColor: "#1a2b5f" }}>
+    <div className="sticky top-0 z-50">
+      {/* ── Top Announcement Strip ─────────────────────────────────── */}
+      <div className="text-gray-600 text-xs bg-brand-secondary font-bold uppercase tracking-wider border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
-          {/* Social icons */}
-          <div className="flex items-center gap-4">
-            {[
-              { icon: faFacebook, href: "https://facebook.com", label: "Facebook" },
-              { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
-              { icon: faInstagram, href: "https://instagram.com", label: "Instagram" },
-              { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-            ].map(({ icon, href, label }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                aria-label={label} className="hover:text-yellow-400 transition-colors">
-                <FontAwesomeIcon icon={icon} />
-              </a>
-            ))}
+          {/* Left: phone & email */}
+          <div className="hidden sm:flex items-center gap-4">
+            <a href="tel:+919321198038" className="flex items-center gap-1.5 hover:text-brand-primary transition-colors">
+              <FontAwesomeIcon icon={faPhone} className="text-[10px]" />
+              +91 93211 98038
+            </a>
+            <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-1.5 hover:text-brand-primary transition-colors">
+              <FontAwesomeIcon icon={faEnvelope} className="text-[10px]" />
+              tech@aexheatshrink.com
+            </a>
           </div>
 
-          {/* Right: contact + Google Translate */}
-          <div className="flex items-center gap-5 flex-wrap justify-center">
-            <a href="tel:+919321198038" className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
-              <FontAwesomeIcon icon={faPhone} className="text-yellow-400 text-[10px]" />
-              <span>+91 93211 98038</span>
-            </a>
-            <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
-              <FontAwesomeIcon icon={faEnvelope} className="text-yellow-400 text-[10px]" />
-              <span>tech@aexheatshrink.com</span>
-            </a>
+          {/* Right: Translate, Make in India, Search */}
+          <div className="flex items-center gap-6 flex-wrap justify-center">
             {/* Google Translate */}
-            <div className="flex items-center gap-1.5 text-white/80">
-              <FontAwesomeIcon icon={faGlobe} className="text-yellow-400 text-[10px]" />
+            <div className="flex items-center gap-1.5">
+              <FontAwesomeIcon icon={faGlobe} className="text-[12px] text-brand-primary" />
               <GoogleTranslate />
             </div>
+            {/* Make in India */}
+            <div className="flex items-center gap-1.5" title="Make in India">
+              <span className="text-lg leading-none">🇮🇳</span>
+              <span>Make in India</span>
+            </div>
+            {/* Search Option */}
+            <button
+              onClick={() => setSearchOpen(!searchOpen)}
+              className="flex items-center gap-1.5 hover:text-red-700 transition-colors"
+            >
+              <FontAwesomeIcon icon={searchOpen ? faTimes : faSearch} className="text-[12px]" />
+              <span>{searchOpen ? 'CLOSE SEARCH' : 'SEARCH'}</span>
+            </button>
           </div>
         </div>
       </div>
 
       {/* ── Main header ─────────────────────────────── */}
       <header ref={navRef}
-        className={`sticky top-0 z-50 transition-all duration-300 bg-brand-primary ${scrolled ? "shadow-lg" : ""}`}>
-        <div className="max-w-7xl mx-auto px-4">
+        className={`transition-all duration-300 bg-brand-primary ${scrolled ? "shadow-lg" : ""}`}>
+        <div className="max-w-[1300px] mx-auto px-4">
           <div className="flex items-center justify-between h-16 xl:h-20">
 
             {/* Logo */}
@@ -102,40 +104,43 @@ export default function Navbar() {
               {/* Premium slanted edge */}
               <div className="absolute top-0 -right-6 w-6 h-full bg-white hidden sm:block" style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 0)' }}></div>
               <div className="absolute top-0 -right-4 w-4 h-full bg-white sm:hidden" style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 0)' }}></div>
-              
+
               <Image src="/images/logo-2.png" alt="AEX International Engineering"
                 width={160} height={60} className="h-10 xl:h-14 w-auto object-contain relative z-10" priority />
             </Link>
 
             {/* ── Desktop nav ───────────────────────── */}
-            <nav className="hidden xl:flex items-center gap-0.5">
+            <nav className="hidden xl:flex items-center h-full border-l border-white/20">
               {navigation.map((item) =>
                 item.children ? (
-                  <div key={item.label} className="relative group"
+                  <div key={item.label} className="relative group h-full flex items-center border-r border-white/20"
                     onMouseEnter={() => setActiveDropdown(item.label)}
                     onMouseLeave={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
-                    <Link href={item.href} className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 text-white hover:text-yellow-400">
+                    <Link href={item.href} className="flex items-center gap-1 px-4 py-2 text-[14px] font-bold uppercase tracking-wide transition-colors duration-200 text-white hover:text-gray-200">
                       {item.label}
                       <FontAwesomeIcon icon={faChevronDown} className="text-[10px] mt-0.5" />
                     </Link>
 
                     {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 min-w-[220px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2 overflow-hidden">
+                      <div className="absolute top-full left-0 min-w-[220px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2">
                         {item.children.map((child) => (
-                          <div key={child.label} className="relative group/sub"
+                          <div key={child.label} className="relative overflow-visible"
                             onMouseEnter={() => child.children ? setActiveSubDropdown(child.label) : undefined}
                             onMouseLeave={() => child.children ? setActiveSubDropdown(null) : undefined}>
                             {child.children ? (
                               <>
-                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
+                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
                                   {child.label}
-                                  <FontAwesomeIcon icon={faChevronRight} className="text-xs ml-4" />
+                                  <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                    className={`text-xs ml-4 transition-transform duration-200 ${activeSubDropdown === child.label ? "rotate-180" : ""}`}
+                                  />
                                 </Link>
                                 {activeSubDropdown === child.label && (
-                                  <div className="absolute top-0 left-full min-w-[260px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2 overflow-hidden">
+                                  <div className="absolute top-0 left-full min-w-[260px] bg-white shadow-2xl rounded-xl border border-gray-100 z-[60] py-2">
                                     {child.children.map((sub) => (
                                       <Link key={sub.label} href={sub.href}
-                                        className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
+                                        className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
                                         onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
                                         {sub.label}
                                       </Link>
@@ -145,7 +150,7 @@ export default function Navbar() {
                               </>
                             ) : (
                               <Link href={child.href}
-                                className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
+                                className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
                                 onClick={() => setActiveDropdown(null)}>
                                 {child.label}
                               </Link>
@@ -156,31 +161,18 @@ export default function Navbar() {
                     )}
                   </div>
                 ) : (
-                  <Link key={item.label} href={item.href}
-                    className="px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-200 text-white hover:text-yellow-400">
-                    {item.label}
-                  </Link>
+                  <div key={item.label} className="h-full flex items-center border-r border-white/20">
+                    <Link href={item.href}
+                      className="px-4 py-2 text-[14px] font-bold uppercase tracking-wide transition-colors duration-200 text-white hover:text-gray-200">
+                      {item.label}
+                    </Link>
+                  </div>
                 )
               )}
-
-              {/* ── Desktop Global Search ── */}
-              <div className="hidden xl:block ml-2">
-                <GlobalSearch variant="desktop" />
-              </div>
-
-              {/* Get Quote CTA */}
-              <Link href="/enquiry"
-                className="ml-2 bg-yellow-400 text-gray-900 text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-yellow-300 transition-all duration-200 shadow-md hover:shadow-lg flex-shrink-0">
-                Get Quote
-              </Link>
             </nav>
 
             {/* ── Mobile right buttons ──────────────── */}
             <div className="flex items-center gap-2 xl:hidden">
-              <button onClick={() => setSearchOpen(!searchOpen)} aria-label="Search"
-                className="p-2 rounded-md transition-colors text-white">
-                <FontAwesomeIcon icon={searchOpen ? faTimes : faSearch} />
-              </button>
               <button
                 className="p-2 rounded-md transition-colors text-white"
                 onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
@@ -190,8 +182,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ── Mobile Search Panel ──────────────────────────── */}
-        <div className={`xl:hidden overflow-hidden transition-all duration-300 bg-brand-primary ${searchOpen ? "max-h-[500px]" : "max-h-0"}`}>
+        {/* ── Desktop & Mobile Search Panel ──────────────────────────── */}
+        <div className={`absolute w-full left-0 transition-all duration-300 bg-brand-primary z-40 ${searchOpen ? "top-[100%] opacity-100 pointer-events-auto shadow-md" : "top-[50%] opacity-0 pointer-events-none"}`}>
           <GlobalSearch
             variant="mobile"
             inputRef={searchInputRef}
@@ -200,8 +192,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Mobile menu ───────────────────────────── */}
-        <div className={`xl:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0"}`}
-          style={{ backgroundColor: "#111111" }}>
+        <div className={`bg-brand-dark xl:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0"}`}>
           <nav className="px-4 py-4 space-y-1">
             {navigation.map((item) =>
               item.children ? (
@@ -237,7 +228,7 @@ export default function Navbar() {
                               <div className="ml-3 border-l border-white/10 pl-3 space-y-1 mt-1">
                                 {child.children.map((sub) => (
                                   <Link key={sub.label} href={sub.href}
-                                    className="block text-gray-400 text-xs py-1.5 px-3 rounded hover:text-yellow-400 hover:bg-white/5 transition-colors"
+                                    className="block text-gray-400 text-xs py-1.5 px-3 rounded hover:text-white hover:bg-white/5 transition-colors"
                                     onClick={() => setMobileOpen(false)}>
                                     {sub.label}
                                   </Link>
@@ -266,7 +257,7 @@ export default function Navbar() {
             )}
             <div className="pt-3 pb-2">
               <Link href="/enquiry"
-                className="block w-full text-center bg-yellow-400 text-gray-900 font-bold py-3 rounded-lg hover:bg-yellow-300 transition-colors"
+                className="block w-full text-center bg-white text-brand-primary font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors"
                 onClick={() => setMobileOpen(false)}>
                 Get a Quote
               </Link>
@@ -274,6 +265,6 @@ export default function Navbar() {
           </nav>
         </div>
       </header>
-    </>
+    </div>
   );
 }

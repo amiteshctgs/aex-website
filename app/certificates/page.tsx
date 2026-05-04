@@ -43,16 +43,10 @@ const certsList = [
     image: "/images/resource/certificate5-iso-9001.jpg",
   },
   {
-    slug: "iso-14001",
-    title: "ISO 14001:2015",
-    subtitle: "Environmental Management System",
-    image: "/images/resource/certificate6iso-14001.png",
-  },
-  {
-    slug: "iso-45001",
-    title: "ISO 45001:2018",
-    subtitle: "Occupational Health & Safety",
-    image: "/images/resource/certificate7iso-45001.jpg",
+    slug: "ce-marking",
+    title: "CE Marking",
+    subtitle: "European Conformity",
+    image: "/images/resource/certification1.png",
   },
 ];
 
@@ -74,7 +68,7 @@ export default function CertificatesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8">
             {certsList.map((cert) => (
               <div key={cert.slug} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col">
                 <div className="relative h-80 bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">

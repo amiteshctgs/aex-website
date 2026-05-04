@@ -6,14 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckCircle,
   faArrowRight,
-  faDownload,
-  faPaperPlane,
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
-import { getProductBySlug, getProductSlugs, products } from "@/lib/data/products";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
+import { getProductBySlug, getProductSlugs, products } from "@/lib/data/products";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,34 +29,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${product.title} | AEX International Engineering`,
     description: product.description,
     keywords: [product.title, product.shortTitle, "AEX products", "heat shrink", "cable accessories"],
-    alternates: {
-      canonical: `https://www.aexheatshrink.com/products/${slug}`,
-    },
+    alternates: { canonical: `https://www.aexheatshrink.com/products/${product.slug}` },
     openGraph: {
       title: `${product.title} | AEX International Engineering`,
       description: product.description,
-      url: `https://www.aexheatshrink.com/products/${slug}`,
+      url: `https://www.aexheatshrink.com/products/${product.slug}`,
       type: "website",
       siteName: "AEX International Engineering",
-      images: [
-        {
-          url: product.image,
-          width: 800,
-          height: 600,
-          alt: product.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${product.title} | AEX International Engineering`,
-      description: product.description,
-      images: [product.image],
+      images: [{ url: product.image, width: 800, height: 600, alt: product.title }],
     },
   };
 }
 
-export default async function ProductPage({ params }: Props) {
+export default async function ProductCategoryPage({ params }: Props) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) notFound();
@@ -70,17 +53,16 @@ export default async function ProductPage({ params }: Props) {
       <PageTitle
         title={product.title}
         breadcrumbs={[
-          { label: "Products", href: "/products/heat-shrink-moulded-components" },
+          { label: "Products", href: "/products" },
           { label: product.shortTitle },
         ]}
       />
 
-      {/* Main Content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Left — Product Details */}
+          {/* Left — Category Details */}
           <div className="lg:col-span-2 space-y-10">
-            {/* Hero image */}
+            {/* Hero Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl h-72 md:h-96">
               <Image
                 src={product.image}
@@ -103,10 +85,7 @@ export default async function ProductPage({ params }: Props) {
               <h3 className="text-xl font-bold text-brand-primary mb-5">Key Features & Specifications</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {product.features.map((feature) => (
-                  <div
-                    key={feature}
-                    className="flex items-start gap-3 p-4 bg-brand-light rounded-xl border border-gray-100"
-                  >
+                  <div key={feature} className="flex items-start gap-3 p-4 bg-brand-light rounded-xl border border-gray-100">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-brand-accent mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
@@ -114,34 +93,60 @@ export default async function ProductPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Applications */}
-            <div>
-              <h3 className="text-xl font-bold text-brand-primary mb-5">Product Range / Applications</h3>
-              <ul className="space-y-2">
-                {product.applications.map((app) => (
-                  <li key={app} className="flex items-center gap-3 text-gray-600">
-                    <FontAwesomeIcon icon={faArrowRight} className="text-brand-primary text-xs flex-shrink-0" />
-                    <span>{app}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Sub-products grid */}
+            {product.subProducts && product.subProducts.length > 0 ? (
+              <div>
+                <h3 className="text-xl font-bold text-brand-primary mb-5">Product Range</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {product.subProducts.map((sub) => (
+                    <Link
+                      key={sub.slug}
+                      href={`/products/${product.slug}/${sub.slug}`}
+                      className="group flex flex-col p-5 rounded-xl border border-gray-100 hover:border-brand-primary hover:shadow-lg transition-all duration-200"
+                    >
+                      <div className="flex items-start justify-between mb-3">
+                        <h4 className="font-bold text-gray-800 group-hover:text-brand-primary transition-colors text-sm leading-snug pr-2">
+                          {sub.title}
+                        </h4>
+                        <FontAwesomeIcon
+                          icon={faArrowRight}
+                          className="text-brand-primary text-xs flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform"
+                        />
+                      </div>
+                      <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">{sub.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div>
+                <h3 className="text-xl font-bold text-brand-primary mb-5">Applications</h3>
+                <ul className="space-y-2">
+                  {product.applications.map((app) => (
+                    <li key={app} className="flex items-center gap-3 text-gray-600">
+                      <FontAwesomeIcon icon={faArrowRight} className="text-brand-primary text-xs flex-shrink-0" />
+                      <span>{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-            {/* PDF Downloads */}
+            {/* Downloads */}
             <div className="p-6 bg-brand-light rounded-xl border border-brand-primary/20">
               <h4 className="font-bold text-brand-primary mb-2">Downloads</h4>
               <p className="text-gray-500 text-sm mb-5">
-                Download the specific technical datasheet for this product, or grab our complete catalogue.
+                Download the technical datasheet or our complete product catalogue.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 {product.pdfUrl && (
-                  <DownloadPdfButton 
+                  <DownloadPdfButton
                     label="Technical Datasheet"
                     className="btn-secondary flex-1"
                     fileName={`AEX_Datasheet_${product.slug}.pdf`}
                   />
                 )}
-                <DownloadPdfButton 
+                <DownloadPdfButton
                   label="ALL CATALOGUES"
                   className="btn-primary flex-1"
                   fileName="AEX_ALL_CATALOGUES.pdf"
@@ -152,13 +157,12 @@ export default async function ProductPage({ params }: Props) {
 
           {/* Right Sidebar */}
           <div className="space-y-6">
-            {/* Need Help CTA */}
+            {/* CTA */}
             <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-4">Need Help?</h3>
               <p className="text-white/90 text-sm mb-8 leading-relaxed">
                 Our technical team is available to assist you in selecting the right product for your application.
               </p>
-              
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -171,7 +175,6 @@ export default async function ProductPage({ params }: Props) {
                     </a>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <FontAwesomeIcon icon={faEnvelope} className="text-white text-lg" />
@@ -186,7 +189,7 @@ export default async function ProductPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Related products */}
+            {/* Related Products */}
             <div>
               <h4 className="font-bold text-brand-primary text-lg mb-4">Other Products</h4>
               <div className="space-y-3">
@@ -208,11 +211,11 @@ export default async function ProductPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Certs */}
+            {/* Certifications */}
             <div className="bg-brand-light rounded-xl p-5">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Our Certifications</p>
               <div className="flex flex-wrap gap-2">
-                {["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018"].map((c) => (
+                {["ISO 9001", "CE"].map((c) => (
                   <span key={c} className="bg-brand-primary text-white text-xs px-3 py-1 rounded-full">{c}</span>
                 ))}
               </div>

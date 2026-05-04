@@ -60,7 +60,7 @@ export default function StatsCounter() {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <p className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-2">
+          <p className="text-brand-accent text-center text-xs font-bold uppercase tracking-[0.2em] mb-2">
             By the Numbers
           </p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-white">

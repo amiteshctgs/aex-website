@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,7 @@ import {
   faMapMarkerAlt,
   faClock,
   faChevronRight,
+  faChevronDown,
   faDownload,
   faNewspaper,
 } from "@fortawesome/free-solid-svg-icons";
@@ -24,23 +26,71 @@ import {
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About AEX", href: "/about" },
-  { label: "Our Facility", href: "/facility" },
-  { label: "Strength & Values", href: "/strength" },
+  { label: "Facility", href: "/facility" },
+  { label: "Vision, Mission and Ethics", href: "/vision-mission-ethics" },
+  { label: "Our Strength", href: "/strength" },
+  { label: "Values We Live By", href: "/values-we-live-by" },
   { label: "Events & News", href: "/news" },
   { label: "Downloads", href: "/downloads" },
   { label: "Enquiry", href: "/enquiry" },
   { label: "Contact Us", href: "/contact" },
 ];
 
+interface SolutionSubLink { label: string; href: string; }
+interface SolutionLink { label: string; href: string; children?: SolutionSubLink[]; }
+
+const solutionLinks: SolutionLink[] = [
+  { label: "Cable Industry", href: "/industries/cable-industry" },
+  { label: "Switchgear Industry", href: "/industries/switchgear-industry" },
+  { label: "Transformer & Busduct", href: "/industries/transformer-and-busduct-industry" },
+  { label: "Electric Utilities (Power T&D)", href: "/industries/power-transmission-and-distribution" },
+  {
+    label: "Asset & Wildlife Protection",
+    href: "/industries/asset-and-wildlife-protection",
+    children: [
+      { label: "Wildlife Protection Covers", href: "/products/overhead-line-covers" },
+      { label: "Overhead Line Covers", href: "/products/overhead-line-covers" },
+      { label: "Overhead Line Tubes", href: "/products/overhead-line-covers" },
+      { label: "Busbar Sleeves", href: "/products/heat-shrink-tubes" },
+      { label: "Heat Shrink Tape", href: "/products/tapes-and-sealants" },
+    ],
+  },
+  { label: "Renewable Energy — Wind", href: "/industries/wind-energy-solutions" },
+  { label: "Renewable Energy — Solar", href: "/industries/solar-energy-solutions" },
+  { label: "Cable Joints & Terminations", href: "/industries/kit-components-cable-joints" },
+  {
+    label: "Pre-Insulated Pipe / District Heating",
+    href: "/industries/district-heating-cooling",
+    children: [
+      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/pre-insulated-pipe-management" },
+      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubes" },
+      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrinkable-wrap-around-sleeves" },
+      { label: "Mastic Tapes", href: "/products/tapes-and-sealants" },
+    ],
+  },
+  {
+    label: "Utility Pole / Street Pole",
+    href: "/industries/utility-pole-industry",
+    children: [
+      { label: "Heat Shrink Pole Caps", href: "/products/pole-protection-products" },
+      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/pole-protection-products" },
+    ],
+  },
+  { label: "Oil & Gas / Corrosion Protection", href: "/industries/oil-gas-corrosion-protection" },
+  { label: "Cathodic Protection", href: "/industries/cathodic-protection" },
+  { label: "Automobile / Wire Harness", href: "/industries/automobile-wire-harness" },
+  { label: "Telecom Industry", href: "/industries/telecom-industry" },
+];
+
 const productLinks = [
   { label: "Heat Shrink Moulded Components", href: "/products/heat-shrink-moulded-components" },
-  { label: "Heat Shrink Tubing / Sleeves", href: "/products/heat-shrink-tubes" },
+  { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubing" },
   { label: "Power Cable Accessories", href: "/products/power-cable-accessories" },
-  { label: "Busbar / Switchgear Insulation", href: "/products/switchgear-insulation-products" },
-  { label: "Asset & Wildlife Protection", href: "/products/overhead-line-covers" },
-  { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrinkable-wrap-around-sleeves" },
+  { label: "Busbar / Switchgear Insulation", href: "/products/busbar-switchgear-insulation" },
+  { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrink-wrap-around-sleeves" },
+  { label: "Asset & Wildlife Protection", href: "/products/asset-wildlife-protection" },
   { label: "Tapes & Sealants", href: "/products/tapes-and-sealants" },
-  { label: "Pre-Insulated Pipe Management", href: "/products/pre-insulated-pipe-management" },
+  { label: "Other Products", href: "/products/other-products" },
 ];
 
 const socialLinks = [
@@ -54,11 +104,12 @@ const socialLinks = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const [expandedSolution, setExpandedSolution] = useState<string | null>(null);
 
   return (
-    <footer style={{ backgroundColor: "#111111" }} className="text-gray-300">
+    <footer className="bg-white text-gray-600 border-t border-gray-100">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
         {/* Column 1 — Brand */}
         <div>
@@ -99,7 +150,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-primary transition-colors duration-200"
+                className="w-9 h-9 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors duration-200"
               >
                 <FontAwesomeIcon icon={icon} className="text-sm" />
               </a>
@@ -109,7 +160,7 @@ export default function Footer() {
 
         {/* Column 2 — Quick Links */}
         <div>
-          <h3 className="text-white font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
+          <h3 className="text-gray-900 font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
             Quick Links
           </h3>
           <ul className="space-y-2">
@@ -131,7 +182,7 @@ export default function Footer() {
 
           {/* ISO Certs badges */}
           <div className="mt-6 flex flex-wrap gap-1.5">
-            {["ISO 9001", "ISO 14001", "ISO 45001", "CE", "RoHS"].map((cert) => (
+            {["ISO 9001", "CE"].map((cert) => (
               <span
                 key={cert}
                 className="text-[10px] font-bold bg-brand-primary/20 border border-brand-primary/30 text-brand-primary px-2 py-0.5 rounded"
@@ -142,9 +193,77 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Column 3 — Products */}
+        {/* Column 3 — Solutions */}
         <div>
-          <h3 className="text-white font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
+          <h3 className="text-gray-900 font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
+            Solutions
+          </h3>
+          <ul className="space-y-1">
+            {solutionLinks.map((link) => (
+              <li key={link.label}>
+                {link.children ? (
+                  <>
+                    <button
+                      onClick={() => setExpandedSolution(expandedSolution === link.label ? null : link.label)}
+                      className="w-full flex items-center justify-between gap-2 text-sm py-0.5 hover:text-brand-primary transition-colors duration-200 group text-left"
+                    >
+                      <span className="flex items-center gap-2">
+                        <FontAwesomeIcon
+                          icon={faChevronRight}
+                          className="text-brand-primary text-xs group-hover:translate-x-1 transition-transform"
+                        />
+                        {link.label}
+                      </span>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`text-[10px] text-brand-primary transition-transform duration-200 flex-shrink-0 ${
+                          expandedSolution === link.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {expandedSolution === link.label && (
+                      <ul className="ml-4 mt-1 mb-1 border-l-2 border-brand-primary/20 pl-3 space-y-1">
+                        <li>
+                          <Link
+                            href={link.href}
+                            className="block text-xs text-brand-primary font-semibold py-0.5 hover:underline"
+                          >
+                            View All →
+                          </Link>
+                        </li>
+                        {link.children.map((sub) => (
+                          <li key={sub.label}>
+                            <Link
+                              href={sub.href}
+                              className="block text-xs text-gray-500 py-0.5 hover:text-brand-primary transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-2 text-sm py-0.5 hover:text-brand-primary transition-colors duration-200 group"
+                  >
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="text-brand-primary text-xs group-hover:translate-x-1 transition-transform"
+                    />
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 4 — Products */}
+        <div>
+          <h3 className="text-gray-900 font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
             Our Products
           </h3>
           <ul className="space-y-2">
@@ -185,7 +304,7 @@ export default function Footer() {
 
         {/* Column 4 — Contact Info */}
         <div>
-          <h3 className="text-white font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
+          <h3 className="text-gray-900 font-bold text-base mb-5 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-primary">
             Contact Info
           </h3>
           <ul className="space-y-4">
@@ -229,7 +348,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
           <p className="text-gray-500">
             &copy; {year} AEX International Engineering Works Pvt. Ltd. All rights reserved.

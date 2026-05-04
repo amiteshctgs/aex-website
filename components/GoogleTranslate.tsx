@@ -60,30 +60,34 @@ export default function GoogleTranslate() {
           display: none !important;
         }
         
-        /* Style the actual dropdown */
+        /* Style the actual dropdown for a light background (top strip) */
         .goog-te-combo {
-          color: white !important;
-          background-color: rgba(255, 255, 255, 0.1) !important;
-          border: 1px solid rgba(255, 255, 255, 0.3) !important;
-          border-radius: 6px !important;
-          padding: 3px 8px !important;
-          font-size: 12px !important;
+          color: #333333 !important;
+          background-color: #ffffff !important;
+          border: 1px solid #d1d5db !important;
+          border-radius: 4px !important;
+          padding: 2px 6px !important;
+          font-size: 11px !important;
+          font-weight: 600 !important;
+          text-transform: uppercase !important;
           font-family: inherit !important;
           outline: none !important;
           cursor: pointer !important;
           margin: 0 !important;
+          height: 22px !important;
           transition: all 0.2s ease;
         }
         
         .goog-te-combo:hover {
-          background-color: rgba(255, 255, 255, 0.2) !important;
+          border-color: #cc0000 !important;
+          color: #cc0000 !important;
         }
         
         /* Dropdown options */
         .goog-te-combo option {
           color: #111 !important;
           background: white !important;
-          font-size: 14px !important;
+          font-size: 13px !important;
           padding: 4px !important;
         }
       `}</style>

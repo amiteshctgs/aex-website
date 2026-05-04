@@ -51,7 +51,7 @@ function buildResults(query: string): SearchResult[] {
   const results: SearchResult[] = [];
   const MIN_SCORE = 30;
 
-  // 1. Products
+  // 1. Products (category level)
   products.forEach((p) => {
     const fields = [
       p.title,
@@ -71,6 +71,22 @@ function buildResults(query: string): SearchResult[] {
         score: s,
       });
     }
+
+    // 1b. Sub-products
+    p.subProducts?.forEach((sub) => {
+      const subFields = [sub.title, sub.description, ...sub.features, ...sub.applications];
+      const ss = bestScore(subFields, query);
+      if (ss >= MIN_SCORE) {
+        results.push({
+          id: `product-${p.slug}-${sub.slug}`,
+          title: sub.title,
+          subtitle: p.shortTitle,
+          category: "Product",
+          href: `/products/${p.slug}/${sub.slug}`,
+          score: ss,
+        });
+      }
+    });
   });
 
   // 2. Industries / Solutions

@@ -24,10 +24,10 @@ const config: Config = {
       colors: {
         brand: {
           primary: "#cc0000",
-          secondary: "#1a2b5f",
-          accent: "#f5a623",
-          dark: "#111111",
-          light: "#f8f9fa",
+          secondary: "#f5f5f5", // Light gray
+          accent: "#cc0000", // Red
+          dark: "#333333", // Dark gray instead of black
+          light: "#ffffff",
           gray: "#6b7280",
         },
       },

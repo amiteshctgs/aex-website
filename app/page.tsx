@@ -50,8 +50,8 @@ export const metadata: Metadata = {
 const whyChooseUs = [
   {
     icon: faCertificate,
-    title: "ISO Triple Certified",
-    text: "ISO 9001:2015, ISO 14001:2015 & ISO 45001:2018 — quality, environment, and safety certified.",
+    title: "ISO 9001 & CE Certified",
+    text: "ISO 9001 quality management and CE marking certified — meeting the highest international product standards.",
   },
   {
     icon: faShieldAlt,
@@ -132,7 +132,7 @@ export default function HomePage() {
             {/* Checkpoints */}
             <ul className="space-y-2 mb-8">
               {[
-                "ISO 9001:2015 / 14001:2015 / 45001:2018 Triple Certified",
+                "ISO 9001 & CE Certified — Quality Assured",
                 "In-house R&D — Injection Moulding & Extrusion expertise",
                 "Exported to 50+ countries across 6 continents",
                 "Custom heat shrink solutions for unique applications",
@@ -312,14 +312,14 @@ export default function HomePage() {
         className="py-20 relative"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(13,27,62,0.88), rgba(13,27,62,0.92)), url(/images/background/10.jpg)",
+            "linear-gradient(rgba(51,51,51,0.88), rgba(51,51,51,0.92)), url(/images/background/10.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-brand-accent font-semibold uppercase tracking-wider text-sm mb-4">
+          <p className="text-brand-accent text-center font-semibold uppercase tracking-wider text-sm mb-4">
             Ready to Reach New Heights?
           </p>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">

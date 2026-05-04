@@ -217,12 +217,12 @@ export default function GlobalSearch({
   // MOBILE variant — full-width panel inside the mobile header
   // ══════════════════════════════════════════════════════════════════════════
   return (
-    <div ref={dropdownRef} className="max-w-3xl mx-auto px-4 py-4">
+    <div ref={dropdownRef} className="max-w-2xl mx-auto px-4 py-4">
       {/* Input */}
       <div className="relative">
         <FontAwesomeIcon
           icon={faSearch}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 text-sm pointer-events-none"
         />
         <input
           ref={inputRef}
@@ -232,12 +232,12 @@ export default function GlobalSearch({
           onKeyDown={handleKeyDown}
           placeholder="Search products, solutions, pages…"
           autoComplete="off"
-          className="w-full pl-11 pr-10 py-3 rounded-xl border border-gray-200 bg-white text-gray-800 text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="w-full pl-11 pr-10 py-3 rounded-xl border border-yellow-400 bg-brand-primary text-white text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-white/70"
         />
         {query && (
           <button
             onClick={clearSearch}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors"
             aria-label="Clear search"
           >
             <FontAwesomeIcon icon={faTimes} className="text-xs" />
@@ -247,7 +247,7 @@ export default function GlobalSearch({
 
       {/* Results */}
       {showDropdown && (
-        <div className="mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+        <div className=" max-w-2xl mx-auto absolute left-4 right-4 top-[calc(100%+4px)] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-[60] max-h-[60vh] overflow-y-auto">
           {loading ? (
             <SkeletonRows />
           ) : results.length > 0 ? (
@@ -310,31 +310,27 @@ function ResultRow({
     <button
       onClick={onSelect}
       onMouseEnter={onHover}
-      className={`w-full flex items-center gap-3 px-4 py-3 text-left border-b border-gray-50 last:border-0 transition-colors group ${
-        active ? "bg-red-700 text-white" : "text-gray-800 hover:bg-red-50"
-      }`}
+      className={`w-full flex items-center gap-3 px-4 py-3 text-left border-b border-gray-50 last:border-0 transition-colors group ${active ? "bg-red-700 text-white" : "text-gray-800 hover:bg-red-50"
+        }`}
     >
       {/* Category dot */}
       <span
-        className={`w-2 h-2 rounded-full flex-shrink-0 ${
-          active ? "bg-white/70" : cfg.dot
-        }`}
+        className={`w-2 h-2 rounded-full flex-shrink-0 ${active ? "bg-white/70" : cfg.dot
+          }`}
       />
 
       {/* Text */}
       <span className="flex-1 min-w-0">
         <span
-          className={`block text-sm font-medium truncate ${
-            active ? "text-white" : "text-gray-800"
-          }`}
+          className={`block text-sm font-medium truncate ${active ? "text-white" : "text-gray-800"
+            }`}
         >
           {item.title}
         </span>
         {item.subtitle && item.subtitle !== item.title && (
           <span
-            className={`text-[11px] truncate ${
-              active ? "text-white/70" : "text-gray-400"
-            }`}
+            className={`text-[11px] truncate ${active ? "text-white/70" : "text-gray-400"
+              }`}
           >
             {item.subtitle}
           </span>
@@ -343,9 +339,8 @@ function ResultRow({
 
       {/* Category badge */}
       <span
-        className={`flex-shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-          active ? "bg-white/20 text-white" : `${cfg.bg} ${cfg.text}`
-        }`}
+        className={`flex-shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full ${active ? "bg-white/20 text-white" : `${cfg.bg} ${cfg.text}`
+          }`}
       >
         {item.category}
       </span>
@@ -353,9 +348,8 @@ function ResultRow({
       {/* Arrow */}
       <FontAwesomeIcon
         icon={faArrowRight}
-        className={`text-[10px] flex-shrink-0 transition-transform group-hover:translate-x-0.5 ${
-          active ? "text-white/70" : "text-gray-300"
-        }`}
+        className={`text-[10px] flex-shrink-0 transition-transform group-hover:translate-x-0.5 ${active ? "text-white/70" : "text-gray-300"
+          }`}
       />
     </button>
   );

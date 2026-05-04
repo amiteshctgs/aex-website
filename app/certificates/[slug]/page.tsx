@@ -30,26 +30,15 @@ const certificates: CertificateData[] = [
     scope: "Design, Manufacture and Supply of Heat Shrinkable Products",
   },
   {
-    slug: "iso-14001",
-    title: "ISO 14001:2015",
-    subtitle: "Environmental Management System",
+    slug: "ce-marking",
+    title: "CE Marking",
+    subtitle: "European Conformity",
     description:
-      "ISO 14001:2015 sets criteria for an environmental management system and maps out a framework that a company can follow to set up an effective environmental management system. AEX is certified to this standard, reflecting our commitment to reducing environmental impact.",
-    image: "/images/resource/certificate6iso-14001.png",
+      "CE Marking indicates conformity with health, safety, and environmental protection standards for products sold within the European Economic Area (EEA). AEX's products carry the CE mark, demonstrating our compliance with European regulations and safety requirements.",
+    image: "/images/resource/certification1.png",
     validity: "Valid through 2027",
-    issuer: "Bureau Veritas Certification",
-    scope: "Manufacturing of Heat Shrinkable Products — Environmental Management",
-  },
-  {
-    slug: "iso-45001",
-    title: "ISO 45001:2018",
-    subtitle: "Occupational Health & Safety Management System",
-    description:
-      "ISO 45001:2018 is the international standard for occupational health and safety management systems. Our certification under this standard demonstrates AEX's commitment to providing a safe and healthy workplace for all employees, contractors, and visitors.",
-    image: "/images/resource/certificate7iso-45001.jpg",
-    validity: "Valid through 2027",
-    issuer: "Bureau Veritas Certification",
-    scope: "Manufacturing of Heat Shrinkable Products — Occupational Health & Safety",
+    issuer: "European Conformity Assured",
+    scope: "Compliance with European Economic Area Health & Safety Standards",
   },
 ];
 
