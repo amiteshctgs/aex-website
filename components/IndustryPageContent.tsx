@@ -79,14 +79,14 @@ export default function IndustryPageContent({ industry }: Props) {
                     href={productUrl || `/enquiry?product=${encodeURIComponent(p)}`}
                     className="flex items-center gap-3 p-4 bg-brand-light rounded-xl border border-gray-100 hover:border-brand-primary hover:shadow-md transition-all duration-200 group"
                   >
-                  <FontAwesomeIcon
-                    icon={faArrowRight}
-                    className="text-brand-accent flex-shrink-0 text-sm group-hover:translate-x-1 transition-transform"
-                  />
-                  <span className="text-gray-700 font-medium text-sm group-hover:text-brand-primary transition-colors">
-                    {p}
-                  </span>
-                </Link>
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="text-brand-accent flex-shrink-0 text-sm group-hover:translate-x-1 transition-transform"
+                    />
+                    <span className="text-gray-700 font-medium text-sm group-hover:text-brand-primary transition-colors">
+                      {p}
+                    </span>
+                  </Link>
                 );
               })}
             </div>
@@ -113,7 +113,7 @@ export default function IndustryPageContent({ industry }: Props) {
                 <Link
                   key={ind.slug}
                   href={`/industries/${ind.slug}`}
-                  className="flex items-center gap-3 p-3 rounded-xl border border-gray-100 hover:border-brand-primary hover:bg-brand-light transition-all duration-200 group text-sm font-medium text-gray-700 group-hover:text-brand-primary"
+                  className="flex items-center gap-3 p-3 rounded-xl border border-gray-100 hover:border-brand-primary hover:bg-brand-light transition-all duration-200 group text-sm font-medium text-gray-700"
                 >
                   <FontAwesomeIcon icon={faArrowRight} className="text-brand-accent text-xs" />
                   {ind.title}

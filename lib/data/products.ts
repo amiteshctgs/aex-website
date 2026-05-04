@@ -478,16 +478,16 @@ export function getProductUrlByName(name: string): string | null {
 
   // Try partial/fuzzy matches (e.g. "Heat Shrink Cable End Sealing Caps" matching "Cable End Sealing Caps")
   // We remove common prefixes like "Heat Shrink", "Heat Shrinkable", etc.
-  const normalized = searchName.replace(/^heat shrink(able)?\s+/i, "").replace(/[-\s]/g, "");
+  const normalized = searchName.replace(/^heat shrink(able)?\s+/i, "").replace(/[\-\s]/g, "");
 
   for (const p of products) {
-    const pTitle = p.title.toLowerCase().replace(/[-\s]/g, "");
+    const pTitle = p.title.toLowerCase().replace(/[\-\s]/g, "");
     if (pTitle.includes(normalized) || normalized.includes(pTitle)) {
       return `/products/${p.slug}`;
     }
     if (p.subProducts) {
       for (const s of p.subProducts) {
-        const sTitle = s.title.toLowerCase().replace(/[-\s]/g, "");
+        const sTitle = s.title.toLowerCase().replace(/[\-\s]/g, "");
         if (sTitle.includes(normalized) || normalized.includes(sTitle)) {
           return resolveProductUrl(p.slug, s.slug);
         }

@@ -152,21 +152,18 @@ export const industries: Industry[] = [
         slug: "overhead-line-tubes",
         href: "/industries/asset-and-wildlife-protection/overhead-line-tubes",
         description: "Continuous heat shrink insulation for bare overhead conductors.",
-        href_old: "/products/asset-and-wildlife-protection/overhead-line-tubes"
       },
       { 
         label: "Busbar Sleeves", 
         slug: "busbar-sleeves",
         href: "/industries/asset-and-wildlife-protection/busbar-sleeves",
         description: "Insulating sleeves for outdoor busbar connections.",
-        href_old: "/products/asset-and-wildlife-protection/busbar-sleeves"
       },
       { 
         label: "Heat Shrink Tape", 
         slug: "busbar-tape",
         href: "/industries/asset-and-wildlife-protection/busbar-tape",
         description: "Insulating tape for irregular busbar shapes and joints.",
-        href_old: "/products/asset-and-wildlife-protection/busbar-tape"
       },
     ],
   },
