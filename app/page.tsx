@@ -21,6 +21,28 @@ export const metadata: Metadata = {
   title: "Heat Shrink Products Manufacturer India | AEX International Engineering",
   description:
     "AEX International Engineering — India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection. ISO certified. 35+ years legacy. Export to 50+ countries.",
+  keywords: [
+    "heat shrink manufacturer",
+    "cable accessories India",
+    "busbar insulation",
+    "pipeline protection heat shrink",
+    "AEX International Engineering",
+    "Jamnagar manufacturer",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/",
+  },
+  openGraph: {
+    title: "Heat Shrink Products Manufacturer India | AEX International Engineering",
+    description:
+      "India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection.",
+    url: "https://www.aexheatshrink.com/",
+  },
+  twitter: {
+    title: "Heat Shrink Products Manufacturer India | AEX International Engineering",
+    description:
+      "India's leading manufacturer of heat shrink products, cable accessories, busbar insulation, and pipeline protection.",
+  },
 };
 
 

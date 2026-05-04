@@ -8,6 +8,26 @@ export const metadata: Metadata = {
   title: "Product Enquiry — AEX International Engineering",
   description:
     "Submit a product enquiry to AEX International Engineering. Get a custom quote for heat shrink products, cable accessories, and industrial insulation solutions.",
+  keywords: [
+    "heat shrink quote",
+    "cable accessories enquiry",
+    "AEX sales",
+    "custom heat shrink products",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/enquiry",
+  },
+  openGraph: {
+    title: "Product Enquiry — AEX International Engineering",
+    description:
+      "Submit a product enquiry to AEX International Engineering. Get a custom quote for heat shrink products.",
+    url: "https://www.aexheatshrink.com/enquiry",
+  },
+  twitter: {
+    title: "Product Enquiry — AEX International Engineering",
+    description:
+      "Submit a product enquiry to AEX International Engineering. Get a custom quote for heat shrink products.",
+  },
 };
 
 export default function EnquiryPage() {

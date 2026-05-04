@@ -7,6 +7,30 @@ export const metadata: Metadata = {
   title: "Industries Served",
   description:
     "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
+  keywords: [
+    "industries served",
+    "cable industry solutions",
+    "switchgear insulation",
+    "transformer protection",
+    "renewable energy products",
+    "telecom heat shrink",
+    "AEX industries",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/industries",
+  },
+  openGraph: {
+    title: "Industries Served",
+    description: "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
+    url: "https://www.aexheatshrink.com/industries",
+    type: "website",
+    siteName: "AEX International Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries Served",
+    description: "Discover how AEX heat shrink products serve the cable, switchgear, transformer, renewable energy, and telecom industries globally.",
+  },
 };
 
 export default function IndustriesPage() {

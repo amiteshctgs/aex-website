@@ -7,6 +7,31 @@ export const metadata: Metadata = {
   title: "Products | Heat Shrink Accessories",
   description:
     "Explore AEX's complete range of heat shrinkable moulded components, tubes, cable accessories, and pipeline protection products.",
+  keywords: [
+    "heat shrink accessories",
+    "moulded components",
+    "heat shrink tubes",
+    "cable accessories",
+    "pipeline protection",
+    "AEX products",
+    "busbar insulation",
+    "wrap around sleeves",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/products",
+  },
+  openGraph: {
+    title: "Products | Heat Shrink Accessories",
+    description: "Explore AEX's complete range of heat shrinkable moulded components, tubes, cable accessories, and pipeline protection products.",
+    url: "https://www.aexheatshrink.com/products",
+    type: "website",
+    siteName: "AEX International Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | Heat Shrink Accessories",
+    description: "Explore AEX's complete range of heat shrinkable moulded components, tubes, cable accessories, and pipeline protection products.",
+  },
 };
 
 export default function ProductsPage() {

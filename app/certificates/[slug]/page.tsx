@@ -68,6 +68,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${cert.title} Certificate | AEX International Engineering`,
     description: cert.description,
+    keywords: [cert.title, cert.subtitle, "AEX certificate", "ISO certification"],
+    alternates: {
+      canonical: `https://www.aexheatshrink.com/certificates/${slug}`,
+    },
+    openGraph: {
+      title: `${cert.title} Certificate | AEX International Engineering`,
+      description: cert.description,
+      url: `https://www.aexheatshrink.com/certificates/${slug}`,
+      type: "website",
+      siteName: "AEX International Engineering",
+      images: [
+        {
+          url: cert.image,
+          width: 800,
+          height: 600,
+          alt: cert.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${cert.title} Certificate | AEX International Engineering`,
+      description: cert.description,
+      images: [cert.image],
+    },
   };
 }
 

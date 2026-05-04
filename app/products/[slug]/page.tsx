@@ -30,6 +30,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.title} | AEX International Engineering`,
     description: product.description,
+    keywords: [product.title, product.shortTitle, "AEX products", "heat shrink", "cable accessories"],
+    alternates: {
+      canonical: `https://www.aexheatshrink.com/products/${slug}`,
+    },
+    openGraph: {
+      title: `${product.title} | AEX International Engineering`,
+      description: product.description,
+      url: `https://www.aexheatshrink.com/products/${slug}`,
+      type: "website",
+      siteName: "AEX International Engineering",
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 600,
+          alt: product.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.title} | AEX International Engineering`,
+      description: product.description,
+      images: [product.image],
+    },
   };
 }
 

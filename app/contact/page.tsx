@@ -16,7 +16,22 @@ export const metadata: Metadata = {
   title: "Contact Us | AEX International Engineering",
   description:
     "Contact AEX International Engineering Works Pvt. Ltd. for heat shrink product enquiries, technical support, and business partnerships. Jamnagar, Gujarat, India.",
+  keywords: [
+    "contact AEX",
+    "heat shrink supplier contact",
+    "AEX International Jamnagar address",
+    "heat shrink enquiries",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/contact",
+  },
   openGraph: {
+    title: "Contact Us | AEX International Engineering",
+    description:
+      "Get in touch with AEX — India's leading heat shrink manufacturer. We respond within 24 business hours.",
+    url: "https://www.aexheatshrink.com/contact",
+  },
+  twitter: {
     title: "Contact Us | AEX International Engineering",
     description:
       "Get in touch with AEX — India's leading heat shrink manufacturer. We respond within 24 business hours.",

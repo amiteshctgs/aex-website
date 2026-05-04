@@ -28,6 +28,26 @@ export const metadata: Metadata = {
   title: "Our Strength, Vision & Values | AEX International Engineering",
   description:
     "Discover the vision, mission, ethics, team strengths, and core values that drive AEX International Engineering Works Pvt. Ltd. — a global leader in heat shrink products.",
+  keywords: [
+    "AEX company strengths",
+    "ISO certified heat shrink manufacturer",
+    "quality assurance heat shrink",
+    "global export heat shrink",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/strength",
+  },
+  openGraph: {
+    title: "Our Strength, Vision & Values | AEX International Engineering",
+    description:
+      "Discover the vision, mission, ethics, team strengths, and core values that drive AEX International Engineering.",
+    url: "https://www.aexheatshrink.com/strength",
+  },
+  twitter: {
+    title: "Our Strength, Vision & Values | AEX International Engineering",
+    description:
+      "Discover the vision, mission, ethics, team strengths, and core values that drive AEX International Engineering.",
+  },
 };
 
 const visionPoints = [

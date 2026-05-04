@@ -19,6 +19,26 @@ export const metadata: Metadata = {
   title: "Our Facility — 200,000 Sq Ft Manufacturing Unit | AEX International Engineering",
   description:
     "Explore AEX International Engineering's 200,000 sq ft state-of-the-art manufacturing facility in Jamnagar, Gujarat — in-house compounding, advanced test laboratory, and 400+ skilled workforce.",
+  keywords: [
+    "AEX manufacturing facility",
+    "heat shrink factory Jamnagar",
+    "polymer extrusion plant India",
+    "testing lab for cable accessories",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/facility",
+  },
+  openGraph: {
+    title: "Our Facility — 200,000 Sq Ft Manufacturing Unit",
+    description:
+      "Explore AEX's 200,000 sq ft state-of-the-art manufacturing facility in Jamnagar, Gujarat.",
+    url: "https://www.aexheatshrink.com/facility",
+  },
+  twitter: {
+    title: "Our Facility — 200,000 Sq Ft Manufacturing Unit",
+    description:
+      "Explore AEX's 200,000 sq ft state-of-the-art manufacturing facility in Jamnagar, Gujarat.",
+  },
 };
 
 const facilityFeatures = [

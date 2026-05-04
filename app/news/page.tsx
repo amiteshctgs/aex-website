@@ -15,6 +15,30 @@ export const metadata: Metadata = {
   title: "Events & News | AEX International Engineering",
   description:
     "Stay updated with the latest news, events, trade shows, and announcements from AEX International Engineering Works Pvt. Ltd.",
+  keywords: [
+    "AEX news",
+    "AEX events",
+    "heat shrink exhibitions",
+    "cable accessories news",
+    "AEX milestones",
+    "ELECRAMA AEX",
+    "manufacturing news",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/news",
+  },
+  openGraph: {
+    title: "Events & News | AEX International Engineering",
+    description: "Stay updated with the latest news, events, trade shows, and announcements from AEX International Engineering Works Pvt. Ltd.",
+    url: "https://www.aexheatshrink.com/news",
+    type: "website",
+    siteName: "AEX International Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Events & News | AEX International Engineering",
+    description: "Stay updated with the latest news, events, trade shows, and announcements from AEX International Engineering Works Pvt. Ltd.",
+  },
 };
 
 const news = [

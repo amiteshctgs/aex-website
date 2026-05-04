@@ -23,6 +23,27 @@ export const metadata: Metadata = {
   title: "About AEX Heat Shrink — Global Manufacturer | AEX International Engineering",
   description:
     "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers. 200,000 sq ft facility, 400+ workforce, ISO certified, export to 50+ countries.",
+  keywords: [
+    "about AEX",
+    "heat shrink company profile",
+    "polymer engineering India",
+    "Apple International Engineering group",
+    "Jamnagar manufacturing facility",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/about",
+  },
+  openGraph: {
+    title: "About AEX Heat Shrink — Global Manufacturer",
+    description:
+      "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers.",
+    url: "https://www.aexheatshrink.com/about",
+  },
+  twitter: {
+    title: "About AEX Heat Shrink — Global Manufacturer",
+    description:
+      "Learn about AEX International Engineering Works Pvt. Ltd. — decades of experience in thermoplastics and thermoset polymers.",
+  },
 };
 
 const productRange = [

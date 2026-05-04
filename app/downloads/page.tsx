@@ -13,6 +13,29 @@ export const metadata: Metadata = {
   title: "Downloads & Catalogues | AEX International Engineering",
   description:
     "Download product catalogues, technical datasheets, and brochures from AEX International Engineering. Heat shrink, cable accessories, and insulation product PDFs.",
+  keywords: [
+    "AEX catalogues",
+    "heat shrink product downloads",
+    "cable accessories datasheet",
+    "AEX brochures",
+    "technical datasheet pdf",
+    "insulation products catalogue",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/downloads",
+  },
+  openGraph: {
+    title: "Downloads & Catalogues | AEX International Engineering",
+    description: "Download product catalogues, technical datasheets, and brochures from AEX International Engineering.",
+    url: "https://www.aexheatshrink.com/downloads",
+    type: "website",
+    siteName: "AEX International Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Downloads & Catalogues | AEX International Engineering",
+    description: "Download product catalogues, technical datasheets, and brochures from AEX International Engineering.",
+  },
 };
 
 const catalogues = [

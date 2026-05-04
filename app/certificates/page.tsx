@@ -9,6 +9,30 @@ export const metadata: Metadata = {
   title: "Certificates & Quality Assurance",
   description:
     "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+  keywords: [
+    "AEX certificates",
+    "ISO 9001:2015 AEX",
+    "ISO 14001:2015",
+    "ISO 45001:2018",
+    "quality assurance certificates",
+    "heat shrink manufacturer certifications",
+    "AEX quality management",
+  ],
+  alternates: {
+    canonical: "https://www.aexheatshrink.com/certificates",
+  },
+  openGraph: {
+    title: "Certificates & Quality Assurance",
+    description: "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+    url: "https://www.aexheatshrink.com/certificates",
+    type: "website",
+    siteName: "AEX International Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Certificates & Quality Assurance",
+    description: "AEX is certified with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. View our quality, environmental, and health & safety certifications.",
+  },
 };
 
 const certsList = [
