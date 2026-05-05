@@ -107,7 +107,7 @@ export default function IndustryPageContent({ industry }: Props) {
           </div>
 
           <div>
-            <h4 className="font-bold text-brand-primary text-lg mb-4">Other Industries</h4>
+            <h3 className="font-bold text-brand-primary text-lg mb-4">Other Industries</h3>
             <div className="space-y-2">
               {otherIndustries.map((ind) => (
                 <Link

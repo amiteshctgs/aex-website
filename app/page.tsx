@@ -181,9 +181,10 @@ export default function HomePage() {
           {/* Content */}
           <div>
             <p className="section-subtitle">Welcome to AEX Heat Shrink</p>
-            <h2 className="section-title mb-5">
+            {/* H1 — one per page, keyword-rich. The HeroSlider uses <p> for visual titles. */}
+            <h1 className="section-title mb-5">
               With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
-            </h2>
+            </h1>
             <p className="text-gray-600 leading-relaxed mb-4">
               We have a deep advantage of many years of experience in processing a wide variety of
               <strong> Thermoplastics and Thermoset Polymers</strong> including Flame-retardant materials

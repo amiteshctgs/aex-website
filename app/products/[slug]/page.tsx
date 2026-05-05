@@ -176,7 +176,7 @@ export default async function ProductCategoryPage({ params }: Props) {
 
             {/* Downloads */}
             <div className="p-6 bg-brand-light rounded-xl border border-brand-primary/20">
-              <h4 className="font-bold text-brand-primary mb-2">Downloads</h4>
+              <h3 className="font-bold text-brand-primary mb-2">Downloads</h3>
               <p className="text-gray-500 text-sm mb-5">
                 Download the technical datasheet or our complete product catalogue.
               </p>
@@ -234,7 +234,7 @@ export default async function ProductCategoryPage({ params }: Props) {
 
             {/* Related Products */}
             <div>
-              <h4 className="font-bold text-brand-primary text-lg mb-4">Other Products</h4>
+              <h3 className="font-bold text-brand-primary text-lg mb-4">Other Products</h3>
               <div className="space-y-3">
                 {relatedProducts.map((rp) => (
                   <Link

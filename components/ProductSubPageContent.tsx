@@ -80,7 +80,7 @@ export default function ProductSubPageContent({ product, sub }: Props) {
 
           {/* Downloads */}
           <div className="p-6 bg-brand-light rounded-xl border border-brand-primary/20">
-            <h4 className="font-bold text-brand-primary mb-2">Downloads</h4>
+            <h3 className="font-bold text-brand-primary mb-2">Downloads</h3>
             <p className="text-gray-500 text-sm mb-5">
               Download our complete product catalogue or request a specific technical datasheet.
             </p>

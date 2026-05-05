@@ -82,7 +82,7 @@ export default function EnquiryPage() {
             </div>
 
             <div className="bg-brand-light rounded-2xl p-6 border border-gray-100">
-              <h4 className="font-bold text-brand-primary mb-3">Why Enquire with AEX?</h4>
+              <h3 className="font-bold text-brand-primary mb-3">Why Enquire with AEX?</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 {[
                   "18+ years of manufacturing expertise",

@@ -36,7 +36,8 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
-              <h2 className="text-3xl font-bold text-white">{subItem.label}</h2>
+              {/* Visual caption only — the page H1 is already in PageTitle above */}
+              <span className="text-3xl font-bold text-white">{subItem.label}</span>
             </div>
           </div>
 
@@ -102,7 +103,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
         <div className="space-y-8">
           {/* Related Industry Info */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-            <h4 className="font-bold text-brand-primary text-lg mb-4">Related to {industry.shortTitle}</h4>
+            <h3 className="font-bold text-brand-primary text-lg mb-4">Related to {industry.shortTitle}</h3>
             <div className="space-y-3">
               {industry.subItems?.filter(item => item.slug !== subItem.slug).map((item) => (
                 <Link
@@ -129,7 +130,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
           </div>
 
           <div>
-            <h4 className="font-bold text-brand-primary text-lg mb-4">Other Industries</h4>
+            <h3 className="font-bold text-brand-primary text-lg mb-4">Other Industries</h3>
             <div className="space-y-2">
               {otherIndustries.map((ind) => (
                 <Link

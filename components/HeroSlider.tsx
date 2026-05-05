@@ -93,10 +93,13 @@ export default function HeroSlider() {
                     <span className="inline-block bg-brand-accent text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
                       {slide.tag}
                     </span>
-                    {/* Title */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5">
+                    {/* Title — purposely <p> not <h1>: slide titles are decorative.
+                        The real page H1 is rendered by the PageTitle component or
+                        defined in each page's metadata. Using h1 here would create
+                        3 simultaneous H1 elements in the DOM (one per slide). */}
+                    <p className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5 text-left">
                       {slide.title}
-                    </h1>
+                    </p>
                     {/* Subtitle */}
                     <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-8 max-w-md">
                       {slide.subtitle}
