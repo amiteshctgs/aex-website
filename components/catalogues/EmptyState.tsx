@@ -15,7 +15,7 @@ export default function EmptyState({ onClearFilters }: EmptyStateProps) {
       
       <h3 className="text-xl font-bold text-gray-900 mb-2">No catalogues found</h3>
       <p className="text-gray-500 max-w-md mb-6">
-        We couldn't find any documents matching your current filters and search criteria.
+        We couldn&apos;t find any documents matching your current filters and search criteria.
       </p>
       
       {onClearFilters && (
