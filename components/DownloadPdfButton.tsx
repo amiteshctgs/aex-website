@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf, faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { hasRecentLeadCapture, saveLeadCaptureTimestamp } from "@/lib/pdf/leadCapture";
 
 interface DownloadPdfButtonProps {
   label?: string;
@@ -21,19 +22,16 @@ export default function DownloadPdfButton({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
 
-  const handleDownloadClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleDownloadClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setIsModalOpen(true);
+    if (!hasRecentLeadCapture()) {
+      setIsModalOpen(true);
+    } else {
+      await processDownload();
+    }
   };
 
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simulate form submission to CRM/DB
-    console.log("Form Submitted:", formData);
-
-    setIsModalOpen(false);
-
+  const processDownload = async () => {
     try {
       setIsGenerating(true);
 
@@ -75,6 +73,18 @@ export default function DownloadPdfButton({
     } finally {
       setIsGenerating(false);
     }
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Simulate form submission to CRM/DB
+    console.log("Form Submitted:", formData);
+
+    setIsModalOpen(false);
+    saveLeadCaptureTimestamp();
+
+    await processDownload();
   };
 
   return (

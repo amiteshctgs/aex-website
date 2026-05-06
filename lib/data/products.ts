@@ -4,6 +4,7 @@ export interface SubProduct {
   description: string;
   features: string[];
   applications: string[];
+  pdfUrl?: string;
 }
 
 export interface Product {
@@ -48,6 +49,7 @@ export const products: Product[] = [
         description: "Heat shrinkable end caps provide reliable sealing of cable ends, preventing moisture ingress and protecting conductors during storage and installation.",
         features: ["Adhesive-lined for watertight seal", "2:1 and 3:1 shrink ratios", "Operating range: -55°C to +135°C", "Flame retardant", "Available in multiple sizes"],
         applications: ["Cable storage protection", "Temporary sealing", "Permanent end terminations", "Underground cable ends"],
+        pdfUrl: "/pdfs/AEX_Heat_Shrinkable_End_Cap.pdf",
       },
       {
         slug: "lv-breakouts",
@@ -55,6 +57,7 @@ export const products: Product[] = [
         description: "Heat shrinkable LV breakouts provide insulation and strain relief at the branching points of multi-core cables in low voltage applications.",
         features: ["Suitable for LV cables", "Flexible polyolefin material", "Excellent dielectric properties", "Easy heat gun installation", "Multiple leg configurations"],
         applications: ["LV cable branching", "Multi-core cable terminations", "Panel wiring", "Distribution boards"],
+        pdfUrl: "/pdfs/AEX_Heat_Shrinkable_Low_Voltage_Cable_Breakouts.pdf",
       },
       {
         slug: "non-tracking-breakouts",
@@ -62,6 +65,7 @@ export const products: Product[] = [
         description: "Non-tracking heat shrinkable breakouts are specially formulated to resist electrical tracking and erosion in medium and high voltage applications.",
         features: ["Non-tracking material", "High voltage rated", "Track and erosion resistant", "UV stabilized", "Suitable for outdoor use"],
         applications: ["MV cable joints", "HV cable terminations", "Outdoor applications", "Substations"],
+        pdfUrl: "/pdfs/Heat_Shrinkable_Non-tracking_Cable_Breakouts.pdf",
       },
       {
         slug: "semi-conductive-breakouts",
@@ -69,6 +73,7 @@ export const products: Product[] = [
         description: "Semi-conductive heat shrinkable breakouts provide electric field control at cable termination points, reducing stress concentration.",
         features: ["Electric field stress control", "Semi-conductive layer", "Compatible with XLPE cables", "Operating voltage up to 36kV", "IEC 60502 compliant"],
         applications: ["MV/HV cable terminations", "Stress grading", "Underground cable systems", "Power stations"],
+        pdfUrl: "/pdfs/Heat_Shrinkable_Semi-Conductive_Cable_Breakouts.pdf",
       },
       {
         slug: "right-angle-boots",
@@ -76,6 +81,7 @@ export const products: Product[] = [
         description: "Heat shrinkable boots provide protection and insulation at connector entry points, available in right angle and straight configurations.",
         features: ["Right angle and straight versions", "Strain relief at connector entry", "Moisture and chemical resistant", "Multiple entry diameters", "Flexible installation"],
         applications: ["Connector backshells", "Panel entry protection", "Cable strain relief", "Military connectors"],
+        pdfUrl: "/pdfs/Heat_Shrinkable_Right_Angle_and_Straight_Boots.pdf",
       },
       {
         slug: "creepage-extension-skirts",
@@ -83,6 +89,7 @@ export const products: Product[] = [
         description: "Creepage extension skirts increase the creepage distance of insulators and bushings, improving performance in polluted environments.",
         features: ["Increases creepage distance", "UV and weather resistant", "Silicone and polyolefin grades", "Easy field installation", "Rated for 11kV to 33kV"],
         applications: ["Insulator retrofit", "Bushing creepage extension", "Substation equipment", "Overhead line fittings"],
+        pdfUrl: "/pdfs/Heat_Shrink_Creepage_Extension_Skirt.pdf",
       },
       {
         slug: "anode-caps",
@@ -90,6 +97,7 @@ export const products: Product[] = [
         description: "Anode caps provide insulation and protection for sacrificial anodes used in cathodic protection systems.",
         features: ["Chemical resistant", "Watertight seal", "Adhesive-lined", "Operating range: -55°C to +90°C", "Compatible with all anode materials"],
         applications: ["Cathodic protection anodes", "Offshore structures", "Buried pipelines", "Marine applications"],
+        pdfUrl: "/pdfs/Heat_Shrinkable_Anode_Cap.pdf",
       },
       {
         slug: "pre-insulated-pipe-seals",
@@ -97,6 +105,7 @@ export const products: Product[] = [
         description: "Heat shrinkable sealing caps and sleeves for the end sealing of pre-insulated pipes used in district heating and cooling systems.",
         features: ["EN 489 compliant", "Adhesive-lined watertight seal", "Compatible with HDPE/LDPE jackets", "Up to 115°C continuous", "DN20 to DN500 sizes"],
         applications: ["District heating pipe ends", "Pre-insulated pipe sealing", "Pipe storage protection", "Field joint sealing"],
+        pdfUrl: "/pdfs/Heat_Shrink_Pre-insulated_Pipe_Seal.pdf",
       },
     ],
   },
@@ -124,6 +133,7 @@ export const products: Product[] = [
         description: "Medium and heavy wall heat shrink tubing provides robust insulation and mechanical protection for cables and connections requiring high-performance barriers.",
         features: ["Wall thickness: 0.8mm to 2.5mm", "3:1 shrink ratio", "Adhesive-lined dual wall version available", "Operating temp: -55°C to +135°C", "Flame retardant"],
         applications: ["Cable jointing", "Connector insulation", "Pipe protection", "Underground cables"],
+        pdfUrl: "/pdfs/Heat_Shrink_Medium_and_Heavy_Wall_Tube.pdf",
       },
       {
         slug: "busbar-insulation-sleeves",
@@ -131,6 +141,7 @@ export const products: Product[] = [
         description: "Large diameter heat shrink tubing specifically designed for busbar insulation in switchgear and distribution panels.",
         features: ["Large diameter: up to 300mm", "High dielectric strength", "Flame retardant", "Low smoke halogen-free", "Track resistant"],
         applications: ["Busbar insulation", "Switchgear panels", "Distribution boards", "MV/LV busbars"],
+        pdfUrl: "/pdfs/Heat_Shrink_Busbar_Insulation_Sleeves.pdf",
       },
       {
         slug: "non-tracking-tubing",
@@ -138,6 +149,7 @@ export const products: Product[] = [
         description: "Non-tracking heat shrink tubing resists electrical tracking and erosion, ideal for outdoor and high-voltage insulation.",
         features: ["Non-tracking formulation", "UV stabilized", "Outdoor rated", "High voltage compatible", "Weather resistant"],
         applications: ["Outdoor HV terminations", "Overhead line insulation", "Substation applications"],
+        pdfUrl: "/pdfs/Heat_Shrink_Non-tracking_Tube.pdf",
       },
       {
         slug: "thin-wall",
@@ -145,6 +157,7 @@ export const products: Product[] = [
         description: "Thin wall heat shrink tubing offers lightweight insulation and identification for wires and small components.",
         features: ["2:1 shrink ratio", "Thin wall profile", "Available in many colors", "Operating temp: -55°C to +125°C", "UL approved"],
         applications: ["Wire identification", "Harness protection", "Small connector insulation", "Color coding"],
+        pdfUrl: "/pdfs/Heat_Shrink_Thin_Wall_Tubes_-_Suitable_upto_3.3_kV.pdf",
       },
       {
         slug: "dual-wall",
@@ -152,6 +165,7 @@ export const products: Product[] = [
         description: "Dual wall heat shrink tubing with inner hot-melt adhesive provides a fully waterproof, strain-relieved seal.",
         features: ["Inner adhesive liner", "3:1 shrink ratio", "Watertight seal", "Strain relief", "Operating temp: -55°C to +110°C"],
         applications: ["Marine wiring", "Outdoor connections", "Underground cables", "Automotive wiring"],
+        pdfUrl: "/pdfs/Heat_Shrink_Adhesive_Coated_Dual_Wall_Sleeves.pdf",
       },
       {
         slug: "stress-control",
@@ -229,6 +243,7 @@ export const products: Product[] = [
         description: "Extruded polyolefin busbar covers for insulating and protecting rectangular and circular busbars in switchgear panels.",
         features: ["Flexible polyolefin material", "Snap-fit installation", "Phase color coded", "UV resistant", "Temperature rated to +105°C"],
         applications: ["Rectangular busbars", "Circular busbars", "Switchgear panels", "Distribution boards"],
+        pdfUrl: "/pdfs/Busbar_Insulation_Cover_-_Polyolefin.pdf",
       },
       {
         slug: "pvc-busbar-covers",
@@ -236,6 +251,7 @@ export const products: Product[] = [
         description: "PVC busbar covers provide cost-effective insulation for busbars in control panels and distribution boards.",
         features: ["PVC material", "Economical solution", "Color-coded", "Easy clip installation", "Rated for LV applications"],
         applications: ["Control panels", "Distribution boards", "LV busbars", "Motor control centers"],
+        pdfUrl: "/pdfs/Busbar_Insulation_Cover_-_PVC.pdf",
       },
       {
         slug: "heat-shrink-tapes",
@@ -243,6 +259,7 @@ export const products: Product[] = [
         description: "Heat shrink insulating tapes for wrapping and insulating irregular-shaped busbars, joints, and connections.",
         features: ["Self-supporting tape form", "Conforms to complex shapes", "Shrinks with heat gun", "High dielectric strength", "Flame retardant"],
         applications: ["Irregular busbar shapes", "Joint insulation", "Connector wrapping", "Field repair"],
+        pdfUrl: "/pdfs/Heat_Shrink_Tape.pdf",
       },
       {
         slug: "insulated-adapters",
@@ -250,6 +267,7 @@ export const products: Product[] = [
         description: "Insulated busbar adapter systems for connecting cables to busbars with integrated insulation and mechanical support.",
         features: ["Integrated insulation", "Mechanical support", "Multiple cable entry sizes", "Phase-segregated", "Tool-free installation"],
         applications: ["Busbar to cable connections", "Panel wiring", "Switchgear terminations"],
+        pdfUrl: "/pdfs/Insulated_Adapter_Termination_System.pdf",
       },
       {
         slug: "right-angle-boots",
@@ -288,6 +306,7 @@ export const products: Product[] = [
         description: "Heat shrink wrap around sleeves for cable repair, insulation, and protection without removing connectors or equipment.",
         features: ["Longitudinally split design", "Adhesive-lined versions available", "Flame retardant", "2:1 shrink ratio", "Various widths and lengths"],
         applications: ["Cable repair", "Cable insulation retrofit", "Splice protection", "Underground cable joints"],
+        pdfUrl: "/pdfs/Heat_Shrink_Wraparound_Sleeve.pdf",
       },
       {
         slug: "for-pipes",
@@ -302,6 +321,7 @@ export const products: Product[] = [
         description: "Heat shrink wrap around sleeves for protecting wooden, steel, and concrete utility poles at ground level from corrosion and decay.",
         features: ["Ground-line corrosion protection", "UV stabilized", "Mechanical impact resistant", "Adhesive-lined", "Easy field installation"],
         applications: ["Utility pole protection", "Street light poles", "Wooden pole preservation", "Steel pole corrosion control"],
+        pdfUrl: "/pdfs/Heat_Shrink_Pole_Protection_Sleeves.pdf",
       },
     ],
   },
@@ -325,6 +345,7 @@ export const products: Product[] = [
         description: "Insulating covers designed to protect wildlife — particularly birds — from electrocution on overhead power line equipment.",
         features: ["UV stabilized polyolefin", "Snap-on installation", "11kV to 33kV rated", "Weather resistant", "Long service life"],
         applications: ["Transformer bushings", "Cross-arm insulation", "Jumper wire protection", "Substation structures"],
+        pdfUrl: "/pdfs/Wildlife_and_Asset_Protection_Products.pdf",
       },
       {
         slug: "overhead-line-covers",
@@ -332,6 +353,7 @@ export const products: Product[] = [
         description: "Insulating covers for bare overhead conductors providing phase-to-phase and phase-to-earth protection.",
         features: ["Snap-on or wrap design", "Rated for LV and MV lines", "UV resistant", "Easy installation without outage", "Long service life"],
         applications: ["Distribution lines", "Urban areas", "Wildlife corridors", "Fault-prone sections"],
+        pdfUrl: "/pdfs/Medium_Voltage_Line_Cover.pdf",
       },
       {
         slug: "overhead-line-tubes",
@@ -339,6 +361,7 @@ export const products: Product[] = [
         description: "Heat shrink insulating tubes for overhead conductors, providing a continuous insulating barrier along the conductor length.",
         features: ["Continuous conductor insulation", "UV stabilized", "Rated for 11kV, 22kV, 33kV", "Flame retardant", "Easy installation"],
         applications: ["Bare conductor insulation", "Fault reduction", "Wildlife protection corridors"],
+        pdfUrl: "/pdfs/Medium_Voltage_Line_Tube.pdf",
       },
       {
         slug: "busbar-sleeves",

@@ -11,7 +11,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const slides = [
   {
     id: 1,
-    image: "/images/main-slider/image-1.jpg",
+    image: "/images/main-slider/Factory-Pic-1.jpeg",
     tag: "18+ Years of Excellence",
     title: "Innovative Heat Shrink Solutions",
     subtitle:
@@ -21,7 +21,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/images/main-slider/image-2.jpg",
+    image: "/images/main-slider/Factory-Pic-2.jpeg",
     tag: "ISO 9001 & CE Certified",
     title: "Quality You Can Rely On",
     subtitle:
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/images/main-slider/image-3.jpg",
+    image: "/images/main-slider/Factory-Pic-3.jpeg",
     tag: "Serving 50+ Countries",
     title: "Global Reach, Local Expertise",
     subtitle:
