@@ -109,6 +109,7 @@ export interface CatalogueFilters {
   featured?: boolean;
   language?: string;
   status?: CatalogueStatus;
+  tags?: string[];
 }
 
 export interface CataloguePaginationResult {

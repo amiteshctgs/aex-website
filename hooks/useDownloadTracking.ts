@@ -1,12 +1,11 @@
 "use client";
 
 import { useCallback } from "react";
-import { TrackingSource } from "@/types/pdf";
 
 export function useDownloadTracking() {
   const trackDownload = useCallback((
     catalogueId: string, 
-    source: TrackingSource, 
+    source: string, 
     leadData?: any
   ) => {
     // Basic local tracking

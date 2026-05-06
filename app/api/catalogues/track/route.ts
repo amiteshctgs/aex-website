@@ -1,17 +1,15 @@
 import { NextResponse } from "next/server";
-import { TrackingPayload } from "@/types/pdf";
+import { DownloadTrackPayload } from "@/types/pdf";
 
 export async function POST(request: Request) {
   try {
-    const payload: TrackingPayload = await request.json();
+    const payload: DownloadTrackPayload = await request.json();
 
     // Here we would normally save this to a database
     // For now, we'll just log it to simulate backend processing
     console.log(`[TRACKING] Download recorded:`, {
-      catalogueId: payload.catalogueId,
+      slug: payload.slug,
       timestamp: payload.timestamp,
-      source: payload.source,
-      hasLeadData: !!payload.leadData
     });
 
     return NextResponse.json({ success: true });

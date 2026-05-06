@@ -168,6 +168,12 @@ export function filterCatalogues(
     result = searchCatalogues(result, filters.query);
   }
 
+  if (filters.tags && filters.tags.length > 0) {
+    result = result.filter((cat) =>
+      filters.tags!.some((tag) => cat.tags?.includes(tag))
+    );
+  }
+
   if (filters.sort) {
     result = sortCatalogues(result, filters.sort);
   }

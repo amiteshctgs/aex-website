@@ -32,8 +32,8 @@ export function useCatalogueFilters(initialFilters?: CatalogueFilters): UseCatal
   // Current filter state (syncs with URL)
   const [filters, setFilters] = useState<CatalogueFilters>({
     query: searchParams.get("q") || initialFilters?.query || "",
-    category: searchParams.get("category") || initialFilters?.category || "",
-    subCategory: searchParams.get("subCategory") || initialFilters?.subCategory || "",
+    category: (searchParams.get("category") as any) || initialFilters?.category || "All",
+    subCategory: (searchParams.get("subCategory") as any) || initialFilters?.subCategory || undefined,
     sort: (searchParams.get("sort") as any) || initialFilters?.sort || "latest",
   });
 
@@ -103,11 +103,11 @@ export function useCatalogueFilters(initialFilters?: CatalogueFilters): UseCatal
 
   // Handlers
   const handleCategoryChange = (category: string) => {
-    setFilters(prev => ({ ...prev, category, subCategory: "" })); // Reset subcategory when category changes
+    setFilters(prev => ({ ...prev, category: category as any, subCategory: undefined })); // Reset subcategory when category changes
   };
 
   const handleSubCategoryChange = (subCategory: string) => {
-    setFilters(prev => ({ ...prev, subCategory }));
+    setFilters(prev => ({ ...prev, subCategory: subCategory as any }));
   };
 
   const handleSortChange = (sort: string) => {
@@ -121,8 +121,8 @@ export function useCatalogueFilters(initialFilters?: CatalogueFilters): UseCatal
   const handleClearFilters = () => {
     setFilters({
       query: "",
-      category: "",
-      subCategory: "",
+      category: "All",
+      subCategory: undefined,
       sort: "latest"
     });
   };

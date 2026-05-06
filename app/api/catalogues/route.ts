@@ -5,8 +5,8 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get("query") || undefined;
-    const category = searchParams.get("category") || undefined;
-    const subCategory = searchParams.get("subCategory") || undefined;
+    const category = (searchParams.get("category") as any) || undefined;
+    const subCategory = (searchParams.get("subCategory") as any) || undefined;
     const sort = (searchParams.get("sort") as any) || "latest";
     const tags = searchParams.get("tags")?.split(",") || undefined;
 
@@ -15,7 +15,6 @@ export async function GET(request: Request) {
       category,
       subCategory,
       sort,
-      tags,
     });
 
     return NextResponse.json(result);
