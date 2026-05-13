@@ -1,5 +1,30 @@
 "use client";
 
+// Inject scrollbar styles once (lightweight, no extra package needed)
+const dropdownScrollbarStyle = `
+  .aex-dropdown-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #c41e3a33 transparent;
+  }
+  .aex-dropdown-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .aex-dropdown-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .aex-dropdown-scroll::-webkit-scrollbar-thumb {
+    background-color: #c41e3a55;
+    border-radius: 4px;
+  }
+  @keyframes aex-dropdown-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .aex-dropdown-animate {
+    animation: aex-dropdown-in 0.18s ease forwards;
+  }
+`;
+
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -52,6 +77,8 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-50">
+      {/* Scoped scrollbar + entrance-animation styles */}
+      <style dangerouslySetInnerHTML={{ __html: dropdownScrollbarStyle }} />
       {/* ── Top Announcement Strip ─────────────────────────────────── */}
       <div className="text-gray-600 text-xs bg-brand-secondary font-bold uppercase tracking-wider border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -122,41 +149,46 @@ export default function Navbar() {
                     </Link>
 
                     {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 min-w-[220px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 py-2">
-                        {item.children.map((child) => (
-                          <div key={child.label} className="relative overflow-visible"
-                            onMouseEnter={() => child.children ? setActiveSubDropdown(child.label) : undefined}
-                            onMouseLeave={() => child.children ? setActiveSubDropdown(null) : undefined}>
-                            {child.children ? (
-                              <>
-                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
+                      // ─── Primary dropdown shell (no overflow — keeps sub-dropdown flyout visible)
+                      <div className="absolute top-full left-0 z-50 aex-dropdown-animate">
+                        {/* Inner scroll wrapper — only this scrolls, does NOT clip siblings */}
+                        <div className="min-w-[240px] bg-white shadow-2xl rounded-xl border border-gray-100 py-2">
+                          {item.children.map((child) => (
+                            <div key={child.label} className="relative"
+                              onMouseEnter={() => child.children ? setActiveSubDropdown(child.label) : undefined}
+                              onMouseLeave={() => child.children ? setActiveSubDropdown(null) : undefined}>
+                              {child.children ? (
+                                <>
+                                  <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
+                                    {child.label}
+                                    <FontAwesomeIcon
+                                      icon={faChevronRight}
+                                      className="text-xs ml-4"
+                                    />
+                                  </Link>
+                                  {activeSubDropdown === child.label && (
+                                    // Sub-dropdown: sibling to the scroll wrapper so it is NEVER clipped
+                                    <div className="absolute top-0 left-full min-w-[280px] bg-white shadow-2xl rounded-xl border border-gray-100 z-[60] py-2 max-h-[80vh] overflow-y-auto aex-dropdown-scroll aex-dropdown-animate">
+                                      {child.children.map((sub) => (
+                                        <Link key={sub.label} href={sub.href}
+                                          className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
+                                          onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
+                                          {sub.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </>
+                              ) : (
+                                <Link href={child.href}
+                                  className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
+                                  onClick={() => setActiveDropdown(null)}>
                                   {child.label}
-                                  <FontAwesomeIcon
-                                    icon={faChevronDown}
-                                    className={`text-xs ml-4 transition-transform duration-200 ${activeSubDropdown === child.label ? "rotate-180" : ""}`}
-                                  />
                                 </Link>
-                                {activeSubDropdown === child.label && (
-                                  <div className="absolute top-0 left-full min-w-[260px] bg-white shadow-2xl rounded-xl border border-gray-100 z-[60] py-2">
-                                    {child.children.map((sub) => (
-                                      <Link key={sub.label} href={sub.href}
-                                        className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
-                                        onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
-                                        {sub.label}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                )}
-                              </>
-                            ) : (
-                              <Link href={child.href}
-                                className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
-                                onClick={() => setActiveDropdown(null)}>
-                                {child.label}
-                              </Link>
-                            )}
-                          </div>
-                        ))}
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -202,6 +234,7 @@ export default function Navbar() {
                       {item.label}
                     </Link>
                     <button
+                    aria-label="Toggle dropdown"
                       className="px-4 py-3 border-l border-white/5"
                       onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}>
                       <FontAwesomeIcon icon={faChevronDown}
@@ -218,6 +251,7 @@ export default function Navbar() {
                                 {child.label}
                               </Link>
                               <button
+                              aria-label="Toggle dropdown"
                                 className="px-4 py-2 border-l border-white/5"
                                 onClick={() => setMobileSubExpanded(mobileSubExpanded === child.label ? null : child.label)}>
                                 <FontAwesomeIcon icon={faChevronDown}
