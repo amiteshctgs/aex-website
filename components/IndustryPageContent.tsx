@@ -19,7 +19,7 @@ export default function IndustryPageContent({ industry }: Props) {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Main content */}
         <div className="lg:col-span-2 space-y-8">
-          <div className="relative rounded-2xl overflow-hidden h-72 shadow-xl">
+          <div className="relative rounded-2xl overflow-hidden h-[450px] shadow-xl">
             <Image
               src={industry.image}
               alt={industry.title}
@@ -35,6 +35,27 @@ export default function IndustryPageContent({ industry }: Props) {
               {industry.longDescription}
             </p>
           </div>
+
+          {/* Gallery section — only when industry has multiple images */}
+          {industry.images && industry.images.length > 0 && (
+            <div>
+              <h3 className="text-xl font-bold text-brand-primary mb-5">
+                Application Gallery
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {industry.images.map((img, idx) => (
+                  <div key={idx} className="relative rounded-2xl overflow-hidden h-60 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <Image
+                      src={img}
+                      alt={`${industry.title} gallery ${idx + 1}`}
+                      fill
+                      className="object-contain bg-white p-2"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Sub-items section — only when industry has sub-categories */}
           {industry.subItems && industry.subItems.length > 0 && (

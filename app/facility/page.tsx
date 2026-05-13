@@ -211,7 +211,7 @@ export default function FacilityPage() {
               ))}
             </ul>
           </div>
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-80 lg:h-96">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]  lg:h-96">
             <Image
               src="/images/resource/faq.jpg"
               alt="AEX Engineering Expertise"

@@ -72,12 +72,12 @@ export default function ProductsPage() {
               We manufacture a wide range of heat shrinkable products, cable jointing kits, and
               accessories designed for electrical, power, telecom, and pipeline industries.
             </p>
-            <DownloadPdfButton
+            {/* <DownloadPdfButton
               label="ALL PRODUCT CATALOGUES (PDF)"
               className="btn-primary inline-flex items-center gap-2"
-              fileName="ALL_PRODUCT_CATALOGUES.pdf"
-              pdfUrl="/pdfs/ALL_PRODUCT_CATALOGUES.pdf"
-            />
+              fileName="AEX_heat_shrink_products.pdf"
+              pdfUrl="/pdfs/AEX_heat_shrink_products.pdf"
+            /> */}
           </div>
 
           {/* Category Grid */}

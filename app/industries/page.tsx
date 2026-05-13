@@ -60,11 +60,13 @@ export default function IndustriesPage() {
 
       <section className="py-20 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-7xl mx-auto mb-16">
             <h2 className="section-title mb-4">Solutions for Every Sector</h2>
+            <p className="text-gray-500 leading-relaxed mb-6">
+              AEX International, a group of Apple International, a remarkable history of over 30 years in manufacturing all the types of Metal Parts under the brand APPLE. The spirit of perseverance has served us well in the last 30 years, reason why our manufacturing unit is one of the largest of its kind in Asia. AEX is a leading manufacturer of high-quality Power Cable Accessories, Heat Shrinkable Products, Busbar Insulation Products, Products for Pre-insulated Pipe Sealing Systems and Metal fittings in India.  We have emerged to become one of the largest heat shrink manufacturers in the world. AEX provides electrical and mechanical insulation solutions to the Electrical Utilities, Power and Telecom industries and Automotive and Electronics markets.
+            </p>
             <p className="text-gray-500 leading-relaxed">
-              Our heat shrinkable products are engineered to meet the rigorous demands of various
-              industries, providing reliable insulation, sealing, and protection.
+              AEX is one of the most experienced companies focussing solely on the Energy sectors and providing customised solutions to Electrical Insulating Industries. We provide a wide range of products, which are designed and produced to the highest International Standards. AEX is the most trusted name in contributing at every step right from Power Generation to Transmission and Distribution.  AEX has gained worldwide recognition for the highest material and product quality with standards being continuously controlled in our high-performance laboratories and testing facilities.
             </p>
           </div>
 

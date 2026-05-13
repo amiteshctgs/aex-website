@@ -4,7 +4,7 @@ import IndustryPageContent from "@/components/IndustryPageContent";
 import JsonLd from "@/components/JsonLd";
 import { getIndustryBySlug } from "@/lib/data/industries";
 
-const industry = getIndustryBySlug("power-transmission-and-distribution")!;
+const industry = getIndustryBySlug("electric-utilities-power-transmission")!;
 
 export const metadata: Metadata = {
   title: `${industry.title} Solutions | AEX International Engineering`,
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     "power cable solutions India",
   ],
   alternates: {
-    canonical: `https://www.aexheatshrink.com/industries/power-transmission-and-distribution`,
+    canonical: `https://www.aexheatshrink.com/industries/electric-utilities-power-transmission`,
   },
   openGraph: {
     title: `${industry.title} Solutions | AEX International Engineering`,
     description: industry.description,
-    url: `https://www.aexheatshrink.com/industries/power-transmission-and-distribution`,
+    url: `https://www.aexheatshrink.com/industries/electric-utilities-power-transmission`,
     type: "website",
     siteName: "AEX International Engineering",
     images: [{ url: industry.image, width: 800, height: 600, alt: industry.title }],

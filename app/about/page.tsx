@@ -142,7 +142,7 @@ export default function AboutPage() {
       {/* Welcome Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 block">
-          
+
           {/* Floated Image */}
           <div className="relative float-none md:float-left w-full md:w-1/2 lg:w-5/12 mb-10 md:mb-6 md:mr-10 lg:mr-14">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
@@ -166,13 +166,13 @@ export default function AboutPage() {
             <h2 className="section-title mb-6">
               With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
             </h2>
-            
+
             <div className="text-gray-600 leading-relaxed space-y-5 text-justify">
               <p>
                 We have a deep advantage of many years of experience in processing a wide variety of Thermoplastics and Thermoset Polymers including Flame-retardant materials across many industries.
               </p>
               <p>
-                Guided by our Policy of Innovation and flexibility, AEX leads the way in supplying high-quality services to the Energy industry worldwide. 
+                Guided by our Policy of Innovation and flexibility, AEX leads the way in supplying high-quality services to the Energy industry worldwide.
               </p>
               <p>
                 AEX is recognized as a worldwide leader in manufacturing a wide range of Heat Shrinkable Moulded Products, Heat Shrink Tubes, Power Cable Accessories, Insulation Enhancement Products, etc. Our Product range consists of Heat Shrink Cable End Caps, Heat Shrink Low Voltage Breakouts, Heat Shrink Non-Tracking Breakouts, Heat Shrink Creepage-extension Skirts, Heat Shrink Right Angled and Heat Shrink Straight Boots, Heat Shrink Anode Caps, Heat Shrink Pre-Insulated Pipe Sealing Caps, Heat Shrink Medium and Heavy Wall Tubes, Heat Shrink Busbar Insulating Sleeves, Heat Shrink Wraparound Sleeves, Wildlife Protection Products etc.
@@ -184,7 +184,7 @@ export default function AboutPage() {
                 Our R&D team and manufacturing setups employ cutting-edge processes to deliver products of the highest standard to our customers. To ensure maximum reliability and to consistently meet customer expectations, all AEX products are subject to stringent quality management and testing procedures. Testing starts with the incoming raw materials, spans through the manufacturing process, and finally extends to checking the performance of the end products. AEX has an established quality assurance structure designed strictly following ISO 9001 and ISO 14001, to ensure quality is maintained in the product and services delivered. AEX&apos;s test facility is capable of conducting performance tests of Cable Accessories according to all major national and international standards. Independent type testing of products plays an important role in reassuring customers of our product quality and reliability. To meet this requirement, AEX&apos;s Power Cable Accessories have been tested to international standards at Independent Accredited Testing Facilities worldwide.
               </p>
             </div>
-            
+
             <div className="clear-both pt-8 flex flex-wrap gap-4">
               <Link href="/facility" className="btn-primary">
                 Our Facility <FontAwesomeIcon icon={faArrowRight} />
@@ -233,7 +233,7 @@ export default function AboutPage() {
             </div>
 
             {/* Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-80 lg:h-full min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]  lg:h-full min-h-[400px]">
               <Image
                 src="/images/resource/feature52.jpg"
                 alt="AEX Heat Shrink Products Range"
@@ -264,7 +264,7 @@ export default function AboutPage() {
                 Explore Solutions <FontAwesomeIcon icon={faArrowRight} />
               </Link>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-80 min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]  min-h-[400px]">
               <Image
                 src="/images/resource/feature52.jpg"
                 alt="AEX Cable Accessories and Heat Shrink Solutions"

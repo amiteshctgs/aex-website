@@ -105,7 +105,7 @@ export default async function ProductCategoryPage({ params }: Props) {
           {/* Left — Category Details */}
           <div className="lg:col-span-2 space-y-10">
             {/* Hero Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl h-72 md:h-96">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[450px]  md:h-96">
               <Image
                 src={product.image}
                 alt={product.title}

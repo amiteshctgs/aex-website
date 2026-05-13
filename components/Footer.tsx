@@ -43,7 +43,7 @@ const solutionLinks: SolutionLink[] = [
   { label: "Cable Industry", href: "/industries/cable-industry" },
   { label: "Switchgear Industry", href: "/industries/switchgear-industry" },
   { label: "Transformer & Busduct", href: "/industries/transformer-and-busduct-industry" },
-  { label: "Electric Utilities (Power T&D)", href: "/industries/power-transmission-and-distribution" },
+  { label: "Electric Utilities (Power T&D)", href: "/industries/electric-utilities-power-transmission" },
   {
     label: "Asset & Wildlife Protection",
     href: "/industries/asset-and-wildlife-protection",

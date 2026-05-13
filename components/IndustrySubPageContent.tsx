@@ -19,7 +19,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Main content */}
         <div className="lg:col-span-2 space-y-8">
-          <Link 
+          <Link
             href={`/industries/${industry.slug}`}
             className="inline-flex items-center gap-2 text-brand-primary font-medium hover:gap-3 transition-all mb-4"
           >
@@ -27,12 +27,12 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
             Back to {industry.shortTitle} Overview
           </Link>
 
-          <div className="relative rounded-2xl overflow-hidden h-80 shadow-xl border border-gray-100">
+          <div className="relative rounded-2xl overflow-hidden h-[450px]  shadow-xl border border-gray-100 items-center justify-center">
             <Image
               src={subItem.image || industry.image}
               alt={subItem.label}
               fill
-              className="object-cover"
+              className="object-contain object-center"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
@@ -49,6 +49,27 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
               {subItem.longDescription || "AEX provides high-quality engineered solutions tailored for specific industrial requirements. Our products are designed for reliability, durability, and ease of installation."}
             </div>
           </div>
+
+          {/* Gallery section — only when subItem has multiple images */}
+          {subItem.images && subItem.images.length > 0 && (
+            <div className="pt-6 border-t border-gray-100">
+              <h3 className="text-xl font-bold text-brand-primary mb-5">
+                Application Gallery
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {subItem.images.map((img, idx) => (
+                  <div key={idx} className="relative rounded-2xl overflow-hidden h-60 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <Image
+                      src={img}
+                      alt={`${subItem.label} gallery ${idx + 1}`}
+                      fill
+                      className="object-contain bg-white p-2"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {(subItem.features || subItem.applications) && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-100">
