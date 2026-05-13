@@ -1049,33 +1049,48 @@ export const industries: Industry[] = [
     description: "High-voltage insulating covers and sleeves to protect systems from accidental bridging caused by wildlife.",
     longDescription:
       "High-voltage insulating products for underground and overhead systems in electrical supply utilities, railways, OEMs & major industrial companies. They improve systems' reliability and prevent costly damages to equipment caused by accidental inter-phase or phase to ground bridging. Bridging occurs when birds, animals, vegetation, air-bourne debris and even vandalism come in contact with bare electrical systems in substations, overhead lines and related equipment. By insulating strategic areas, it is possible to eliminate such problems, and in areas of growing environmental awareness such as protection of endangered species, insulation products allow wildlife to move freely without being electrocuted.",
-    image: "/images/resource/slideee4.jpg",
+    image: "/images/no.5-asset-and-wildlife-protection-products/insulation-enhancement-theme.jpg",
+    images: [
+      "/images/no.5-asset-and-wildlife-protection-products/insulation-enhancement-theme.jpg",
+      "/images/no.5-asset-and-wildlife-protection-products/field-application-image.jpg",
+    ],
     products: [
       "Bus Connection Insulating Covers",
       "Overhead Line Covers",
       "Overhead Line Tubes",
+      "Heat Shrink Pole Protection Sleeves",
       "Heat Shrink Busbar Sleeves",
-      "Heat Shrink Busbar Tapes"
+      "Heat Shrink Tape",
+      "Heat Shrink Wrap Around Sleeves",
+      "Bushing Boot"
     ],
     icon: "shield-alt",
     subItems: [
       {
-        label: "Wildlife Protection Covers",
-        slug: "wildlife-protection-covers",
-        href: "/industries/asset-and-wildlife-protection/wildlife-protection-covers",
+        label: "Bus Connection Insulating Covers",
+        slug: "bus-connection-insulating-covers",
+        href: "/industries/asset-and-wildlife-protection/bus-connection-insulating-covers",
         description: "Specialized insulating covers to protect wildlife and prevent electrical faults on overhead equipment.",
-        longDescription: "AEX Wildlife Protection Covers are engineered to provide a reliable insulating barrier for transformer bushings, cross-arms, and other critical overhead equipment. These covers are essential for preventing accidental bridging by birds and animals, ensuring both wildlife safety and grid reliability. Manufactured from high-quality, UV-stabilized polyolefin, they offer exceptional weather resistance and a long service life in harsh outdoor environments.",
-        image: "/images/resource/p3m14.jpg",
+        longDescription: "Medium voltage protection covers for energized Busbars, Insulators, Suspension clamps and Conductors from flash-overs due to contact from birds, squirrels and other wildlife. he protective covers ABCIC are available in different designs and sizes. They offer an effective encapsulation against accidental phase-to-phase or phase-to-ground contact caused by fauna and flora. \n\nThe Covers are made from a UV stable, track resistant, high performance material to ensure years of reliable service.",
+        image: "/images/no.5-asset-and-wildlife-protection-products/product-application/5-1-bushing-insulation-cover-2.jpg",
+        images: [
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-1-bushing-insulation-cover-2.jpg",
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-2-bushing-insulation-cover-3.jpg"
+        ],
         features: ["UV stabilized material", "Easy snap-on installation", "Rated for 11kV to 33kV", "Weather resistant", "Flame retardant"],
         applications: ["Transformer bushings", "Substation equipment", "Overhead cross-arms", "Jumper wire protection"]
+
       },
       {
         label: "Overhead Line Covers",
         slug: "overhead-line-covers",
         href: "/industries/asset-and-wildlife-protection/overhead-line-covers",
         description: "Flexible insulating covers for bare overhead conductors providing phase-to-phase protection.",
-        longDescription: "Our Overhead Line Covers provide a robust insulating layer for bare conductors in urban areas and wildlife corridors. They are designed for easy installation without the need for power outages, offering an immediate solution to reduce fault rates caused by environmental factors. The flexible design allows for application on various conductor sizes and configurations.",
-        image: "/images/resource/p3m14.jpg",
+        longDescription: "AEX's Overhead Line Cover is a Medium Voltage Wrap-Around type Overhead Line Cover that provides state-of-the-art insulation to Overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material.  It is designed to insulate existing bare lines without costly conductor replacement expenditures or additional line hardware.These covers provide a layer of electrical insulation for Phase-to-Phase and Phase-to-Ground protection from birds and animals.",
+        image: "/images/no.5-asset-and-wildlife-protection-products/product-application/5-2-overhead-line-cover.jpg",
+        images: [
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-2-overhead-line-cover.jpg"
+        ],
         features: ["Retrofit installation", "Flexible design", "UV resistant", "High dielectric strength"],
         applications: ["Urban distribution lines", "Wildlife corridors", "Temporary insulation"]
       },
@@ -1084,20 +1099,82 @@ export const industries: Industry[] = [
         slug: "overhead-line-tubes",
         href: "/industries/asset-and-wildlife-protection/overhead-line-tubes",
         description: "Continuous heat shrink insulation for bare overhead conductors.",
+        longDescription: "AEX's Overhead Line Tube is a Medium Voltage Tubular type Line Cover that provides insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with Power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material. ",
+        image: "/images/no.5-asset-and-wildlife-protection-products/product-application/5-3-overhead-line-tube.png",
+        images: [
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-3-overhead-line-tube.png"
+        ],
+        features: ["Superior tracking resistance", "Excellent weatherability", "High mechanical strength", "Permanent insulation"],
+        applications: ["Overhead lines", "Transmission networks", "Distribution networks"]
       },
       {
-        label: "Busbar Sleeves",
-        slug: "busbar-sleeves",
-        href: "/industries/asset-and-wildlife-protection/busbar-sleeves",
+        label: "Heat Shrink Pole Protection Sleeves",
+        slug: "heat-shrink-pole-protection-sleeves",
+        href: "/industries/asset-and-wildlife-protection/heat-shrink-pole-protection-sleeves",
+        description: "Sleeves to protect utility poles from environmental damage and wildlife.",
+        longDescription: "Heat Shrink Pole Protection Sleeves are applied to utility poles to protect them from environmental degradation, moisture, and wildlife damage. They extend the life of the poles and improve network reliability.",
+        image: "/images/no.4-electric-utilities-power-transmission/product-and-application/4-6-pole-protection-sleeve-application-image.png",
+        images: [
+          "/images/no.4-electric-utilities-power-transmission/product-and-application/4-6-pole-protection-sleeve-application-image.png"
+        ],
+        features: ["Environmental protection", "Wildlife deterrence", "UV resistant", "Extends pole lifespan"],
+        applications: ["Utility poles", "Power distribution", "Telecommunications"]
+      },
+      {
+        label: "Heat Shrink Busbar Sleeves",
+        slug: "heat-shrink-busbar-sleeves",
+        href: "/industries/asset-and-wildlife-protection/heat-shrink-busbar-sleeves",
         description: "Insulating sleeves for outdoor busbar connections.",
+        longDescription: "AEX’s Heat Shrink Busbar Insulating Sleeve is used to insulate Copper and Aluminium Busbars. These Sleeves provide Insulation enhancement and protection against flashover and accidentally induced discharge. \n\nThe Busbar Sleeves can be used in confined spaces to reduce the clearance necessary between busbar phases in Medium Voltage Switchgears up to 36kV. The use of Busbar Sleeves allows equipment designers the liberty to reduce air spacing between busbars, such as in the manufacture of switchgear cabinets where space is at a premium.",
+        image: "/images/no.5-asset-and-wildlife-protection-products/product-application/5-4-heat-shrink-busbar-insulation-sleeve.jpg",
+        images: [
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-4-heat-shrink-busbar-insulation-sleeve.jpg"
+        ],
+        features: ["High dielectric strength", "Protects against flashovers", "UV stable", "Weather resistant"],
+        applications: ["Busducts", "Substations", "Power distribution"]
       },
       {
         label: "Heat Shrink Tape",
-        slug: "busbar-tape",
-        href: "/industries/asset-and-wildlife-protection/busbar-tape",
-        description: "Insulating tape for irregular busbar shapes and joints.",
+        slug: "heat-shrink-tape",
+        href: "/industries/asset-and-wildlife-protection/heat-shrink-tape",
+        description: "Versatile insulating tape for irregular busbar shapes and joints.",
+        longDescription: "AEX’s high voltage Heat Shrink Busbar Insulation Tapes are adhesive-coated tapes that provide Insulation enhancement and protection against accidentally induced flashovers for Copper or Aluminium busbar sections where tube products cannot easily be applied. \n\n The AHT tapes are quick and easy to install. Upon application of heat, the tapes shrink and the adhesive lining melts, joining the overlapping layers to produce a complete seal. ",
+        image: "/images/no.5-asset-and-wildlife-protection-products/product-application/5-5-application-heat-shrink-busbar-insulating-tapes.png",
+        images: [
+          "/images/no.5-asset-and-wildlife-protection-products/product-application/5-5-application-heat-shrink-busbar-insulating-tapes.png"
+        ],
+        features: ["Highly flexible", "Ideal for complex shapes", "Excellent electrical insulation", "Easy application"],
+        applications: ["Complex bends", "Substation connections", "Repair and maintenance"]
       },
-    ],
+      {
+        label: "Heat Shrink Wrap Around Sleeves",
+        slug: "heat-shrink-wrap-around-sleeves",
+        href: "/industries/asset-and-wildlife-protection/heat-shrink-wrap-around-sleeves",
+        description: "Designed for cable repair and jointing without cutting the cable.",
+        longDescription: "Heat Shrink Wrap Around Sleeves are designed for cable repair and jointing in power distribution networks without the need to cut the cable, providing effective insulation and environmental sealing.",
+        image: "/images/no.4-electric-utilities-power-transmission/product-and-application/4-9-product-heat-shrink-wraparound-sleeve.jpg",
+        images: [
+          "/images/no.4-electric-utilities-power-transmission/product-and-application/4-9-product-heat-shrink-wraparound-sleeve.jpg",
+          "/images/no.4-electric-utilities-power-transmission/product-and-application/4-9-application-heat-shrink-wraparound-sleeve.jpg"
+        ],
+        features: ["No need to cut cable", "Quick and easy repair", "Excellent environmental sealing", "Durable"],
+        applications: ["Cable repair", "Power distribution", "Maintenance"]
+      },
+      {
+        label: "Bushing Boot",
+        slug: "bushing-boot",
+        href: "/industries/asset-and-wildlife-protection/bushing-boot",
+        description: "Provides insulation and protection for transformer bushings.",
+        longDescription: "Bushing Boots are designed to insulate and protect bushings in substations from environmental elements and animal-induced short circuits.",
+        image: "/images/no.4-electric-utilities-power-transmission/product-and-application/4-14-product-bushing-boot.jpg",
+        images: [
+          "/images/no.4-electric-utilities-power-transmission/product-and-application/4-14-product-bushing-boot.jpg",
+          "/images/no.4-electric-utilities-power-transmission/product-and-application/4-14-application-bushing-boot.jpg"
+        ],
+        features: ["High tracking resistance", "UV resistant", "Protects against animal intrusion", "Easy to install"],
+        applications: ["Transformer bushings", "Substation equipment", "Power utilities"]
+      }
+    ]
   },
   {
     slug: "wind-energy-solutions",
