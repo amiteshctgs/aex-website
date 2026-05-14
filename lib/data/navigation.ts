@@ -108,7 +108,7 @@ export const navigation: NavItem[] = [
 
   {
     label: "SOLUTIONS",
-    href: "#",
+    href: "/industries",
     children: [
       {
         label: "Cable Industry",

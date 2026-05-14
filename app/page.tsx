@@ -11,6 +11,7 @@ import {
   faLeaf,
 } from "@fortawesome/free-solid-svg-icons";
 import HeroSlider from "@/components/HeroSlider";
+import FactorySlider from "@/components/FactorySlider";
 import StatsCounter from "@/components/StatsCounter";
 import ProductCard from "@/components/ProductCard";
 import IndustryCard from "@/components/IndustryCard";
@@ -158,8 +159,18 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* Welcome Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
+         <div className="max-w-6xl mx-auto px-4">
+         <p className="section-subtitle px-4">Welcome to AEX Heat Shrink</p>
+            {/* H1 — one per page, keyword-rich. The HeroSlider uses <p> for visual titles. */}
+            <h1 className="section-title mb-5 px-4">
+              With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
+            </h1>
+            </div>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+
+          
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -179,12 +190,10 @@ export default function HomePage() {
           </div>
 
           {/* Content */}
+
+         
           <div>
-            <p className="section-subtitle">Welcome to AEX Heat Shrink</p>
-            {/* H1 — one per page, keyword-rich. The HeroSlider uses <p> for visual titles. */}
-            <h1 className="section-title mb-5">
-              With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
-            </h1>
+           
             <p className="text-gray-600 leading-relaxed mb-4">
               We have a deep advantage of many years of experience in processing a wide variety of
               <strong> Thermoplastics and Thermoset Polymers</strong> including Flame-retardant materials
@@ -229,7 +238,7 @@ export default function HomePage() {
       <StatsCounter />
 
       {/* Featured Products */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-12 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Our Products</p>
@@ -256,44 +265,19 @@ export default function HomePage() {
       </section>
 
       {/* Factory / Aerial View section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
+          <p className="section-subtitle">Our Facility</p>
+          <h2 className="section-title mt-3 mb-5 text-center  ">
+            200,000 Sq Ft State-of-the-Art Manufacturing Unit
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            {/* Factory image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-              <Image
-                src="/images/resource/factory-aerial.jpg"
-                alt="AEX Manufacturing Facility — Aerial View"
-                width={700}
-                height={450}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              {/* Play button overlay for video */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <a
-                  href="https://www.youtube.com/@aexheatshrink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Watch factory aerial video"
-                  className="w-20 h-20 bg-brand-primary/90 hover:bg-brand-primary text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 ml-1">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </a>
-              </div>
-              {/* Tag */}
-              <div className="absolute top-4 left-4 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                Factory Aerial View
-              </div>
-            </div>
+            {/* Factory image slider */}
+            <FactorySlider />
 
             {/* Content */}
             <div>
-              <p className="section-subtitle">Our Facility</p>
-              <h2 className="section-title mt-3 mb-5">
-                200,000 Sq Ft State-of-the-Art Manufacturing Unit
-              </h2>
+
               <p className="text-gray-600 leading-relaxed mb-4 text-justify">
                 AEX operates from a massive <strong>200,000 sq ft</strong> manufacturing facility
                 at Jamnagar GIDC — one of India&apos;s premier industrial hubs. Our end-to-end
@@ -329,7 +313,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Why Choose AEX</p>
@@ -356,7 +340,7 @@ export default function HomePage() {
       </section>
 
       {/* Industries */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-12 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Industries We Serve</p>
@@ -372,7 +356,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/industries/cable-industry" className="btn-secondary">
+            <Link href="/industries" className="btn-secondary">
               View All Industries
               <FontAwesomeIcon icon={faArrowRight} />
             </Link>
@@ -382,7 +366,7 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <section
-        className="py-20 relative"
+        className="py-12 relative"
         style={{
           backgroundImage:
             "linear-gradient(rgba(51,51,51,0.88), rgba(51,51,51,0.92)), url(/images/background/10.jpg)",
@@ -415,7 +399,7 @@ export default function HomePage() {
       </section>
 
       {/* Gallery section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Our Work</p>

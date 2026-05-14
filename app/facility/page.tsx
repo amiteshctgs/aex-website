@@ -92,7 +92,7 @@ export default function FacilityPage() {
       />
 
       {/* Introduction */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
@@ -146,7 +146,7 @@ export default function FacilityPage() {
       <StatsCounter />
 
       {/* Facility Features Grid */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-12 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Capabilities</p>
@@ -178,11 +178,15 @@ export default function FacilityPage() {
       </section>
 
       {/* Expertise section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
+        <div className="text-center mb-12">
+          <p className="section-subtitle">Engineering Expertise</p>
+          <h2 className="section-title mt-3 mb-5">In-House Specialists Across Every Discipline</h2>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="section-subtitle">Engineering Expertise</p>
-            <h2 className="section-title mt-3 mb-5">In-House Specialists Across Every Discipline</h2>
+
             <p className="text-gray-600 leading-relaxed mb-4">
               Our engineers are experts in fields ranging from <strong>Injection Moulding</strong>,
               Anti-Static Treatment, and <strong>Extrusion Lines</strong>, along with Project
@@ -213,17 +217,18 @@ export default function FacilityPage() {
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]  lg:h-96">
             <Image
-              src="/images/resource/faq.jpg"
+              src="/images/resource/project-4.jpg"
               alt="AEX Engineering Expertise"
               fill
-              className="object-cover"
+              className="object-cover "
+              style={{ width: '100%', height: '100%' }}
             />
           </div>
         </div>
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-12 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Factory Photos</p>
@@ -253,13 +258,13 @@ export default function FacilityPage() {
 
       {/* CTA */}
       <section
-        className="py-20"
+        className="py-12"
         style={{
           background: "linear-gradient(135deg, #cc0000 0%, #1a2b5f 100%)",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-yellow-400 font-semibold uppercase tracking-widest text-xs mb-4">
+          <p className="text-yellow-400 font-semibold uppercase tracking-widest text-xs mb-4 text-center">
             Visit or Contact Us
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">

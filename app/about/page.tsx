@@ -140,8 +140,12 @@ export default function AboutPage() {
       />
 
       {/* Welcome Section */}
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 block">
+          <p className="section-subtitle">Welcome to AEX Heat Shrink</p>
+          <h2 className="section-title mb-6">
+            With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
+          </h2>
 
           {/* Floated Image */}
           <div className="relative float-none md:float-left w-full md:w-1/2 lg:w-5/12 mb-10 md:mb-6 md:mr-10 lg:mr-14">
@@ -162,10 +166,7 @@ export default function AboutPage() {
 
           {/* Content */}
           <div>
-            <p className="section-subtitle">Welcome to AEX Heat Shrink</p>
-            <h2 className="section-title mb-6">
-              With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
-            </h2>
+
 
             <div className="text-gray-600 leading-relaxed space-y-5 text-justify">
               <p>
@@ -192,7 +193,7 @@ export default function AboutPage() {
               <Link href="/strength" className="btn-secondary">
                 Strength &amp; Values
               </Link>
-              <DownloadPdfButton />
+              <DownloadPdfButton pdfUrl="/pdfs/aex-company-profile.pdf" forceModal={true} />
             </div>
           </div>
         </div>
@@ -202,7 +203,7 @@ export default function AboutPage() {
       <StatsCounter />
 
       {/* Product Range */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div>
@@ -246,7 +247,7 @@ export default function AboutPage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-white border-t border-gray-100">
+      <section className="py-14 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <p className="section-subtitle">Our Solutions</p>
@@ -277,7 +278,7 @@ export default function AboutPage() {
       </section>
 
       {/* R&D & Advanced Tech — split */}
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <p className="section-subtitle">Innovation &amp; Technology</p>
@@ -368,7 +369,7 @@ export default function AboutPage() {
       </section>
 
       {/* Key Strengths */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Why Choose AEX</p>
@@ -396,13 +397,13 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section
-        className="py-20"
+        className="py-14"
         style={{
           background: "linear-gradient(135deg, #cc0000 0%, #1a2b5f 100%)",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-yellow-400 font-semibold uppercase tracking-widest text-xs mb-4">
+          <p className="text-yellow-400 font-semibold uppercase tracking-widest text-xs mb-4 text-center">
             Get in Touch
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">

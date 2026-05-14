@@ -102,7 +102,7 @@ export default async function CertificatePage({ params }: Props) {
         ]}
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main */}
           <div className="lg:col-span-2 space-y-8">
@@ -150,11 +150,10 @@ export default async function CertificatePage({ params }: Props) {
                   <Link
                     key={c.slug}
                     href={`/certificates/${c.slug}`}
-                    className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                      c.slug === cert.slug
+                    className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${c.slug === cert.slug
                         ? "bg-brand-accent text-white"
                         : "bg-white/10 text-gray-200 hover:bg-white/20"
-                    }`}
+                      }`}
                   >
                     {c.title} — {c.subtitle}
                   </Link>

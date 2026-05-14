@@ -15,7 +15,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
     .slice(0, 5);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Main content */}
         <div className="lg:col-span-2 space-y-8">
@@ -121,12 +121,23 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8">
+        <div className="space-y-8 lg:sticky lg:top-32 lg:self-start">
           {/* Related Industry Info */}
+
+
+          <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-xl font-bold mb-3">Quick Contact</h3>
+            <p className="text-blue-100 text-sm mb-6">
+              Looking for a bulk quote or specific configuration for your industrial project?
+            </p>
+            <Link href="/enquiry" className="btn-accent w-full justify-center">
+              Submit Enquiry
+            </Link>
+          </div>
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
             <h3 className="font-bold text-brand-primary text-lg mb-4">Related to {industry.shortTitle}</h3>
             <div className="space-y-3">
-              {industry.subItems?.filter(item => item.slug !== subItem.slug).map((item) => (
+              {industry.subItems?.filter(item => item.slug !== subItem.slug).slice(0, 5).map((item) => (
                 <Link
                   key={item.slug}
                   href={item.href}
@@ -139,17 +150,6 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
               ))}
             </div>
           </div>
-
-          <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-xl font-bold mb-3">Quick Contact</h3>
-            <p className="text-blue-100 text-sm mb-6">
-              Looking for a bulk quote or specific configuration for your industrial project?
-            </p>
-            <Link href="/enquiry" className="btn-accent w-full justify-center">
-              Submit Enquiry
-            </Link>
-          </div>
-
           <div>
             <h3 className="font-bold text-brand-primary text-lg mb-4">Other Industries</h3>
             <div className="space-y-2">

@@ -135,7 +135,7 @@ function EnquiryFormInner() {
 
   if (success) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
+      <div className="flex flex-col items-center justify-center py-14 text-center">
         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
           <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-4xl" />
         </div>

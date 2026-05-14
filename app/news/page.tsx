@@ -4,12 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
   faArrowRight,
-  faTrophy,
-  faNewspaper,
-  faGlobe,
-  faIndustry,
 } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/PageTitle";
+import { news } from "@/lib/data/news";
 
 export const metadata: Metadata = {
   title: "Events & News | AEX International Engineering",
@@ -41,75 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-const news = [
-  {
-    id: 1,
-    type: "Event",
-    icon: faIndustry,
-    date: "March 2024",
-    title: "AEX at ELECRAMA 2024 — India's Largest Power & Energy Expo",
-    excerpt:
-      "AEX International Engineering participated in ELECRAMA 2024, showcasing its latest range of heat shrink cable accessories, busbar insulation products, and renewable energy solutions to global buyers and OEMs.",
-    category: "Exhibition",
-    color: "bg-brand-primary",
-  },
-  {
-    id: 2,
-    type: "News",
-    icon: faTrophy,
-    date: "January 2024",
-    title: "AEX Achieves ISO 45001:2018 Occupational Health & Safety Certification",
-    excerpt:
-      "AEX International Engineering is proud to announce the successful renewal of its ISO 45001:2018 certification — reaffirming our commitment to employee safety, health, and well-being across all 200,000 sq ft of our manufacturing operations.",
-    category: "Certification",
-    color: "bg-[#1a2b5f]",
-  },
-  {
-    id: 3,
-    type: "News",
-    icon: faGlobe,
-    date: "December 2023",
-    title: "AEX Expands Export Reach to 50+ Countries Across 6 Continents",
-    excerpt:
-      "AEX now exports its heat shrink and cable accessory products to more than 50 countries spanning Africa, Europe, the Middle East, Asia-Pacific, the Americas, and Australia — reinforcing our position as a truly global manufacturing partner.",
-    category: "Milestone",
-    color: "bg-emerald-600",
-  },
-  {
-    id: 4,
-    type: "Event",
-    icon: faIndustry,
-    date: "November 2023",
-    title: "Participation in Gulf Electric & Power Expo — Dubai",
-    excerpt:
-      "Our team represented AEX at the Gulf Electric & Power Expo in Dubai, connecting with cable manufacturers, utilities, and EPC contractors from the Middle East and North Africa regions.",
-    category: "Exhibition",
-    color: "bg-brand-primary",
-  },
-  {
-    id: 5,
-    type: "News",
-    icon: faNewspaper,
-    date: "September 2023",
-    title: "New Product Launch: Heat Shrink Pole Protection Range",
-    excerpt:
-      "AEX introduces its expanded pole protection product range including heat shrink pole caps and protection sleeves designed specifically for utility poles, street poles, and telecom infrastructure.",
-    category: "Product Launch",
-    color: "bg-brand-accent",
-  },
-  {
-    id: 6,
-    type: "News",
-    icon: faTrophy,
-    date: "June 2023",
-    title: "AEX Recognized as Top Exporter by GIDC Jamnagar Chamber of Commerce",
-    excerpt:
-      "AEX International Engineering was honored by the Jamnagar GIDC Chamber of Commerce for outstanding export performance and contribution to India's industrial manufacturing sector.",
-    category: "Award",
-    color: "bg-[#1a2b5f]",
-  },
-];
-
 export default function NewsPage() {
   return (
     <>
@@ -119,7 +47,7 @@ export default function NewsPage() {
       />
 
       {/* News grid */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="section-subtitle">Latest Updates</p>
@@ -153,16 +81,18 @@ export default function NewsPage() {
                   </div>
 
                   <h3 className="font-bold text-gray-900 text-base leading-snug mb-3 group-hover:text-brand-primary transition-colors duration-200">
-                    {item.title}
+                    <Link href={`/news/${item.slug}`}>
+                      {item.title}
+                    </Link>
                   </h3>
 
                   <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5 text-justify">
                     {item.excerpt}
                   </p>
 
-                  <div className="flex items-center gap-1.5 text-brand-primary font-semibold text-xs group-hover:gap-2.5 transition-all duration-200 cursor-pointer">
+                  <Link href={`/news/${item.slug}`} className="flex items-center gap-1.5 text-brand-primary font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
                     Read More <FontAwesomeIcon icon={faArrowRight} className="text-[10px]" />
-                  </div>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -172,19 +102,19 @@ export default function NewsPage() {
 
       {/* CTA */}
       <section
-        className="py-20"
+        className="py-14"
         style={{
           background: "linear-gradient(135deg, #111111 0%, #1a2b5f 100%)",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-brand-accent font-semibold uppercase tracking-widest text-xs mb-4">
+          <p className="text-brand-accent font-semibold uppercase tracking-widest text-xs mb-4 text-center">
             Stay Connected
           </p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Follow AEX on Social Media
           </h2>
-          <p className="text-gray-400 mb-8 text-sm">
+          <p className="text-gray-400 mb-8 text-sm  text-center">
             Get the latest product launches, industry insights, and event updates.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

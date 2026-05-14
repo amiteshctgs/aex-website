@@ -80,7 +80,7 @@ export default function ValuesWeLiveByPage() {
       />
 
       {/* Values */}
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <p className="section-subtitle">Values We Live By</p>
@@ -115,7 +115,7 @@ export default function ValuesWeLiveByPage() {
 
       {/* Path to Success / CTA */}
       <section
-        className="py-20 relative"
+        className="py-14 relative"
         style={{
           backgroundImage:
             "linear-gradient(rgba(13,27,62,0.90), rgba(13,27,62,0.93)), url(/images/background/10.jpg)",
@@ -128,7 +128,7 @@ export default function ValuesWeLiveByPage() {
           <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
             <FontAwesomeIcon icon={faFlag} className="text-white text-2xl" />
           </div>
-          <p className="text-brand-accent font-semibold uppercase tracking-widest text-xs mb-4">
+          <p className="text-brand-accent font-semibold uppercase tracking-widest text-xs mb-4 text-center">
             Path to Success
           </p>
           <h2 className="text-3xl md:text-5xl text-center font-extrabold text-white mb-4">

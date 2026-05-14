@@ -110,7 +110,7 @@ export default function ContactPage() {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "09:00",
         "closes": "18:00"
       }
@@ -141,7 +141,7 @@ export default function ContactPage() {
       />
 
       {/* Contact section */}
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Form — 2 cols */}
           <div className="lg:col-span-2">
@@ -255,7 +255,7 @@ export default function ContactPage() {
 
       {/* CTA Banner */}
       <section
-        className="py-20"
+        className="py-14"
         style={{
           background: "linear-gradient(135deg, #111111 0%, #1a2b5f 100%)",
         }}

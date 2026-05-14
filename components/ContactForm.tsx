@@ -53,7 +53,7 @@ export default function ContactForm() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    
+
     // Clear the specific error when the user starts typing
     if (errors[name as keyof FormState]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
@@ -86,7 +86,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -118,7 +118,7 @@ export default function ContactForm() {
 
   if (success) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
+      <div className="flex flex-col items-center justify-center py-14 text-center">
         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
           <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-4xl" />
         </div>

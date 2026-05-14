@@ -87,7 +87,7 @@ export default function CertificatesPage() {
         breadcrumbs={[{ label: "Certificates" }]}
       />
 
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="section-title mb-4">Commitment to Quality & Safety</h2>

@@ -100,7 +100,7 @@ export default async function ProductCategoryPage({ params }: Props) {
         ]}
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left — Category Details */}
           <div className="lg:col-span-2 space-y-10">
@@ -199,7 +199,7 @@ export default async function ProductCategoryPage({ params }: Props) {
           </div>
 
           {/* Right Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
             {/* CTA */}
             <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-4">Need Help?</h3>

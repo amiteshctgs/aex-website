@@ -116,7 +116,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <Navbar />
-        <main className="flex-grow overflow-x-hidden">{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
         <BackToTop />
         <WhatsAppButton />

@@ -56,27 +56,18 @@ export default function CatalogueCard({ catalogue }: CatalogueCardProps) {
           href={`/downloads/${catalogue.slug}`}
           className="relative aspect-[3/4] w-full bg-gray-50 block overflow-hidden"
         >
-          {catalogue.thumbnailUrl ? (
-            <Image
-              src={catalogue.thumbnailUrl}
-              alt={catalogue.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          ) : (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 p-6 text-center transition-transform duration-500 group-hover:scale-105 border-b-4 border-brand-primary/20">
-              <div className="w-16 h-20 bg-white rounded shadow-md flex flex-col items-center justify-center mb-4 border border-gray-100 relative overflow-hidden transform group-hover:-translate-y-1 transition-transform">
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-primary"></div>
-                <FontAwesomeIcon icon={faFilePdf} className="text-3xl text-brand-primary/80 mt-1" />
-              </div>
-              <h4 className="text-gray-800 font-bold text-sm leading-snug line-clamp-3 drop-shadow-sm">
-                {catalogue.title}
-              </h4>
-              <span className="mt-2 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                AEX Document
-              </span>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 p-6 text-center transition-transform duration-500 group-hover:scale-105 border-b-4 border-brand-primary/20">
+            <div className="w-16 h-20 bg-white rounded shadow-md flex flex-col items-center justify-center mb-4 border border-gray-100 relative overflow-hidden transform group-hover:-translate-y-1 transition-transform">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-primary"></div>
+              <FontAwesomeIcon icon={faFilePdf} className="text-3xl text-brand-primary/80 mt-1" />
             </div>
-          )}
+            <h4 className="text-gray-800 font-bold text-sm leading-snug line-clamp-3 drop-shadow-sm">
+              {catalogue.title}
+            </h4>
+            <span className="mt-2 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+              AEX Document
+            </span>
+          </div>
           
           {/* Overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -86,11 +77,11 @@ export default function CatalogueCard({ catalogue }: CatalogueCardProps) {
             <span className="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
               {catalogue.subCategory}
             </span>
-            {catalogue.requiresLead && (
+            {/* {catalogue.requiresLead && (
               <span className="bg-gray-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md inline-flex items-center gap-1 w-fit">
                 <FontAwesomeIcon icon={faLock} className="w-2 h-2" /> Premium
               </span>
-            )}
+            )} */}
           </div>
         </Link>
 

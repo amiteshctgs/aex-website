@@ -38,7 +38,7 @@ export default function EnquiryPage() {
         breadcrumbs={[{ label: "Enquiry" }]}
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Form */}
           <div className="lg:col-span-2">

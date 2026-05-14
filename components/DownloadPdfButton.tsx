@@ -10,13 +10,15 @@ interface DownloadPdfButtonProps {
   className?: string;
   fileName?: string;
   pdfUrl?: string; // Optional static PDF URL
+  forceModal?: boolean; // Always ask for user info before downloading
 }
 
 export default function DownloadPdfButton({ 
   label = "Download Company Profile (PDF)", 
   className = "btn-primary",
   fileName = "AEX_Company_Profile.pdf",
-  pdfUrl
+  pdfUrl,
+  forceModal = false
 }: DownloadPdfButtonProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +26,7 @@ export default function DownloadPdfButton({
 
   const handleDownloadClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (!hasRecentLeadCapture()) {
+    if (forceModal || !hasRecentLeadCapture()) {
       setIsModalOpen(true);
     } else {
       await processDownload();

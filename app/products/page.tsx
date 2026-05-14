@@ -63,7 +63,7 @@ export default function ProductsPage() {
       <JsonLd data={itemListSchema} />
       <PageTitle title="Our Products" breadcrumbs={[{ label: "Products" }]} />
 
-      <section className="py-20 bg-brand-light">
+      <section className="py-14 bg-brand-light">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">

@@ -15,7 +15,7 @@ export default function IndustryPageContent({ industry }: Props) {
     .slice(0, 5);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Main content */}
         <div className="lg:col-span-2 space-y-8">
@@ -115,7 +115,7 @@ export default function IndustryPageContent({ industry }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
           <div className="bg-brand-primary text-white rounded-2xl p-8">
             <h3 className="text-xl font-bold mb-3">Get a Custom Quote</h3>
             <p className="text-gray-300 text-sm mb-5">

@@ -149,46 +149,39 @@ export default function Navbar() {
                     </Link>
 
                     {activeDropdown === item.label && (
-                      // ─── Primary dropdown shell (no overflow — keeps sub-dropdown flyout visible)
-                      <div className="absolute top-full left-0 z-50 aex-dropdown-animate">
-                        {/* Inner scroll wrapper — only this scrolls, does NOT clip siblings */}
-                        <div className="min-w-[240px] bg-white shadow-2xl rounded-xl border border-gray-100 py-2">
+                      <div className="absolute top-full left-0 z-50 aex-dropdown-animate flex items-start"
+                           onMouseLeave={() => setActiveSubDropdown(null)}>
+                        {/* Main Dropdown Scroll Wrapper */}
+                        <div className="min-w-[260px] bg-white shadow-2xl rounded-xl border border-gray-100 py-2 max-h-[75vh] overflow-y-auto aex-dropdown-scroll">
                           {item.children.map((child) => (
                             <div key={child.label} className="relative"
-                              onMouseEnter={() => child.children ? setActiveSubDropdown(child.label) : undefined}
-                              onMouseLeave={() => child.children ? setActiveSubDropdown(null) : undefined}>
+                              onMouseEnter={() => setActiveSubDropdown(child.children ? child.label : null)}>
                               {child.children ? (
-                                <>
-                                  <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className="w-full flex items-center justify-between px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap">
-                                    {child.label}
-                                    <FontAwesomeIcon
-                                      icon={faChevronRight}
-                                      className="text-xs ml-4"
-                                    />
-                                  </Link>
-                                  {activeSubDropdown === child.label && (
-                                    // Sub-dropdown: sibling to the scroll wrapper so it is NEVER clipped
-                                    <div className="absolute top-0 left-full min-w-[280px] bg-white shadow-2xl rounded-xl border border-gray-100 z-[60] py-2 max-h-[80vh] overflow-y-auto aex-dropdown-scroll aex-dropdown-animate">
-                                      {child.children.map((sub) => (
-                                        <Link key={sub.label} href={sub.href}
-                                          className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
-                                          onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
-                                          {sub.label}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  )}
-                                </>
+                                <Link href={child.href} onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }} className={`w-full flex items-center justify-between px-5 py-3 text-[14px] font-semibold transition-colors duration-150 whitespace-nowrap ${activeSubDropdown === child.label ? 'bg-brand-primary text-white' : 'text-gray-700 hover:bg-brand-primary hover:text-white'}`}>
+                                  {child.label}
+                                  <FontAwesomeIcon icon={faChevronRight} className="text-xs ml-4" />
+                                </Link>
                               ) : (
-                                <Link href={child.href}
-                                  className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
-                                  onClick={() => setActiveDropdown(null)}>
+                                <Link href={child.href} className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap" onClick={() => setActiveDropdown(null)}>
                                   {child.label}
                                 </Link>
                               )}
                             </div>
                           ))}
                         </div>
+
+                        {/* Active Sub-dropdown Flyout */}
+                        {activeSubDropdown && (
+                          <div className="min-w-[280px] ml-1 bg-white shadow-2xl rounded-xl border border-gray-100 py-2 max-h-[75vh] overflow-y-auto aex-dropdown-scroll aex-dropdown-animate">
+                            {item.children.find(c => c.label === activeSubDropdown)?.children?.map((sub) => (
+                              <Link key={sub.label} href={sub.href}
+                                className="block px-5 py-3 text-[14px] font-semibold text-gray-700 hover:bg-brand-primary hover:text-white transition-colors duration-150 whitespace-nowrap"
+                                onClick={() => { setActiveDropdown(null); setActiveSubDropdown(null); }}>
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
