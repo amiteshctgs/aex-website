@@ -7,8 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { news } from "@/lib/data/news";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const article = news.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const article = news.find((item) => item.slug === resolvedParams.slug);
 
   if (!article) {
     return {
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function NewsArticlePage({ params }: { params: { slug: string } }) {
-  const article = news.find((item) => item.slug === params.slug);
+export default async function NewsArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const article = news.find((item) => item.slug === resolvedParams.slug);
 
   if (!article) {
     notFound();
