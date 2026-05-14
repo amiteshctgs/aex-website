@@ -1182,19 +1182,134 @@ export const industries: Industry[] = [
     shortTitle: "Wind Energy",
     description: "Durable cable accessories optimized for onshore and offshore wind farms, tackling humidity, temperature, and corrosion.",
     longDescription:
-      "Renewable energy, i.e., Wind Energy, has emerged as a crucial component in the global pursuit of sustainable and clean energy solutions. These technologies harness the power of natural resources to generate electricity, offering a cleaner alternative to traditional fossil fuels.\n\nAEX provides the most suitable Cable Accessories to optimize the design of your onshore and offshore wind farms. From turbines to grids, substations and energy storage – we are one of the best source for multiple connectivity. Our Products are engineered and tested specifically for the wind farm environment so they are durable to tackle the toughest humidity, temperatures, and corrosion.",
-    image: "/images/resource/feature51.jpg",
+      "Renewable energy, i.e., Wind Energy, has emerged as a crucial component in the global pursuit of sustainable and clean energy solutions. These technologies harness the power of natural resources to generate electricity, offering a cleaner alternative to traditional fossil fuels.\n\n AEX provides the most suitable Cable Accessories to optimize the design of your onshore and offshore wind farms. From turbines to grids, substations and energy storage – we are one of the best source for multiple connectivity. Our Products are engineered and tested specifically for the wind farm environment so they are durable to tackle the toughest humidity, temperatures, and corrosion.",
+    image: "/images/no.6-renewable-energy-wind-energy-solution/wind-energy-with-wind-turbines-background-1400x788.jpg",
+    images: [
+      "/images/no.6-renewable-energy-wind-energy-solution/commentary-asia-renewables-finance.jpg",
+      "/images/no.6-renewable-energy-wind-energy-solution/wind-energy-with-wind-turbines-background-1400x788.jpg",
+    ],
     products: [
       "Heat Shrinkable Cable Jointing Kits",
       "Heat Shrinkable Cable Termination Kits",
       "Heat Shrink Medium and Heavy Wall Tubes",
       "Heat Shrink Busbar Insulating Sleeves",
       "Heat Shrink Tape",
-      "Asset & Wildlife Protection Products",
+      "Bushing Insulation Covers",
       "Overhead Line Cover",
       "Overhead Line Tube"
     ],
     icon: "wind",
+    subItems: [
+      {
+        label: "Heat Shrinkable Cable Jointing Kits",
+        slug: "heat-shrinkable-cable-jointing-kits",
+        href: "/industries/wind-energy-solutions/heat-shrinkable-cable-jointing-kits",
+        description: "Complete kits for creating reliable cable joints in wind farm networks.",
+        longDescription: "AEX is the World leader in High-performance Power Cable Accessories. AEX offers Heat Shrink Joints for all types of PVC/PILC/XLPE/EPR Power Cables up to 66kV. The design specification and quality of AEX Heat Shrink Power Cable accessories meet and conform to the various National and International standards and tested as per IEC, CENELEC, IS Standards from leading independent test laboratories such as CPRI and ERDA.\n\nAEX is one of the leaders in designing and manufacturing Heat Shrink Joints for the most modern PVC/PILC/XLPE/EPR Low & Medium Voltage Power Cable up to 66kV Class.The design specification and  quality of our Heat Shrink Cable accessories have been upheld by the most stringent national/International standards worldwide.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-1-product-heat-shrinkable-cable-jointing-kits.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-1-product-heat-shrinkable-cable-jointing-kits.jpg",
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-1-application-heat-shrinkable-cable-jointing-kits.webp"
+        ],
+        features: ["Engineered for wind environments", "Corrosion resistant", "Excellent electrical insulation", "Environmental sealing"],
+        applications: ["Wind turbine connections", "Offshore wind farms", "Onshore wind farms"]
+      },
+      {
+        label: "Heat Shrinkable Cable Termination Kits",
+        slug: "heat-shrinkable-cable-termination-kits",
+        href: "/industries/wind-energy-solutions/heat-shrinkable-cable-termination-kits",
+        description: "Provides excellent electrical insulation and stress control for cable terminations in wind applications.",
+        longDescription: "AEX is the World leader in High-performance Power Cable Accessories. AEX offers Class 1 Termination for all types of PVC/PILC/XLPE/EPR Power Cables up to 66kV. The design specification and quality of AEX Heat Shrink Power Cable accessories meet and conform to the various National and International standards and tested as per IEC, CENELEC, IS Standards from leading independent test laboratories such as CPRI and ERDA.\n\n AEX offers unsurpassed technical superiority for perfect Termination of most modern PVC/PILC/XLPE/EPR Low & Medium Voltage Power Cable up to 66kV Class. We provide CLASS 1 Terminations to Electrical Industries. Our Cable Terminations are made considerably tamper proof from environmental factors as the entire length between the wire termination point and contact is safely encapsulated with this protective product.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-2-heat-shrink-cable-termination-kits.jpeg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-2-heat-shrink-cable-termination-kits.jpeg",
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-2-application-heat-shrinkable-cable-termination-kits.jpeg"
+        ],
+        features: ["Excellent stress control", "Weather resistant", "Tackles humidity and temperature", "Easy to install"],
+        applications: ["Wind farm grids", "Substations", "Energy storage connections"]
+      },
+      {
+        label: "Heat Shrink Medium and Heavy Wall Tubes",
+        slug: "heat-shrink-medium-heavy-wall-tubes",
+        href: "/industries/wind-energy-solutions/heat-shrink-medium-heavy-wall-tubes",
+        description: "Robust tubing providing superior insulation and mechanical protection.",
+        longDescription: "AEX’s Heat Shrink Medium Wall Tubing (AMT) and Heavy Wall Tubing (AHT) are made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability in severe climatic conditions and in polluted environments. \n\n By applying the heat, the tubing shrinks to the original smaller extruded diameter, fitting tightly over a wide range of Cable sizes and Cable accessories. The inside-coated Hot melt adhesive melts and flows throughout the shrinking process and gives a reliable moisture seal over even the most irregular shapes.\n\nAEX's medium wall and heavy wall black tubing are manufactured from high quality cross-linked polyolefin material. These Tubes are used in Onshore and Offshore Wind Energy. It provides abrasion, corrosion and chemical resistance in Wind Turbine.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-3-heat-shrink-medium-heavy-wall-tubes.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-3-heat-shrink-medium-heavy-wall-tubes.jpg",
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-3-application-heat-shrink-medium-and-heavy-wall-tube.jpeg"
+        ],
+        features: ["High mechanical strength", "Abrasion resistant", "Weatherproof", "Halogen-free"],
+        applications: ["Cable jackets", "Underground connections", "Outdoor exposures"]
+      },
+      {
+        label: "Heat Shrink Busbar Insulating Sleeves",
+        slug: "heat-shrink-busbar-insulating-sleeves",
+        href: "/industries/wind-energy-solutions/heat-shrink-busbar-insulating-sleeves",
+        description: "Insulating sleeves for busbar connections in wind farm substations.",
+        longDescription: "AEX’s Heat Shrink Busbar Insulating Sleeve is used to insulate Copper and Aluminium Busbars. These Sleeves provide Insulation enhancement and protection against flashover and accidentally induced discharge. \n\nThe Busbar Sleeves can be used in confined spaces to reduce the clearance necessary between busbar phases in Medium Voltage Switchgears up to 36kV. The use of Busbar Sleeves allows equipment designers the liberty to reduce air spacing between busbars, such as in the manufacture of switchgear cabinets where space is at a premium.\n\n AEX's Heat Shrink Busbar Sleeve is heat shrinkable sleeve designed to insulate busbar systems up to 66KV and also to protect against accidental flash-over. It helps to reduces the air clearance. The sleeves are manufactured from high-quality cross-linked polyolefin material. Meets ANSI C37.20.2 standards for MV switchgear application up to 66 kV.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-4-product-heat-shrink-busbar-insulating-sleeves.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-4-product-heat-shrink-busbar-insulating-sleeves.jpg",
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-4-application-heat-shrink-busbar-insulating-sleeves.jpg"
+        ],
+        features: ["High dielectric strength", "Reduces clearance requirements", "Protects against flashovers", "UV stable"],
+        applications: ["Wind turbine switchgears", "Substations", "Busducts"]
+      },
+      {
+        label: "Heat Shrink Tape",
+        slug: "heat-shrink-tape",
+        href: "/industries/wind-energy-solutions/heat-shrink-tape",
+        description: "Versatile insulating tape for irregular busbar shapes and joints.",
+        longDescription: "AEX’s high voltage Heat Shrink Busbar Insulation Tapes are adhesive-coated tapes that provide Insulation enhancement and protection against accidentally induced flashovers for Copper or Aluminium busbar sections where tube products cannot easily be applied. \n\n The AHT tapes are quick and easy to install. Upon application of heat, the tapes shrink and the adhesive lining melts, joining the overlapping layers to produce a complete seal. \n\n AEX's Heat Shrink Tape is used for Insulation & protection of medium voltage busbar connections, where tubing cannot be used.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-5-product-heat-shrink-busbar-insulating-tapes.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-5-product-heat-shrink-busbar-insulating-tapes.jpg",
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-5-application-heat-shrink-busbar-insulating-tapes.png"
+        ],
+        features: ["Highly flexible", "Ideal for complex shapes", "Adhesive lined for complete seal", "Quick installation"],
+        applications: ["Complex bends", "Substation connections", "Maintenance and repair"]
+      },
+      {
+        label: "Bushing Insulation Covers",
+        slug: "bushing-insulation-covers",
+        href: "/industries/wind-energy-solutions/bushing-insulation-covers",
+        description: "Insulating covers designed to protect connections and prevent wildlife-related outages.",
+        longDescription: "High-voltage insulating products for underground and overhead systems in electrical supply utilities, railways, OEMs & major industrial companies. They improve systems' reliability and prevent costly damages to equipment caused by accidental inter-phase or phase to ground bridging. Bridging occurs when birds, animals, vegetation, air-bourne debris and even vandalism come in contact with bare electrical systems in substations, overhead lines and related equipment. By insulating strategic areas, it is possible to eliminate such problems, and in areas of growing environmental awareness such as protection of endangered species, insulation products allow wildlife to move freely without being electrocuted.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-6-bushing-insulation-covers.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-6-bushing-insulation-covers.jpg"
+        ],
+        features: ["Prevents bridging", "UV stabilized material", "Weather resistant", "Long service life"],
+        applications: ["Transformer bushings", "Substation equipment", "Wind farm infrastructure"]
+      },
+      {
+        label: "Overhead Line Cover",
+        slug: "overhead-line-cover",
+        href: "/industries/wind-energy-solutions/overhead-line-cover",
+        description: "Flexible insulating covers for bare overhead conductors.",
+        longDescription: "AEX's Overhead Line Cover is a Medium Voltage Wrap-Around type Overhead Line Cover that provides state-of-the-art insulation to Overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material.  It is designed to insulate existing bare lines without costly conductor replacement expenditures or additional line hardware.These covers provide a layer of electrical insulation for Phase-to-Phase and Phase-to-Ground protection from birds and animals.\n\n AEX's Overhead Line Cover is a Medium Voltage Wrap Around Overhead Line Cover that provides retrofit insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into the contact with distribution lines. It is manufactured from high-quality UV resistant Polyolefin material. These covers provide a layer of electrical insulation for Phase-to-Phase and Phase-to-Ground protection from bird and animals.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-7-overhead-line-cover.jpg",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-7-overhead-line-cover.jpg"
+        ],
+        features: ["Retrofit installation", "Flexible design", "UV resistant", "High dielectric strength"],
+        applications: ["Distribution lines", "Wildlife corridors", "Temporary insulation"]
+      },
+      {
+        label: "Overhead Line Tube",
+        slug: "overhead-line-tube",
+        href: "/industries/wind-energy-solutions/overhead-line-tube",
+        description: "Continuous heat shrink insulation for bare overhead conductors.",
+        longDescription: "AEX's Overhead Line Tube is a Medium Voltage Tubular type Line Cover that provides insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with Power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material. \n\n AEX's Overhead Line Tube is a Medium Voltage Line Cover that provides insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into the contact with distribution lines. It is manufactured from high-quality UV resistant Polyolefin material.",
+        image: "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-8-overhead-line-tube.png",
+        images: [
+          "/images/no.6-renewable-energy-wind-energy-solution/product-and-application/6-8-overhead-line-tube.png"
+        ],
+        features: ["Superior tracking resistance", "Excellent weatherability", "High mechanical strength", "Permanent insulation"],
+        applications: ["Overhead lines", "Transmission networks", "Distribution networks"]
+      }
+    ]
   },
   {
     slug: "solar-energy-solutions",
@@ -1203,18 +1318,133 @@ export const industries: Industry[] = [
     description: "Reliable, cost-effective solar energy solutions and grid connectivity designed for harsh environmental conditions.",
     longDescription:
       "Renewable energy, i.e., Solar Energy, has emerged as a crucial component in the global pursuit of sustainable and clean energy solutions. These technologies harness the power of natural resources to generate electricity, offering a cleaner alternative to traditional fossil fuels.\n\nAs the necessity for Solar power continues to grow, so does your need for more dynamic systems that deliver increased power and efficiency. AEX offers reliable solar energy solutions and grid connectivity. We’re ready with cost-effective and reliable solar connectors that are durable even in harsh environments. Our products suitable for Solar connections can be installed quickly, easily, and accurately.",
-    image: "/images/resource/feature54.png",
+    image: "/images/no.7-renewable-energy-solar-energy/solar-power-plant.jpg",
+    images: [
+      "/images/no.7-renewable-energy-solar-energy/solar-power-plant.jpg",
+      "/images/no.7-renewable-energy-solar-energy/cirencester-hybrid-solar-farm-photo-credit-abovesolardataanalytics_edited-1.jpg"
+    ],
     products: [
       "Heat Shrinkable Cable Jointing Kits",
       "Heat Shrinkable Cable Termination Kits",
       "Heat Shrink Medium and Heavy Wall Tubes",
       "Heat Shrink Busbar Insulating Sleeves",
       "Heat Shrink Tape",
-      "Asset & Wildlife Protection Products",
+      "Bushing Insulation Covers",
       "Overhead Line Cover",
       "Overhead Line Tube"
     ],
     icon: "sun",
+    subItems: [
+      {
+        label: "Heat Shrinkable Cable Jointing Kits",
+        slug: "heat-shrinkable-cable-jointing-kits",
+        href: "/industries/solar-energy-solutions/heat-shrinkable-cable-jointing-kits",
+        description: "Complete kits for creating reliable cable joints in solar farm networks.",
+        longDescription: "AEX is the World leader in High-performance Power Cable Accessories. AEX offers Heat Shrink Joints for all types of PVC/PILC/XLPE/EPR Power Cables up to 66kV. The design specification and quality of AEX Heat Shrink Power Cable accessories meet and conform to the various National and International standards and tested as per IEC, CENELEC, IS Standards from leading independent test laboratories such as CPRI and ERDA.\n\n AEX is one of the leaders in designing and manufacturing Heat Shrink Joints for the most modern PVC/PILC/XLPE/EPR Low & Medium Voltage Power Cable up to 66kV Class.The design specification and  quality of our Heat Shrink Cable accessories have been upheld by the most stringent national/International standards worldwide.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-1-product-heat-shrinkable-cable-jointing-kits.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-1-product-heat-shrinkable-cable-jointing-kits.jpg",
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-1-application-heat-shrinkable-cable-jointing-kits.webp"
+        ],
+        features: ["Engineered for solar environments", "UV resistant", "Excellent electrical insulation", "Environmental sealing"],
+        applications: ["Solar array connections", "Solar farm grids", "Inverter connections"]
+      },
+      {
+        label: "Heat Shrinkable Cable Termination Kits",
+        slug: "heat-shrinkable-cable-termination-kits",
+        href: "/industries/solar-energy-solutions/heat-shrinkable-cable-termination-kits",
+        description: "Provides excellent electrical insulation and stress control for cable terminations in solar applications.",
+        longDescription: "AEX is the World leader in High-performance Power Cable Accessories. AEX offers Class 1 Termination for all types of PVC/PILC/XLPE/EPR Power Cables up to 66kV. The design specification and quality of AEX Heat Shrink Power Cable accessories meet and conform to the various National and International standards and tested as per IEC, CENELEC, IS Standards from leading independent test laboratories such as CPRI and ERDA.\n\n AEX offers unsurpassed technical superiority for perfect Termination of most modern PVC/PILC/XLPE/EPR Low & Medium Voltage Power Cable up to 66kV Class. We provide CLASS 1 Terminations to Electrical Industries. Our Cable Terminations are made considerably tamper proof from environmental factors as the entire length between the wire termination point and contact is safely encapsulated with this protective product.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-2-heat-shrink-cable-termination-kits.jpeg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-2-heat-shrink-cable-termination-kits.jpeg",
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-2-application-heat-shrinkable-cable-termination-kits.jpeg"
+        ],
+        features: ["Excellent stress control", "Weather resistant", "Tackles high temperatures", "Easy to install"],
+        applications: ["Solar farm grids", "Substations", "Energy storage connections"]
+      },
+      {
+        label: "Heat Shrink Medium and Heavy Wall Tubes",
+        slug: "heat-shrink-medium-heavy-wall-tubes",
+        href: "/industries/solar-energy-solutions/heat-shrink-medium-heavy-wall-tubes",
+        description: "Robust tubing providing superior insulation and mechanical protection.",
+        longDescription: "AEX’s Heat Shrink Medium Wall Tubing (AMT) and Heavy Wall Tubing (AHT) are made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability in severe climatic conditions and in polluted environments. \n\nBy applying the heat, the tubing shrinks to the original smaller extruded diameter, fitting tightly over a wide range of Cable sizes and Cable accessories. The inside-coated Hot melt adhesive melts and flows throughout the shrinking process and gives a reliable moisture seal over even the most irregular shapes.\n\n AEX's medium wall and heavy wall black tubing are manufactured from high-quality cross-linked polyolefin material. These Tubes are abrasion, corrosion and chemical resistant. It protects Solar panel’s Cabling from any natural forces in its surrounding environment.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-3-heat-shrink-medium-heavy-wall-tubes.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-3-heat-shrink-medium-heavy-wall-tubes.jpg",
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-3-application-heat-shrink-medium-and-heavy-wall-tube.jpeg"
+        ],
+        features: ["High mechanical strength", "Abrasion resistant", "Weatherproof", "Halogen-free"],
+        applications: ["Cable jackets", "Underground connections", "Outdoor exposures"]
+      },
+      {
+        label: "Heat Shrink Busbar Insulating Sleeves",
+        slug: "heat-shrink-busbar-insulating-sleeves",
+        href: "/industries/solar-energy-solutions/heat-shrink-busbar-insulating-sleeves",
+        description: "Insulating sleeves for busbar connections in solar farm substations.",
+        longDescription: "AEX’s Heat Shrink Busbar Insulating Sleeve is used to insulate Copper and Aluminium Busbars. These Sleeves provide Insulation enhancement and protection against flashover and accidentally induced discharge. \n\n The Busbar Sleeves can be used in confined spaces to reduce the clearance necessary between busbar phases in Medium Voltage Switchgears up to 36kV. The use of Busbar Sleeves allows equipment designers the liberty to reduce air spacing between busbars, such as in the manufacture of switchgear cabinets where space is at a premium. \n\n AEX's Heat Shrink Busbar Sleeve is heat shrinkable sleeve designed to insulate busbar systems up to 66KV and also to protect against accidental flash-over. It helps to reduces the air clearance. The sleeves are manufactured from high-quality cross-linked polyolefin material. Meets ANSI C37.20.2 standards for MV switchgear application up to 66 kV.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-4-product-heat-shrink-busbar-insulating-sleeves.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-4-product-heat-shrink-busbar-insulating-sleeves.jpg",
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-4-application-heat-shrink-busbar-insulating-sleeves.jpg"
+        ],
+        features: ["High dielectric strength", "Reduces clearance requirements", "Protects against flashovers", "UV stable"],
+        applications: ["Solar inverter switchgears", "Substations", "Busducts"]
+      },
+      {
+        label: "Heat Shrink Tape",
+        slug: "heat-shrink-tape",
+        href: "/industries/solar-energy-solutions/heat-shrink-tape",
+        description: "Versatile insulating tape for irregular busbar shapes and joints.",
+        longDescription: "AEX's Heat Shrink Busbar Sleeve is heat shrinkable sleeve designed to insulate busbar systems up to 66KV and also to protect against accidental flash-over. It helps to reduces the air clearance. \n\n The sleeves are manufactured from high-quality cross-linked polyolefin material. Meets ANSI C37.20.2 standards for MV switchgear application up to 66 kV. \n\n AEX's Heat Shrink Tape is used for Insulation & protection of medium voltage busbar connections, where tubing cannot be used.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-5-product-heat-shrink-busbar-insulating-tapes.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-5-product-heat-shrink-busbar-insulating-tapes.jpg",
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-5-application-heat-shrink-busbar-insulating-tapes.png"
+        ],
+        features: ["Highly flexible", "Ideal for complex shapes", "Adhesive lined for complete seal", "Quick installation"],
+        applications: ["Complex bends", "Substation connections", "Maintenance and repair"]
+      },
+      {
+        label: "Bushing Insulation Covers",
+        slug: "bushing-insulation-covers",
+        href: "/industries/solar-energy-solutions/bushing-insulation-covers",
+        description: "Insulating covers designed to protect connections and prevent wildlife-related outages.",
+        longDescription: "High-voltage insulating products for underground and overhead systems in electrical supply utilities, railways, OEMs & major industrial companies. They improve systems' reliability and prevent costly damages to equipment caused by accidental inter-phase or phase to ground bridging. Bridging occurs when birds, animals, vegetation, air-bourne debris and even vandalism come in contact with bare electrical systems in substations, overhead lines and related equipment. By insulating strategic areas, it is possible to eliminate such problems, and in areas of growing environmental awareness such as protection of endangered species, insulation products allow wildlife to move freely without being electrocuted.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-6-bushing-insulation-covers.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-6-bushing-insulation-covers.jpg"
+        ],
+        features: ["Prevents bridging", "UV stabilized material", "Weather resistant", "Long service life"],
+        applications: ["Transformer bushings", "Substation equipment", "Solar farm infrastructure"]
+      },
+      {
+        label: "Overhead Line Cover",
+        slug: "overhead-line-cover",
+        href: "/industries/solar-energy-solutions/overhead-line-cover",
+        description: "Flexible insulating covers for bare overhead conductors.",
+        longDescription: "AEX's Overhead Line Cover is a Medium Voltage Wrap-Around type Overhead Line Cover that provides state-of-the-art insulation to Overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material.  It is designed to insulate existing bare lines without costly conductor replacement expenditures or additional line hardware.These covers provide a layer of electrical insulation for Phase-to-Phase and Phase-to-Ground protection from birds and animals.\n\nAEX's Overhead Line Cover is a Medium Voltage Wrap Around Overhead Line Cover that provides retrofit insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into the contact with distribution lines. It is manufactured from high-quality UV resistant Polyolefin material. These covers provide a layer of electrical insulation for Phase-to-Phase and Phase-to-Ground protection from bird and animals.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-7-overhead-line-cover.jpg",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-7-overhead-line-cover.jpg"
+        ],
+        features: ["Retrofit installation", "Flexible design", "UV resistant", "High dielectric strength"],
+        applications: ["Distribution lines", "Wildlife corridors", "Temporary insulation"]
+      },
+      {
+        label: "Overhead Line Tube",
+        slug: "overhead-line-tube",
+        href: "/industries/solar-energy-solutions/overhead-line-tube",
+        description: "Continuous heat shrink insulation for bare overhead conductors.",
+        longDescription: "AEX's Overhead Line Tube is a Medium Voltage Tubular type Line Cover that provides insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into contact with Power distribution lines. It is manufactured from high-quality UV-resistant, Non-tracking Polyolefin material. \n\n AEX's Overhead Line Tube is a Medium Voltage Line Cover that provides insulation for overhead conductors to help prevent electrical outages caused by trees or wildlife coming into the contact with distribution lines. It is manufactured from high-quality UV resistant Polyolefin material.",
+        image: "/images/no.7-renewable-energy-solar-energy/product-and-application/7-8-overhead-line-tube.png",
+        images: [
+          "/images/no.7-renewable-energy-solar-energy/product-and-application/7-8-overhead-line-tube.png"
+        ],
+        features: ["Superior tracking resistance", "Excellent weatherability", "High mechanical strength", "Permanent insulation"],
+        applications: ["Overhead lines", "Transmission networks", "Distribution networks"]
+      }
+    ]
   },
   {
     slug: "kit-components-cable-joints",
@@ -1222,12 +1452,18 @@ export const industries: Industry[] = [
     shortTitle: "Cable Joint Kits",
     description: "Crucial power cable components providing secure insulation and reliable connections for underground and overhead networks.",
     longDescription:
-      "Cable joints and terminations are crucial components in electrical power systems, facilitating the connection and termination of cables to ensure reliable and safe transmission of electricity. These components are vital for both underground and overhead power distribution networks. Effective cable jointing and termination are critical for the integrity and reliability of electrical power systems.\n\nAEX's electrical Power Cable Accessories last for decades and increase the reliability and efficiency of the grid. They are suitable for low, medium and high voltage applications and can operate under severe environments. Our extensive range of electrical connectors fits applications from Overhead and Underground networks to Power Substations. Our history of invention, heritage of reliable products and decades of experience enable powerful connections for electrical networks.",
-    image: "/images/resource/project-3.jpg",
+      "Cable joints and terminations are crucial components in electrical power systems, facilitating the connection and termination of cables to ensure reliable and safe transmission of electricity. These components are vital for both underground and overhead power distribution networks. Effective cable jointing and termination are critical for the integrity and reliability of electrical power systems. The selection and proper installation of kit components ensure that cable connections remain secure, insulated, and protected against various environmental and operational challenges, contributing to the overall safety and efficiency of the power distribution network.\n\n AEX's electrical Power Cable Accessories last for decades and increase the reliability and efficiency of the grid. They are suitable for low, medium and high voltage applications and can operate under severe environments. Our extensive range of electrical connectors fits applications from Overhead and Underground networks to Power Substations. Our history of invention, heritage of reliable products and decades of experience enable powerful connections for electrical networks.",
+    image: "/images/no.8-kit-components-for-joints-and-termination/cable-jointing-kits.jpeg",
+    images: [
+      "/images/no.8-kit-components-for-joints-and-termination/cable-jointing-kits.jpeg",
+      "/images/no.8-kit-components-for-joints-and-termination/raychem-cable-jointing-kit.jpg",
+      "/images/no.8-kit-components-for-joints-and-termination/low-voltage-termination-500x500.webp",
+      "/images/no.8-kit-components-for-joints-and-termination/three-layers-heat-shrink-tube8fafa.webp"
+    ],
     products: [
       "Heat Shrink Low Voltage Cable Breakouts",
       "Heat Shrink Non Tracking Cable Breakouts",
-      "Heat Shrink Creepage Extension Skirt",
+      "Heat Shrink Creepage Extension Skirt (Rain Sheds)",
       "Heat Shrink Semi Conductivecable Breakouts",
       "Heat Shrink Right Angle and Straight Boot",
       "Heat Shrink Medium and Heavy Wall Tubing",
@@ -1243,6 +1479,224 @@ export const industries: Industry[] = [
       "Copper Braid with Solder Blocks"
     ],
     icon: "tools",
+    subItems: [
+      {
+        label: "Heat Shrink Low Voltage Cable Breakouts",
+        slug: "heat-shrink-low-voltage-cable-breakouts",
+        href: "/industries/kit-components-cable-joints/heat-shrink-low-voltage-cable-breakouts",
+        description: "Provides environmental sealing and strain relief for low voltage cable breakouts.",
+        longDescription: "AEX’s Heat Shrink Low Voltage Cable Breakouts are used to insulate and seal the crutches of 2, 3, 4, 5, 6, and 7 core XLPE, PVC, PILC and Rubber insulated Cables up to 3.3kV. \n\n The Breakouts are made from thermally stabilised Cross-linked halogen-free Polyolefin material that offers abiding service reliability. It contains a minimum of 2.5% carbon to protect it from ultraviolet rays. \n\n AEX's Heat Shrink Low Voltage Cable Breakouts provides a strong and permanent environmental seal to the crutch of 2, 3, 4, 5, 6 and 7 core PVC, XLPE Rubber and PILC cables upto 3.3 KV rated voltage. The Breakouts are Manufactured form high quality cross-linked polyolefin material that  offer an exceptional insulation and long term service reliability.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-1-heat-shrink-lv-breakout.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-1-heat-shrink-lv-breakout.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-1-heat-shrink-lv-breakout-application.jpg"
+        ],
+        features: ["Excellent moisture seal", "High mechanical strength", "Adhesive lined", "UV resistant"],
+        applications: ["Low voltage cable joints", "Cable terminations", "Outdoor installations"]
+      },
+      {
+        label: "Heat Shrink Non Tracking Cable Breakouts",
+        slug: "heat-shrink-non-tracking-cable-breakouts",
+        href: "/industries/kit-components-cable-joints/heat-shrink-non-tracking-cable-breakouts",
+        description: "Anti-tracking breakouts for medium voltage terminations and joints.",
+        longDescription: "AEX’s Heat Shrink Non-Tracking Cable Breakouts are used to insulate and seal the crutches of 3 core Plastic and PILC Cables up to 36kV. \n\n The Breakouts are made from thermally stabilised Cross-linked halogen-free Polyolefin material that offers abiding service reliability.\n\n AEX's Heat Shrink Non Tracking Cable Breakout provides permanent evironmental seal to the crutch of 3 core PVR PILC cable rate upto 36KV. These Breakouts are made from high-quality Cross-linked Polyolefin material. ",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-2-heat-shrink-non-tracking-breakout-1.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-2-heat-shrink-non-tracking-breakout-1.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-2-heat-shrink-cable-jointing-kit-746.jpg"
+        ],
+        features: ["Anti-tracking properties", "Erosion resistant", "Halogen-free", "Excellent weatherability"],
+        applications: ["Medium voltage terminations", "Polluted environments", "Switchgear connections"]
+      },
+      {
+        label: "Heat Shrink Creepage Extension Skirt (Rain Sheds)",
+        slug: "heat-shrink-creepage-extension-skirt",
+        href: "/industries/kit-components-cable-joints/heat-shrink-creepage-extension-skirt",
+        description: "Increases creepage distance and protects terminations from environmental contamination.",
+        longDescription: "AEX’s Heat Shrink Rain Sheds are used for extending the creepage path for the Medium Voltage Cable Termination, thereby saving the length of the Cable and compacting the Switchgear cabinet size required for this purpose. The Rain sheds are suitable for the termination of the complete range of XLPE and PILC types of Cables. \n\n They also restrict the continuity of water during the monsoon causing electrical short circuits. \n\n AEX's Heat Shrink Rain Sheds are used to increase the surface creepage distance of the cores of cable termination without incressing the tail length. They are also used to avoid continuity during rainy season to avoid short circuiting of the elecrical network. ",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-3-heat-shrink-creepage-extension-skirt-rain-shed.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-3-heat-shrink-creepage-extension-skirt-rain-shed.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-3-raychem-cable-jointing-kit.jpg"
+        ],
+        features: ["Increases creepage distance", "Anti-tracking", "UV stable", "Weatherproof"],
+        applications: ["Outdoor cable terminations", "High pollution areas", "Overhead connections"]
+      },
+      {
+        label: "Heat Shrink Semi Conductivecable Breakouts",
+        slug: "heat-shrink-semi-conductivecable-breakouts",
+        href: "/industries/kit-components-cable-joints/heat-shrink-semi-conductivecable-breakouts",
+        description: "Provides electrical shielding and stress relief at the cable crutch.",
+        longDescription: "AEX’s Heat Shrink Semi-conductive Cable Breakouts provide a semi-conductive screening to each core and seal over the crutch of multi-core cables. The Semi Conductive Breakouts are ideal for PILC Joints and Termination. \n\n The conductive cable breakouts are normally used as an integral part of 3-core Cable Terminations up to 36 kV and in 3-core Cable Joints up to 36 kV. \n\n AEX's Heat Shrink Semi Conductive Cable Breakout are used for PILC belted cable to seal the crutch area as well as to provide individual screening to each core.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-4-heat-shrink-semi-conductive-breakout.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-4-heat-shrink-semi-conductive-breakout.jpg"
+        ],
+        features: ["Excellent electrical shielding", "Stress relief", "High mechanical strength", "Easy installation"],
+        applications: ["Medium voltage joints", "High voltage connections", "Shielded cables"]
+      },
+      {
+        label: "Heat Shrink Right Angle and Straight Boot",
+        slug: "heat-shrink-right-angle-and-straight-boot",
+        href: "/industries/kit-components-cable-joints/heat-shrink-right-angle-and-straight-boot",
+        description: "Insulating boots for switchgear and transformer connections.",
+        longDescription: "AEX’s Heat Shrink Right Angle and Straight Boots fit over the connection between a Termination’s cable lug and an equipment bushing, to provide phase-to-phase and phase-to-ground insulation. \n\nThey are used in Switchgear and Transformer Cable boxes up to 36kV, particularly where air clearances are not sufficient for normal operation, and they also protect against flashovers in the event of any surge impulse, high humidity, or rodent menace contact. The boots are made from thermally stabilized Non-tracking Cross-linked material for excellent insulation and weather-resistant properties. \n\nAEX's Angleboots are Heat Shrink Right Angle / Straight Boots provide insulation to the bushings in the cable termination box, where the clearance between phase to phase and phase to earth is less then the normal air clearance. These boots provide protection against flashover in the event of high humidity, rodent menace and surge impulse.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-5-product-heat-shrink-right-angle-and-straight-boots.png",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-5-product-heat-shrink-right-angle-and-straight-boots.png",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-5-application-heat-shrink-right-angle-and-straight-boots.png"
+        ],
+        features: ["Prevents flashovers", "Moisture and dust seal", "Flexible design", "Excellent insulation"],
+        applications: ["Switchgear connections", "Transformer bushings", "Motor terminal boxes"]
+      },
+      {
+        label: "Heat Shrink Medium and Heavy Wall Tubing",
+        slug: "heat-shrink-medium-and-heavy-wall-tubing",
+        href: "/industries/kit-components-cable-joints/heat-shrink-medium-and-heavy-wall-tubing",
+        description: "Robust tubing providing superior insulation and mechanical protection.",
+        longDescription: "AEX’s Heat Shrink Medium Wall Tubing (AMT) and Heavy Wall Tubing (AHT) are made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability in severe climatic conditions and in polluted environments. \n\n By applying the heat, the tubing shrinks to the original smaller extruded diameter, fitting tightly over a wide range of Cable sizes and Cable accessories. The inside-coated Hot melt adhesive melts and flows throughout the shrinking process and gives a reliable moisture seal over even the most irregular shapes.\n\n AEX's Medium wall and Heavy wall black tubing are used for environmental and mechanical protection of low voltage and medium voltage Cable Joints and insulating the connectors for low voltage straight through joints/splice rated up to 3.3KV. These tubes are manufactured from high-quality cross-inked polyolefin material.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-6-heat-shrink-medium-heavy-wall-tubes.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-6-heat-shrink-medium-heavy-wall-tubes.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-6-application-heat-shrink-medium-and-heavy-wall-tube.jpeg"
+        ],
+        features: ["High mechanical strength", "Abrasion resistant", "Weatherproof", "Halogen-free"],
+        applications: ["Cable jackets", "Underground connections", "Outdoor exposures"]
+      },
+      {
+        label: "Heat Shrink Wrap Around Sleeves",
+        slug: "heat-shrink-wrap-around-sleeves",
+        href: "/industries/kit-components-cable-joints/heat-shrink-wrap-around-sleeves",
+        description: "Repair sleeves for damaged cable jackets without disconnecting the cable.",
+        longDescription: "AEX’s Heat Shrink Wrap Around Sleeves (AWS) is used for sealing and repairing the damaged sheaths of all Polymeric and Rubber-insulated cables with polyethylene or metal jackets and the Conductors. These Sleeves are ideal for joint outer sheath rebuilding on both LV and MV applications when there is a limitation of space, or when parking the outer jacket Tubing is difficult. It is used as an outer jacket in Cable Joints for mechanical protection.\n\n AEX's Wrap Around Sleeve is Cross-linked polyolefin Sleeve which is folded around the cable/pipe, zipped up with a stainless steel channel and then heat shrunk. It is used as an outer jacket in Cable Joints for mechanical protection. It is also used to repair a Cable jacket. ",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-7-product-heat-shrink-wraparound-sleeve.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-7-product-heat-shrink-wraparound-sleeve.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-7-application-heat-shrink-wraparound-sleeve.jpg"
+        ],
+        features: ["Fast repair", "No cable cutting required", "Excellent moisture seal", "High mechanical strength"],
+        applications: ["Cable jacket repair", "Corrosion protection", "Sealing joints"]
+      },
+      {
+        label: "Heat Shrink Red Insulation Tubing",
+        slug: "heat-shrink-red-insulation-tubing",
+        href: "/industries/kit-components-cable-joints/heat-shrink-red-insulation-tubing",
+        description: "High voltage insulating tubing for medium voltage applications.",
+        longDescription: "AEX’s Heat Shrink Red Insulation Tubing is used for MV application in insulating Power Cable Joints from 36kV to 52kV. \n\nThis Tubing is made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability.\n\n AEX's Heat Shrink Red Insulation Tube is used to insulate the Joint area up to 66kV in Power Cable Joints for MV applications. This Tube is made from high-quality cross-linked material. ",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-8-hear-shrink-red-insulation-tube.jpeg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-8-hear-shrink-red-insulation-tube.jpeg"
+        ],
+        features: ["High dielectric strength", "Tracking resistant", "Flame retardant", "Flexible"],
+        applications: ["Busbar insulation", "Cable terminations", "Switchgear insulation"]
+      },
+      {
+        label: "Heat Shrink Non Tracking Tubing",
+        slug: "heat-shrink-non-tracking-tubing",
+        href: "/industries/kit-components-cable-joints/heat-shrink-non-tracking-tubing",
+        description: "Specialized tubing to prevent surface electrical tracking.",
+        longDescription: "AEX’s Heat Shrink Non-tracking Tubing provides environmental protection and tracking resistance to Medium Voltage (MV) Cable Termination up to 36kV. \n\n In areas of extreme environmental conditions and high electrical stresses, AEX’s Non-tracking tubing protects Cable insulation & substrates from erosion caused by leakage current. The antitracking sealant provides a moisture-proof environmental seal to the substrate. \n\n AEX's Heat Shrink Non Tracking tubesbe are used in Medium Voltage Cable Terminations up to 66 KV. This Tube is made from high-quality cross-linked material that offers exceptional insulation and long-term service reliability. ",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-9-hear-shrink-non-tracking-tube.jpeg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-9-hear-shrink-non-tracking-tube.jpeg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-9-heat-shrink-non-tracking-tube.jpg"
+        ],
+        features: ["Anti-tracking properties", "Erosion resistant", "UV stable", "Excellent weatherability"],
+        applications: ["Outdoor terminations", "Polluted environments", "Overhead lines"]
+      },
+      {
+        label: "Heat Shrink Stress Control Tubing",
+        slug: "heat-shrink-stress-control-tubing",
+        href: "/industries/kit-components-cable-joints/heat-shrink-stress-control-tubing",
+        description: "Controls electrical stress at the screen cutback of medium voltage cables.",
+        longDescription: "AEX’s Heat Shrink Stress Control Tubing provides excellent electrical stress control at the end of semi-con screen in Terminations and Joints of XLPE cables. This Tube is also used with PILC cables. \n\n It is normally used as an integral part of Cable Terminations and Cable Joints up to 36 kV. It is the core component of Power Cable Accessories and mainly helps to disperse the stress. \n\n AEX's Heat Shrink Stress Control Tube is used to control High Electrical Stress present at Insulation Screen Terminals and Power Cable Joints up to 66KV.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-10-heat-shrink-stress-control-tube.jpeg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-10-heat-shrink-stress-control-tube.jpeg"
+        ],
+        features: ["Precise stress control", "High permittivity", "Reliable performance", "Easy installation"],
+        applications: ["Medium voltage terminations", "Cable joints", "Stress relief"]
+      },
+      {
+        label: "Heat Shrink Double Layer Tubing",
+        slug: "heat-shrink-double-layer-tubing",
+        href: "/industries/kit-components-cable-joints/heat-shrink-double-layer-tubing",
+        description: "Co-extruded tubing providing both insulation and stress control in a single step.",
+        longDescription: "AEX’s Heat Shrink Double Layer Tubing is made up of 2 layers. The red inner layer is made of insulation material to provide good insulation. The black outer layer is made of semi-conductive material to provide electrical shielding. \n\n This tube is used in Power Cable Straight Through Joints for insulating and outer-shielding layers up to 36kV. It can also be used in other places wherever insulation and shielding are required.\n\n AEX's Heat Shrink Double Layer is manufactured by Heat Shrinkable Insulating material and Heat Shrinkable Semi-Conductive material with special technology for good insulation in its inner layer and good semi-conduction in its outer layer; providing reliable shield protection.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-11-heat-shrink-double-layer-tube.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-11-heat-shrink-double-layer-tube.jpg",
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-11-heat-shrink-double-layer-tube.webp"
+        ],
+        features: ["Co-extruded design", "Simplified installation", "Excellent insulation", "Precise stress control"],
+        applications: ["Medium voltage joints", "Compact installations", "Reliable splicing"]
+      },
+      {
+        label: "Mastic Tape",
+        slug: "mastic-tape",
+        href: "/industries/kit-components-cable-joints/mastic-tape",
+        description: "High-performance sealing tape for void filling and moisture protection.",
+        longDescription: "AEX's Mastic Tape is a cold-applied Butyl sealant designed to offer excellent water sealing and watherproofing in Cable Joint and Termination kits. \n\n Mastic Tape is a cold-applied butyl sealant designed for use in Cable Joint and Termination kits to offer excellent water sealing and weatherproofing.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-12-butyl-mastic-tape-black.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-12-butyl-mastic-tape-black.jpg"
+        ],
+        features: ["Excellent moisture seal", "Void filling", "High adhesion", "Compatible with various materials"],
+        applications: ["Cable jointing", "Terminations", "Environmental sealing"]
+      },
+      {
+        label: "Constant Force Spring",
+        slug: "constant-force-spring",
+        href: "/industries/kit-components-cable-joints/constant-force-spring",
+        description: "Solderless earthing connections for cable screens and armours.",
+        longDescription: "AEX's Constant Force Springs are a range of solderfree connections for use on lead, or aluminium cable sheaths, to connect cable screen, or armour within a joint kit, and for use in connecting the copper screen to earth for medium voltage terminations. The products are made from Stainless Steel, and are compatible with all metallic screen and armour types. It is also used for Heat Shrink, Cast-resin and Medium voltage Cable joints.\n\n AEX's Contstant Force Sring is is used for solder free electric connection between metal cable elements & earthing device.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-13-constant-force-spring.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-13-constant-force-spring.jpg"
+        ],
+        features: ["Solderless connection", "Constant radial pressure", "Low resistance", "Easy application"],
+        applications: ["Earthing connections", "Cable screening", "Armour bonding"]
+      },
+      {
+        label: "Jubilee Clamps",
+        slug: "jubilee-clamps",
+        href: "/industries/kit-components-cable-joints/jubilee-clamps",
+        description: "Secure mechanical fastening for cable connections and earthing systems.",
+        longDescription: "AEX's Jubilee Clamps has a band that is continuously threaded enabling extra flexibility when adjusting the clip to the correct size. The smooth inside profile of the band and rolled edges give protection for all types of Cable Armour / Earthing connections.\n\n It is a part of an Earthing Kit and it is used to clamp the armour along the earthing braid for effective earthing.\n\nAEX's Clampls are used to tighten onto the smallest diameter of a component within the working ranger for which it is designed.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-14-jubilee-clamp.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-14-jubilee-clamp.jpg"
+        ],
+        features: ["Secure fastening", "Corrosion resistant", "Durable", "Adjustable"],
+        applications: ["Earthing connections", "Mechanical securing", "Cable jointing assemblies"]
+      },
+      {
+        label: "Tinned Copper Braids",
+        slug: "tinned-copper-braids",
+        href: "/industries/kit-components-cable-joints/tinned-copper-braids",
+        description: "Flexible earthing continuity across cable joints and terminations.",
+        longDescription: "AEX's Tinned Copper Braids (Earthing braid) are used as an earth lead for LV & MV Cable Joints and Terminations.  \n\n AEX's copper braid (Earthing braid) is used as an earth lead for Cable Joints and Terminations.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-15-tinned-copper-braids.jpeg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-15-tinned-copper-braids.jpeg"
+        ],
+        features: ["High flexibility", "Corrosion resistant", "Excellent conductivity", "Reliable earthing"],
+        applications: ["Screen continuity", "Armour bonding", "Earthing connections"]
+      },
+      {
+        label: "Copper Braid with Solder Blocks",
+        slug: "copper-braid-with-solder-blocks",
+        href: "/industries/kit-components-cable-joints/copper-braid-with-solder-blocks",
+        description: "Advanced earthing braid with integrated moisture block for reliable sealing.",
+        longDescription: "AEX's Copper braid is used as an earth lead for LV & MV Cable Joints and Terminations.This Copper braid has a solder block to stop moisture ingress.",
+        image: "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-16-tinned-copper-braid-with-solder-blocks.jpg",
+        images: [
+          "/images/no.8-kit-components-for-joints-and-termination/product-and-application/8-16-tinned-copper-braid-with-solder-blocks.jpg"
+        ],
+        features: ["Integrated moisture block", "Reliable earthing", "Corrosion resistant", "Prevents moisture ingress"],
+        applications: ["Moisture blocked joints", "Earthing continuity", "High reliability connections"]
+      }
+    ]
   },
   {
     slug: "district-heating-cooling",
