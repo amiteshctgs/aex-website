@@ -60,7 +60,7 @@ export default function EnquiryPage() {
                 your application.
               </p>
               <div className="space-y-4">
-                <a href="tel:+919321198038" className="flex items-center gap-3 text-gray-200 hover:text-brand-accent transition-colors">
+                <a href="tel:+919321198038" className="flex items-center gap-3 text-gray-200">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FontAwesomeIcon icon={faPhone} />
                   </div>
@@ -69,7 +69,7 @@ export default function EnquiryPage() {
                     <p className="font-semibold">+91 93211 98038</p>
                   </div>
                 </a>
-                <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-3 text-gray-200 hover:text-brand-accent transition-colors">
+                <a href="mailto:tech@aexheatshrink.com" className="flex items-center gap-3 text-gray-200">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                     <FontAwesomeIcon icon={faEnvelope} className="text-white" />
                   </div>

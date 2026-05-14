@@ -213,7 +213,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                   </div>
                   <div>
                     <p className="text-white/70 text-xs mb-0.5">Call Us</p>
-                    <a href="tel:+919321198038" className="text-white font-bold text-lg hover:text-brand-accent transition-colors">
+                    <a href="tel:+919321198038" className="text-white font-bold text-lg ">
                       +91 93211 98038
                     </a>
                   </div>
@@ -224,7 +224,7 @@ export default async function ProductCategoryPage({ params }: Props) {
                   </div>
                   <div>
                     <p className="text-white/70 text-xs mb-0.5">Email Us</p>
-                    <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base hover:text-brand-accent transition-colors break-all lowercase">
+                    <a href="mailto:tech@aexheatshrink.com" className="text-white font-bold text-base  break-all lowercase">
                       tech@aexheatshrink.com
                     </a>
                   </div>
