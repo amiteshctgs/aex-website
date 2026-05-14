@@ -185,14 +185,15 @@ export default async function ProductCategoryPage({ params }: Props) {
                   <DownloadPdfButton
                     label="Technical Datasheet"
                     className="btn-secondary flex-1"
-                    fileName={`AEX_Datasheet_${product.slug}.pdf`}
+                    fileName={product.pdfUrl.split('/').pop()}
                     pdfUrl={product.pdfUrl}
                   />
                 )}
                 <DownloadPdfButton
-                  label="ALL CATALOGUES"
+                  label="Company Profile"
                   className="btn-primary flex-1"
-                  fileName="AEX_ALL_CATALOGUES.pdf"
+                  pdfUrl="/pdfs/aex-company-profile.pdf"
+                  fileName="aex-company-profile.pdf"
                 />
               </div>
             </div>
