@@ -199,7 +199,7 @@ export default async function ProductCategoryPage({ params }: Props) {
           </div>
 
           {/* Right Sidebar */}
-          <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+          <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
             {/* CTA */}
             <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-4">Need Help?</h3>
