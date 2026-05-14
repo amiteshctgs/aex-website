@@ -1705,7 +1705,14 @@ export const industries: Industry[] = [
     description: "Heat shrink seals and sleeves for pre-insulated pipe manufacturers in district heating and cooling networks.",
     longDescription:
       "Pre-installed Pipes or District Heating and Cooling systems are innovative solutions for efficiently distributing Thermal energy, providing both heating and cooling services to buildings and communities. These systems are designed to enhance energy efficiency, reduce environmental impact, and optimize the overall performance of heating and cooling infrastructure.\n\nDistrict heating is a system for distributing heat generated in a centralized location through a system of Pre-insulated pipes for residential and commercial heating requirements. District heating is an environmentally friendly heating source, enabling sustainable energy and a green future. AEX is the leader in manufacturing Products for Pre-Insulated Pipe Systems. AEX offers Heat Shrink Seal & Sleeves to Pre-Insulated Pipe manufacturers for underground and overground District Heating networks.",
-    image: "/images/resource/project-4.jpg",
+    image: "/images/no.9-pre-insulated-and-district-heating/4-products_41.jpg",
+    images: [
+      "/images/no.9-pre-insulated-and-district-heating/4-products_41.jpg",
+      "/images/no.9-pre-insulated-and-district-heating/1_drugi_sporten_teren.jpg",
+      "/images/no.9-pre-insulated-and-district-heating/1_drugi_sporten_teren1.jpg",
+      "/images/no.9-pre-insulated-and-district-heating/1_drugi_sporten_teren2.jpg"
+
+    ],
     products: [
       "Heat Shrink Pre-Insulated Pipe Seal",
       "Heat Shrink Tubing",
@@ -1714,11 +1721,60 @@ export const industries: Industry[] = [
     ],
     icon: "fire-alt",
     subItems: [
-      { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/heat-shrink-moulded-components/pre-insulated-pipe-seals" },
-      { label: "Heat Shrink Tubing", href: "/products/heat-shrink-tubing" },
-      { label: "Heat Shrink Wrap Around Sleeves", href: "/products/heat-shrink-wrap-around-sleeves" },
-      { label: "Mastic Tapes", href: "/products/tapes-and-sealants" },
-    ],
+      {
+        label: "Heat Shrink Pre-Insulated Pipe Seal",
+        slug: "heat-shrink-pre-insulated-pipe-seal",
+        href: "/industries/district-heating-cooling/heat-shrink-pre-insulated-pipe-seal",
+        description: "Provides end sealing for pre-insulated pipes to prevent moisture ingress.",
+        longDescription: "AEX's Heat Shrink Pre-Insulated Pipe Seal is used for sealing the annular space between Casing Pipe and Carrier Pipe at the Casing ends to prevent the foam from ingressing moisture, water and contaminants.  This waterproof cap is mainly used for anti-corrosion pipe insulation to prevent the ends of the casing pipe from insulation damage or leakage, thus ensuring pipeline corrosion performance and extending the life of pipelines. \n\n AEX's Heat Shrink Pre-insulated Pipe Sealing Cap is Heat Shrink Cap with Hot Melt Adhesive / Mastic, used to seal and to protect the joints of pipelines and other substrates. These caps are made from high-quality cross-linked Polyolefin material.",
+        image: "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-1-heat-shrink-pre-insulated-pipe-sealing-cap.jpg",
+        images: [
+          "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-1-heat-shrink-pre-insulated-pipe-sealing-cap.jpg",
+          "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-1-heat-shrink-pre-insulated-pipe-sealing-caps.jpg"
+        ],
+        features: ["Excellent water-tight seal", "UV resistant", "High mechanical strength", "Easy installation"],
+        applications: ["District heating pipes", "Pre-insulated pipe ends", "Moisture protection"]
+      },
+      {
+        label: "Heat Shrink Tubing",
+        slug: "heat-shrink-tubing",
+        href: "/industries/district-heating-cooling/heat-shrink-tubing",
+        description: "Heavy-duty tubing for insulation and protection of pipe joints.",
+        longDescription: "AEX's Heat Shrink Tubes (AMT & AHT) are manufactured from high-quality Cross-linked Polyolefin material. These Tubes are designed for the protection and Insulation of Pipelines, Metal elements, lampposts, masts, Cable bundles, and elements of bridges.\n\n Tubes on all lengths are covered with Mastic sealing for the protection of metal pipes, joints and other connections that require reliable sealing.They adopt the shape of the object on which they shrink and improve its mechanical protection. \n\n AEX's Heat Shrink Medium/Heavy wall Tube is designed for corrosion protection of buried and exposed pipelines. This Tube is suitable to joint Corrugated HDPE pipes, used in Water management, Irrigation, Sanitary, Sewer and Drainage, Construction, Mining industries, Ducting and for underground Cable protection.",
+        image: "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-2-heat-shrink-medium-wall-tubes.jpg",
+        images: [
+          "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-2-heat-shrink-medium-wall-tubes.jpg"
+        ],
+        features: ["High mechanical strength", "Abrasion resistant", "Adhesive lined", "Excellent insulation"],
+        applications: ["Pipe joint protection", "District heating networks", "Corrosion prevention"]
+      },
+      {
+        label: "Heat Shrink Wrap Around Sleeves",
+        slug: "heat-shrink-wrap-around-sleeves",
+        href: "/industries/district-heating-cooling/heat-shrink-wrap-around-sleeves",
+        description: "Wrap-around sleeves for easy installation on existing pipe sections.",
+        longDescription: "AEX's Wraparound Sleeves is a Cross-linked polyolefin Sleeves that is folded around the Pipes / Poles, zipped up with a Stainless Steel Channel and then heat shrunk. It is coated inside either with Hot Melt Sealant or with Black Mastic that provides complete environmental sealing. \n\n AEX's Heat Shrink Wrap Around Sleeves coated with black mastic is used for the sealing and corrosion protection of pipeline joints and other substrates. This Sleeve protects against a range of challenges, including corrosion, extreme temperatures, mechanical damage and more. ",
+        image: "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-3-heat-shrink-wraparound-sleeve.jpg",
+        images: [
+          "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-3-heat-shrink-wraparound-sleeve.jpg"
+        ],
+        features: ["Fast installation", "No need to slide over pipe", "Excellent seal", "Durable"],
+        applications: ["Pipe joint repair", "Field joints", "Corrosion protection"]
+      },
+      {
+        label: "Mastic Tape",
+        slug: "mastic-tape",
+        href: "/industries/district-heating-cooling/mastic-tape",
+        description: "High-performance sealing tape for void filling and moisture protection.",
+        longDescription: "AEX's Mastic Tapes are cold-applied Butyl Sealants used to provide Water sealing and weatherproofing. It prevents water access to the exposed insulation at the Weld Joint area. \n\n Mastic Tape is a cold-applied butyl sealant designed for use with AEX Heat Cable Joint and Termination kits to offer excellent water sealing and waterproofing.",
+        image: "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-4-butyl-mastic-tape-black-1.jpg",
+        images: [
+          "/images/no.9-pre-insulated-and-district-heating/product-and-application/9-4-butyl-mastic-tape-black-1.jpg"
+        ],
+        features: ["Cold applied", "Excellent water resistance", "High adhesion", "Flexible"],
+        applications: ["Interface sealing", "Void filling", "Moisture protection"]
+      }
+    ]
   },
   {
     slug: "utility-pole-industry",
@@ -1726,17 +1782,46 @@ export const industries: Industry[] = [
     shortTitle: "Utility Pole",
     description: "Market-leading heat shrink pole protection caps and sleeves that increase wooden pole lifespan by over 20 years.",
     longDescription:
-      "A utility pole is a column or post usually made out of wood used to support overhead power lines and various other public utilities, such as electrical cable, fiber optic cable, and related equipment such as transformers and street lights. These poles play a fundamental role in the distribution of electricity, telecommunication, street lighting, and other essential services.\n\nAEX is the market-leading provider of Heat Shrink Products for Pole Protection. AEX Products are proven to increase the life of Wooden Poles by more than 20 years.",
-    image: "/images/resource/slideee5.png",
+      "A utility pole is a column or post usually made out of wood used to support overhead power lines and various other public utilities, such as electrical cable, fiber optic cable, and related equipment such as transformers and street lights. These poles play a fundamental role in the distribution of electricity, telecommunication, street lighting, and other essential services. The electric pole industry encompasses the design, manufacturing, and installation of these structures, addressing various requirements for utility networks.\n\nAEX is the market-leading provider of Heat Shrink Products for Pole Protection. AEX Products are proven to increase the life of Wooden Poles by more than 20 years.\n\n AEX is the market-leading provider of Heat Shrink Products for Pole Protection. AEX Products are proven to increase the life of Wooden Poles by more than 20 years.",
+    image: "/images/no.10-pole-industry/polesaver-pentacholorophenol-alternatives-road-in-the-usa.jpg",
+    images: [
+      "/images/no.10-pole-industry/polesaver-pentacholorophenol-alternatives-road-in-the-usa.jpg",
+      "/images/resource/slideee5.png"
+    ],
     products: [
       "Heat Shrink Pole Protection Cap",
       "Heat Shrink Pole Protection Sleeves"
     ],
     icon: "lightbulb",
     subItems: [
-      { label: "Heat Shrink Pole Caps", href: "/products/heat-shrink-moulded-components/cable-end-caps" },
-      { label: "Heat Shrink Pole Protection Sleeves", href: "/products/heat-shrink-wrap-around-sleeves/for-poles" },
-    ],
+      {
+        label: "Heat Shrink Pole Caps",
+        slug: "heat-shrink-pole-caps",
+        href: "/industries/utility-pole-industry/heat-shrink-pole-caps",
+        description: "Protects the top of wooden utility poles from weather and decay.",
+        longDescription: "AEX's Heat Shrink Pole Protection Cap is used to seal and protect the top of the Wooden Electric Poles from ingress of water and moisture. It is manufactured from thermally stabilized Cross-linked Polyolefin material. It improves the life of Poles. ",
+        image: "/images/no.10-pole-industry/product-and-application/10-1-pole-end-cap.png",
+        images: [
+          "/images/no.10-pole-industry/product-and-application/10-1-pole-end-cap.png",
+          "/images/no.10-pole-industry/product-and-application/10-1-pole-cap-application.png"
+        ],
+        features: ["Weatherproof seal", "UV resistant", "Durable construction", "Prevents rot"],
+        applications: ["Wooden utility poles", "Telecom poles", "Pole top protection"]
+      },
+      {
+        label: "Heat Shrink Pole Protection Sleeves",
+        slug: "heat-shrink-pole-protection-sleeves",
+        href: "/industries/utility-pole-industry/heat-shrink-pole-protection-sleeves",
+        description: "Protects the ground-line section of poles from soil-line decay.",
+        longDescription: "AEX's Heat Shrink Pole Protection Sleeve is used to seal and protect the Wooden Electric Poles and the Street lighting poles from Corrosion. These Sleeves are Superior moisture resistance coupled with excellent mechanical protection. It also provides electrical insulation. It is manufactured from high-quality Cross-linked Polyolefin material. This Sleeve is to be folded around the Poles, zipped up with a stainless steel channel, and then to shrink it by using hot air gun or flame tourch. ",
+        image: "/images/no.10-pole-industry/product-and-application/10-2-pole-protection-sleeve-application-image.png",
+        images: [
+          "/images/no.10-pole-industry/product-and-application/10-2-pole-protection-sleeve-application-image.png"
+        ],
+        features: ["Ground-line protection", "Soil moisture barrier", "Extends pole life", "Heavy duty"],
+        applications: ["Utility poles", "Ground-line decay prevention", "Soil-line protection"]
+      }
+    ]
   },
   {
     slug: "oil-gas-corrosion-protection",
@@ -1744,13 +1829,44 @@ export const industries: Industry[] = [
     shortTitle: "Oil & Gas",
     description: "Heat shrinkable tubing and sleeves designed to completely eliminate corrosion between pipes and U-bolts.",
     longDescription:
-      "Corrosion occurs due to metal contact between the uncoated U-bolts and pipe. The excessive corrosion and pitting can eventually develop into pinhole leaks. This interaction can be completely eliminated by utilizing AEX's Heat Shrinkable Tubing.",
-    image: "/images/resource/project-5.jpg",
+      "Corrosion occurs due to metal contact between the uncoated U-bolts and pipe. The excessive corrosion and pitting can eventually develop into pinhole leaks. This interaction can be completely eliminated by utilizing AEX's Heat Shrinkable Tubing. ",
+    image: "/images/no.11-oil-and-gas/pngtree-large-gas-plant-industrial-image_13128120.png",
+    images: [
+      "/images/no.11-oil-and-gas/pngtree-large-gas-plant-industrial-image_13128120.png"
+    ],
     products: [
       "Heat Shrink Tube for U-bolt",
       "Heat Shrink Tube for Corrosion Protection of Pipeline"
     ],
     icon: "oil-can",
+    subItems: [
+      {
+        label: "Heat Shrink Tube for U-bolt",
+        slug: "heat-shrink-tube-for-u-bolt",
+        href: "/industries/oil-gas-corrosion-protection/heat-shrink-tube-for-u-bolt",
+        description: "Eliminates corrosion caused by metal-to-metal contact between U-bolts and pipes.",
+        longDescription: "AEX's Heat Shrink Tube is also used for the corrosion and mechanical protection between U-bolts and pipes. It is made from thermally stabilized Polyolefin Material. ",
+        image: "/images/no.11-oil-and-gas/product-and-application/11-1-heat-shrink-tube-for-u-bolt-coating.jpg",
+        images: [
+          "/images/no.11-oil-and-gas/product-and-application/11-1-heat-shrink-tube-for-u-bolt-coating.jpg"
+        ],
+        features: ["Prevents metal-to-metal contact", "Durable insulation", "Corrosion protection", "Easy to install"],
+        applications: ["U-bolt coating", "Pipe support protection", "Corrosion prevention"]
+      },
+      {
+        label: "Heat Shrink Tube for Corrosion Protection of Pipeline",
+        slug: "heat-shrink-tube-for-corrosion-protection-pipeline",
+        href: "/industries/oil-gas-corrosion-protection/heat-shrink-tube-for-corrosion-protection-pipeline",
+        description: "Provides robust corrosion protection for pipelines and joints.",
+        longDescription: "AEX's Heat Shrinkable Tube is also used to provide corrosion protection of pipes. It is a heat-shrinkable, tubular sleeve that prevents corrosion of welded pipe joints in distribution lines. This mechanically strong and flexible sleeve is compatible with all standard pipeline coatings and outer jackets. The AEX Heat-Shrinkable tubular sleeve is mainly applied to provide anticorrosive protection for field welding and insulation mending in buried or aerial. Also it is available to provide sealing and anticorrosive protection for flanged joint and insulated flange. Mainly application for oil & gas pipelines, water pipelines, etc. It is manufactured from high-quality Cross-linked Polyolefin material. ",
+        image: "/images/no.11-oil-and-gas/product-and-application/11-2-heat-shrink-tube-for-corrosion-protection-in-pipeline.jpg",
+        images: [
+          "/images/no.11-oil-and-gas/product-and-application/11-2-heat-shrink-tube-for-corrosion-protection-in-pipeline.jpg"
+        ],
+        features: ["Robust corrosion protection", "Soil stress resistant", "Moisture barrier", "Long-term integrity"],
+        applications: ["Pipeline protection", "Field joint coating", "Corrosion prevention"]
+      }
+    ]
   },
   {
     slug: "cathodic-protection",
@@ -1759,11 +1875,30 @@ export const industries: Industry[] = [
     description: "Specialized heat shrink anode caps providing essential corrosion protection for cathodic system wire connections.",
     longDescription:
       "Cathodic protection is an electrical means of corrosion control where the structure to be protected is made into a cathode in an electrochemical cell. Oxidation in the electrochemical cell is concentrated on the anodes leaving the structure protected as a cathode with a net reduction reaction. Properly designed cathodic protection systems can reduce the corrosion rate to negligible amounts. Anodic protection (AP) is a technique to control the corrosion of a metal surface by making it the anode of an electrochemical cell and controlling the potential in a range where the metal is passive.\n\nAEX manufactures Heat Shrink Products for Cathodic/Corrosion Protection.",
-    image: "/images/resource/project-6.jpg",
+    image: "/images/no.12-cathotic-protection/ee-02-802-scaled.jpg",
+    images: [
+      "/images/no.12-cathotic-protection/ee-02-802-scaled.jpg",
+      "/images/no.12-cathotic-protection/1764141701270.jpg"
+    ],
     products: [
       "Heat Shrink Anode Caps"
     ],
     icon: "car-battery",
+    subItems: [
+      {
+        label: "Heat Shrink Anode Caps",
+        slug: "heat-shrink-anode-caps",
+        href: "/industries/cathodic-protection/heat-shrink-anode-caps",
+        description: "Provides essential corrosion protection for cathodic system wire connections.",
+        longDescription: "AEX’s Heat Shrink Anode caps are used for protecting the anode ends where the lead wire is connected to the anode. Protection of the connection between the anode and lead wire is important to prevent premature failure of the system typically caused by corrosion of the wire connection.\n\n Anode Caps are made from thermally stabilised Cross-linked Polyolefin material. ",
+        image: "/images/no.12-cathotic-protection/product-and-application/12-1-heat-shrink-anode-caps.jpg",
+        images: [
+          "/images/no.12-cathotic-protection/product-and-application/12-1-heat-shrink-anode-caps.jpg"
+        ],
+        features: ["Waterproof seal", "Corrosion protection", "Durable construction", "Easy installation"],
+        applications: ["Cathodic protection systems", "Anode wire connections", "Corrosion prevention"]
+      }
+    ]
   },
   {
     slug: "automobile-wire-harness",
@@ -1772,12 +1907,45 @@ export const industries: Industry[] = [
     description: "Thin wall and dual wall heat shrink tubing for reliable wire bundling and environmental sealing in vehicles.",
     longDescription:
       "The wiring harness is the combination of electrical cables, or assembly of wires, that connects all electrical and electronic (E/E) components in the automotive vehicle, like sensors, electronic control units, batteries, and actuators.\n\nWhen used in wiring harnesses or other electrical applications, AEX tubing serves to electrically insulate, bundle and protect wires and other components. AEX Heat Shrink Tubing for Vehicle Applications manufactured to provide reliable protection for Vehicle electronic components and electrical systems. Heat Shrink Single Wall and Dual Wall Tubes also provide an environmental seal to prevent liquid, gaseous or solid contaminants from reaching sensitive components.",
-    image: "/images/resource/project-1.jpg",
+    image: "/images/no.13-automobile-and-wire-harness-industry/automotive-wiring-harness.jpg",
+    images: [
+      "/images/no.13-automobile-and-wire-harness-industry/automotive-wiring-harness.jpg",
+      "/images/no.13-automobile-and-wire-harness-industry/wiring-harness.jpg"
+    ],
     products: [
       "Heat Shrink Thin Wall Tubing",
       "Heat Shrink Dual Wall Tubing"
     ],
     icon: "car",
+    subItems: [
+      {
+        label: "Heat Shrink Thin Wall Tubing",
+        slug: "heat-shrink-thin-wall-tubing",
+        href: "/industries/automobile-wire-harness/heat-shrink-thin-wall-tubing",
+        description: "Thin wall tubing for reliable wire bundling and insulation in vehicles.",
+        longDescription: "AEX's Heat Shrink Thin Wall Tubes are used in wire harnessing in electrical and electronic applications. These tubes provide an environmental seal and a permanent waterproof barrier for electrical components like Wire splices and harnesses in the Automobile and Communication industries, Telecommunication, etc.",
+        image: "/images/no.13-automobile-and-wire-harness-industry/product-and-application/13-1-heat-shrink-thin-wall-tubes.jpg",
+        images: [
+          "/images/no.13-automobile-and-wire-harness-industry/product-and-application/13-1-heat-shrink-thin-wall-tubes.jpg",
+          "/images/no.13-automobile-and-wire-harness-industry/product-and-application/13-1-heat-shrink-thin-wall-tubes-for-wire-harness.jpg"
+        ],
+        features: ["Flexible", "Abrasion resistant", "Flame retardant", "Easy to install"],
+        applications: ["Wire harness bundling", "Electrical insulation", "Automotive wiring"]
+      },
+      {
+        label: "Heat Shrink Dual Wall Tubing",
+        slug: "heat-shrink-dual-wall-tubing",
+        href: "/industries/automobile-wire-harness/heat-shrink-dual-wall-tubing",
+        description: "Adhesive-lined tubing for environmental sealing and strain relief.",
+        longDescription: "AEX’s Heat Shrink Dual Wall Tubing (ADT) are made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability. These Tubes are manufactured by co-extrusion of Polyolefin and hot melt adhesive.\n\n These tubes provide an environmental seal and a permanent waterproof barrier for electrical components like Wire splices and harnesses in the Automobile and Communication industries, Telecommunication, etc. ",
+        image: "/images/no.13-automobile-and-wire-harness-industry/product-and-application/13-2-heat-shrink-dual-wall-tubes.jpg",
+        images: [
+          "/images/no.13-automobile-and-wire-harness-industry/product-and-application/13-2-heat-shrink-dual-wall-tubes.jpg"
+        ],
+        features: ["Adhesive lined", "Waterproof seal", "Strain relief", "Corrosion protection"],
+        applications: ["Splice protection", "Connector sealing", "Environmental sealing"]
+      }
+    ]
   },
   {
     slug: "telecom-industry",
@@ -1786,7 +1954,13 @@ export const industries: Industry[] = [
     description: "Broad range of fiber optic solutions, closure kits, and cable jointing products for high-capacity telecom networks.",
     longDescription:
       "The Telecommunications industry is a dynamic and rapidly evolving sector that plays a fundamental role in connecting people and facilitating the exchange of information globally. From traditional voice services to high-speed data transmission and the rise of 5G technology, the telecom industry continues to drive technological innovation and shape the way individuals, businesses, and societies communicate. The Network through Optical Cables is a high-capacity Telecommunications network based on optical technologies.\n\nAEX designs, manufactures, and supplies a broad range of products to the fiber optic industry worldwide. We have expanded our activities to provide unique Fibre Optic solutions to our customers. We provide Fibre Optic Closure Cable Entry Sealing Kit for Telecom Industry. AEX's wide range of products are used to join and seal copper telecom cables.",
-    image: "/images/resource/project-2.jpg",
+    image: "/images/no.14-telecom/telecom-bnr.png",
+    images: [
+      "/images/no.14-telecom/1440x600px_hero_banner_adobestock_361596081.webp",
+      "/images/no.14-telecom/telecom-bnr.png",
+      "/images/no.14-telecom/challenges-facing-telecom-industry-in-india-jpg.webp",
+
+    ],
     products: [
       "Heat Shrink Medium and Heavy Wall Tubing",
       "Branch off Clips",
@@ -1796,6 +1970,88 @@ export const industries: Industry[] = [
       "Heat Shrink Dual Wall Tubing"
     ],
     icon: "wifi",
+    subItems: [
+      {
+        label: "Heat Shrink Medium and Heavy Wall Tubing",
+        slug: "heat-shrink-medium-heavy-wall-tubing",
+        href: "/industries/telecom-industry/heat-shrink-medium-heavy-wall-tubing",
+        description: "Heavy-duty tubing for insulation and protection of telecom cables.",
+        longDescription: "AEX's Heat Shrinkable Medium/Heavy wall Tubes are used as a part of Fibre Optic Closure Kit. These Tubes are designed to insulate & and seal the inlet of the Cable to the base of Fibre Optic closure. It is manufactured from thermally s lity cross-linked polyolefin material. \n\n AEX's Heat Shrinkable Medium/Heavy wall Tubes are used in the installation of Fibre Optic Closure. These Tubes are designed to insulate & seal the inlet of Cable to the base of Fibre Optic closure. It is manufactured from high quality cross-linked polyolefin material. ",
+        image: "/images/no.14-telecom/product-and-application/13-1-heat-shrink-medium-heavy-wall-tubes.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-1-heat-shrink-medium-heavy-wall-tubes.jpg"
+        ],
+        features: ["Heavy duty", "Moisture protection", "UV resistant", "Durable construction"],
+        applications: ["Cable insulation", "Mechanical protection", "Telecom networks"]
+      },
+      {
+        label: "Branch off Clips",
+        slug: "branch-off-clips",
+        href: "/industries/telecom-industry/branch-off-clips",
+        description: "Clips used for branching cables in telecom closures.",
+        longDescription: "AEX Branch Off Clips (ABOC) is mainly used in Telecom Cable Jointing Kits. It is used to separate 2 cores of the cable that are coming out of the joint. Its outer surface is covered with a hot melt adhesive layer.\n\nWhile the outer sleeve is getting shrunk on the joint, the adhesive melts and holds the 2 branches of the cable together inside the Joint.\n\nAEX's Branch Off Clip is mainly used in Telecom Cable Jointing Kits. It is used to separate 2 cores of the cable that are coming out of the joint. Its outer surface is covered with a hot melt adhesive layer.",
+        image: "/images/no.14-telecom/product-and-application/13-2-branch-of-clip-product.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-2-branch-of-clip-product.jpg",
+          "/images/no.14-telecom/product-and-application/13-2-branch-of-clips.jpg",
+          "/images/no.14-telecom/product-and-application/13-2-branch-of-clips-on-fibre-optic-closure.png"
+        ],
+        features: ["Reliable sealing", "Easy to install", "Durable material", "Ensures integrity"],
+        applications: ["Telecom closures", "Cable branching", "Splicing applications"]
+      },
+      {
+        label: "Heat Shrink Wrap Around Sleeves",
+        slug: "heat-shrink-wrap-around-sleeves",
+        href: "/industries/telecom-industry/heat-shrink-wrap-around-sleeves",
+        description: "Wrap-around sleeves for non-pressurised heat shrink closures.",
+        longDescription: "AEX's Heat Shrink Wrap Around Sleeve caters to the requirements of the Telecommunication and Power industry. It is used for environmental and mechanical protection of joints in the Non-pressurized telephone network. It offers excellent resistance to mechanical abuse during and after the installation of Telecom Cables.\n\n AEX's Heat Shrink Wrap Around Sleeve is used for environmental and mechanical protection of joints in the unpressurized telephone network. It offers excellent resistance to mechanical abuse during and after the installation of Telecom Cables.",
+        image: "/images/no.14-telecom/product-and-application/13-3-heat-shrink-wrap-around-sleeves.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-3-heat-shrink-wrap-around-sleeves.jpg"
+        ],
+        features: ["Wrap-around design", "Robust seal", "Easy installation", "Non-pressurised closures"],
+        applications: ["Cable repair", "Joint sealing", "Telecom networks"]
+      },
+      {
+        label: "Heat Shrink Low Voltage Cable Breakouts",
+        slug: "heat-shrink-low-voltage-cable-breakouts",
+        href: "/industries/telecom-industry/heat-shrink-low-voltage-cable-breakouts",
+        description: "Provides environmental sealing and strain relief for cable breakouts.",
+        longDescription: "AEX’s Heat Shrink Low Voltage Cable Breakouts are used to insulate and seal the crutches of 2, 3, 4, 5, 6, and 7 core XLPE, PVC, PILC and Rubber insulated Cables up to 3.3kV. \n\n The Breakouts are made from thermally stabilised Cross-linked halogen-free Polyolefin material that offers abiding service reliability. It contains a minimum of 2.5% carbon to protect it from ultraviolet rays. \n\n AEX's Heat Shrink Low Voltage Cable Breakouts provides a strong and permanent environmental seal to the crutch of 2, 3, 4, 5, 6 and 7 core PVC, XLPE Rubber and PILC cables upto 3.3 KV rated voltage. The Breakouts are Manufactured form high quality cross-linked polyolefin material that offer an exceptional insulation and long term service reliability. ",
+        image: "/images/no.14-telecom/product-and-application/13-4-heat-shrink-lv-breakout-application.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-4-heat-shrink-lv-breakout-application.jpg"
+        ],
+        features: ["Environmental sealing", "Strain relief", "Flame retardant", "Durable"],
+        applications: ["Cable breakouts", "Multi-core cables", "Moisture protection"]
+      },
+      {
+        label: "Heat Shrink Cable End Sealing Caps",
+        slug: "heat-shrink-cable-end-sealing-caps",
+        href: "/industries/telecom-industry/heat-shrink-cable-end-sealing-caps",
+        description: "Seals the ends of telecom cables to prevent moisture ingress.",
+        longDescription: "AEX’s Heat Shrink End Sealing Caps are designed to provide mechanical protection and an environmental seal against moisture and dirt to all types of Power Cable ends. AEX Heat Shrink End Caps are made from high-quality Cross-linked Polyolefin material that is halogen-free. It contains a minimum of 2.5% carbon to protect it from ultraviolet rays. \n\n AEX's Heat Shrink Cable End Caps are  designed to provide Mechanical protection and environmental seal to Power cable ends.It provides a temper proof sealing to cable ends to avoid claims due to cable pilferage.",
+        image: "/images/no.14-telecom/product-and-application/13-5-application-heat-shrink-end-cap.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-5-application-heat-shrink-end-cap.jpg"
+        ],
+        features: ["Moisture protection", "Reliable seal", "Easy to install", "Durable"],
+        applications: ["Cable end protection", "Telecom cables", "Moisture barrier"]
+      },
+      {
+        label: "Heat Shrink Dual Wall Tubing",
+        slug: "heat-shrink-dual-wall-tubing",
+        href: "/industries/telecom-industry/heat-shrink-dual-wall-tubing",
+        description: "Adhesive-lined tubing for environmental sealing and strain relief.",
+        longDescription: "AEX’s Heat Shrink Dual Wall Tubing (ADT) are made from thermally stabilised Cross-linked Polyolefin material that offers abiding service reliability. These Tubes are manufactured by co-extrusion of Polyolefin and hot melt adhesive.\n\n These tubes provide an environmental seal and a permanent waterproof barrier for electrical components like Wire splices and harnesses in the Automobile and Communication industries, Telecommunication, etc. ",
+        image: "/images/no.14-telecom/product-and-application/13-6-heat-shrink-dual-wal-tubes.jpg",
+        images: [
+          "/images/no.14-telecom/product-and-application/13-6-heat-shrink-dual-wal-tubes.jpg"
+        ],
+        features: ["Adhesive lined", "Waterproof seal", "Strain relief", "Corrosion protection"],
+        applications: ["Splice protection", "Connector sealing", "Environmental sealing"]
+      }
+    ]
   }
 ];
 

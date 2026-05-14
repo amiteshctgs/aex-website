@@ -243,24 +243,55 @@ export const navigation: NavItem[] = [
         label: "Pre-Insulated Pipe / District Heating",
         href: "/industries/district-heating-cooling",
         children: [
-          { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/products/heat-shrink-moulded-components/pre-insulated-pipe-seals" },
+          { label: "Heat Shrink Pre-Insulated Pipe Seals", href: "/industries/district-heating-cooling/heat-shrink-pre-insulated-pipe-seal" },
           { label: "Heat Shrink Tubing", href: "/industries/district-heating-cooling/heat-shrink-tubing" },
           { label: "Heat Shrink Wrap Around Sleeves", href: "/industries/district-heating-cooling/heat-shrink-wrap-around-sleeves" },
-          { label: "Mastic Tapes", href: "/industries/district-heating-cooling/mastic-tapes" },
+          { label: "Mastic Tape", href: "/industries/district-heating-cooling/mastic-tape" },
         ],
       },
       {
         label: "Utility Pole / Street Pole",
         href: "/industries/utility-pole-industry",
         children: [
-          { label: "Heat Shrink Pole Caps", href: "/products/heat-shrink-moulded-components/cable-end-caps" },
-          { label: "Heat Shrink Pole Protection Sleeves", href: "/products/heat-shrink-wrap-around-sleeves/for-poles" },
+          { label: "Heat Shrink Pole Caps", href: "/industries/utility-pole-industry/heat-shrink-pole-caps" },
+          { label: "Heat Shrink Pole Protection Sleeves", href: "/industries/utility-pole-industry/heat-shrink-pole-protection-sleeves" },
         ],
       },
-      { label: "Oil & Gas / Corrosion Protection", href: "/industries/oil-gas-corrosion-protection" },
-      { label: "Cathodic Protection", href: "/industries/cathodic-protection" },
-      { label: "Automobile / Wire Harness", href: "/industries/automobile-wire-harness" },
-      { label: "Telecom Industry", href: "/industries/telecom-industry" },
+      {
+        label: "Oil & Gas / Corrosion Protection",
+        href: "/industries/oil-gas-corrosion-protection",
+        children: [
+          { label: "Heat Shrink Tube for U-bolt", href: "/industries/oil-gas-corrosion-protection/heat-shrink-tube-for-u-bolt" },
+          { label: "Heat Shrink Tube for Pipeline Protection", href: "/industries/oil-gas-corrosion-protection/heat-shrink-tube-for-corrosion-protection-pipeline" },
+        ],
+      },
+      {
+        label: "Cathodic Protection",
+        href: "/industries/cathodic-protection",
+        children: [
+          { label: "Heat Shrink Anode Caps", href: "/industries/cathodic-protection/heat-shrink-anode-caps" },
+        ],
+      },
+      {
+        label: "Automobile / Wire Harness",
+        href: "/industries/automobile-wire-harness",
+        children: [
+          { label: "Heat Shrink Thin Wall Tubing", href: "/industries/automobile-wire-harness/heat-shrink-thin-wall-tubing" },
+          { label: "Heat Shrink Dual Wall Tubing", href: "/industries/automobile-wire-harness/heat-shrink-dual-wall-tubing" },
+        ],
+      },
+      {
+        label: "Telecom Industry",
+        href: "/industries/telecom-industry",
+        children: [
+          { label: "Heat Shrink Medium and Heavy Wall Tubing", href: "/industries/telecom-industry/heat-shrink-medium-heavy-wall-tubing" },
+          { label: "Branch off Clips", href: "/industries/telecom-industry/branch-off-clips" },
+          { label: "Heat Shrink Wrap Around Sleeves", href: "/industries/telecom-industry/heat-shrink-wrap-around-sleeves" },
+          { label: "Heat Shrink Low Voltage Cable Breakouts", href: "/industries/telecom-industry/heat-shrink-low-voltage-cable-breakouts" },
+          { label: "Heat Shrink Cable End Sealing Caps", href: "/industries/telecom-industry/heat-shrink-cable-end-sealing-caps" },
+          { label: "Heat Shrink Dual Wall Tubing", href: "/industries/telecom-industry/heat-shrink-dual-wall-tubing" },
+        ],
+      },
     ],
   },
   {
