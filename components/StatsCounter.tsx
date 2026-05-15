@@ -67,7 +67,7 @@ export default function StatsCounter() {
             AEX at a Glance
           </h2>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div
               key={stat.label}
@@ -78,7 +78,7 @@ export default function StatsCounter() {
               >
                 <FontAwesomeIcon icon={stat.icon} className="text-white text-xl" />
               </div>
-              <div className="text-3xl md:text-4xl font-extrabold text-white mb-1">
+              <div className=" sm:text-xl text-2xl md:text-3xl font-extrabold text-white mb-1">
                 {stat.prefix}
                 {inView ? (
                   <CountUp
@@ -91,8 +91,8 @@ export default function StatsCounter() {
                   <span>0</span>
                 )}
               </div>
-              <p className="text-white font-semibold text-sm mb-1">{stat.label}</p>
-              <p className="text-gray-500 text-xs leading-relaxed">{stat.sublabel}</p>
+              <p className="text-white text-center font-semibold text-sm mb-1">{stat.label}</p>
+              <p className="text-gray-500 text-xs text-center leading-relaxed">{stat.sublabel}</p>
             </div>
           ))}
         </div>

@@ -97,7 +97,7 @@ export default function CertificatesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-5 lg:p-8">
             {certsList.map((cert) => (
               <div key={cert.slug} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col">
                 <div className="relative h-[450px]  bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">

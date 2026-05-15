@@ -96,11 +96,11 @@ export default function StrengthPage() {
             <h2 className="section-title mt-3">What Makes AEX Strong</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:p-8">
             {strengths.map((s) => (
               <div
                 key={s.title}
-                className="group bg-brand-light rounded-2xl p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300"
+                className="group bg-brand-light rounded-2xl p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                   <FontAwesomeIcon

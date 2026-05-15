@@ -13,8 +13,8 @@ interface DownloadPdfButtonProps {
   forceModal?: boolean; // Always ask for user info before downloading
 }
 
-export default function DownloadPdfButton({ 
-  label = "Download Company Profile (PDF)", 
+export default function DownloadPdfButton({
+  label = "Download Company Profile (PDF)",
   className = "btn-primary",
   fileName = "AEX_Company_Profile.pdf",
   pdfUrl,
@@ -49,14 +49,14 @@ export default function DownloadPdfButton({
       } else {
         // Call the Puppeteer API
         const response = await fetch("/api/generate-pdf");
-        
+
         if (!response.ok) {
           throw new Error("Failed to generate PDF from server");
         }
 
         // Convert the response to a Blob
         const blob = await response.blob();
-        
+
         // Create a temporary link to download the Blob
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -64,7 +64,7 @@ export default function DownloadPdfButton({
         a.download = fileName || "AEX_Company_Profile.pdf";
         document.body.appendChild(a);
         a.click();
-        
+
         // Clean up
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
@@ -79,7 +79,7 @@ export default function DownloadPdfButton({
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission to CRM/DB
     console.log("Form Submitted:", formData);
 
@@ -111,7 +111,7 @@ export default function DownloadPdfButton({
             >
               <FontAwesomeIcon icon={faTimes} className="text-xl" />
             </button>
-            <div className="p-6 sm:p-8">
+            <div className="p-6 sm:p-5 lg:p-8">
               <h3 className="text-xl font-bold text-brand-dark mb-2">Request Download</h3>
               <p className="text-sm text-gray-500 mb-6">
                 Please provide your contact details to download the <strong>{fileName.replace(".pdf", "").replace(/_/g, " ")}</strong>.

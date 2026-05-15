@@ -98,7 +98,7 @@ export default function VisionMissionEthicsPage() {
             <h2 className="section-title mt-3">Vision &amp; Mission</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:p-8">
             {/* Vision */}
             <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
               <div className="bg-brand-primary px-8 py-6 flex items-center gap-4">
@@ -107,7 +107,7 @@ export default function VisionMissionEthicsPage() {
                 </div>
                 <h3 className="text-2xl font-extrabold text-white">Our Vision</h3>
               </div>
-              <div className="bg-white p-8">
+              <div className="bg-white p-5 lg:p-8">
                 <ul className="space-y-5">
                   {visionPoints.map((point, i) => (
                     <li key={i} className="flex items-start gap-4">
@@ -129,7 +129,7 @@ export default function VisionMissionEthicsPage() {
                 </div>
                 <h3 className="text-2xl font-extrabold text-white">Our Mission</h3>
               </div>
-              <div className="bg-white p-8">
+              <div className="bg-white p-5 lg:p-8">
                 <ul className="space-y-4">
                   {missionPoints.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-600">
@@ -166,7 +166,7 @@ export default function VisionMissionEthicsPage() {
                 className={`group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${idx === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                   }`}
               >
-                <div className={`${e.color} p-8 text-white h-full`}>
+                <div className={`${e.color} p-5 lg:p-8 text-white h-full`}>
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-5">
                     <FontAwesomeIcon icon={e.icon} className="text-white text-xl" />
                   </div>

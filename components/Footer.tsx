@@ -57,7 +57,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-gray-600 border-t border-gray-100">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="max-w-[1440px] mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 lg:p-5 lg:p-8">
 
         {/* Column 1 — Brand */}
         <div>
@@ -98,9 +98,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors duration-200"
+                className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors duration-200"
               >
-                <FontAwesomeIcon icon={icon} className="text-sm" />
+                <FontAwesomeIcon icon={icon} className="text-[16px]" />
               </a>
             ))}
           </div>
@@ -330,9 +330,9 @@ export default function Footer() {
             href="https://wa.me/919321198038"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-[#1ebe57] transition-colors"
+            className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white text-[14px] font-bold px-4 py-2.5 rounded-lg hover:bg-[#1ebe57] transition-colors"
           >
-            <FontAwesomeIcon icon={faWhatsapp} />
+            <FontAwesomeIcon icon={faWhatsapp} className="text-[18px]" />
             Chat on WhatsApp
           </a>
         </div>

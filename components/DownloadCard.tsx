@@ -28,18 +28,18 @@ export default function DownloadCard({ cat }: DownloadCardProps) {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission to CRM/DB
     console.log("Form Submitted:", formData);
 
     setIsModalOpen(false);
-    
+
     // Proceed with download
     if (cat.pdf === "/api/generate-pdf") {
       try {
         setIsGenerating(true);
         const response = await fetch("/api/generate-pdf");
-        
+
         if (!response.ok) {
           throw new Error("Failed to generate PDF from server");
         }
@@ -51,7 +51,7 @@ export default function DownloadCard({ cat }: DownloadCardProps) {
         a.download = cat.title.replace(/\s+/g, "_") + ".pdf";
         document.body.appendChild(a);
         a.click();
-        
+
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
       } catch (error) {
@@ -125,7 +125,7 @@ export default function DownloadCard({ cat }: DownloadCardProps) {
             >
               <FontAwesomeIcon icon={faTimes} className="text-xl" />
             </button>
-            <div className="p-6 sm:p-8">
+            <div className="p-6 sm:p-5 lg:p-8">
               <h3 className="text-xl font-bold text-brand-dark mb-2">Request Download</h3>
               <p className="text-sm text-gray-500 mb-6">
                 Please provide your contact details to download the <strong>{cat.title}</strong> catalogue.

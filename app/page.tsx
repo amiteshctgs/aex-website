@@ -160,17 +160,17 @@ export default function HomePage() {
 
       {/* Welcome Section */}
       <section className="py-12 bg-white">
-         <div className="max-w-6xl mx-auto px-4">
-         <p className="section-subtitle px-4">Welcome to AEX Heat Shrink</p>
-            {/* H1 — one per page, keyword-rich. The HeroSlider uses <p> for visual titles. */}
-            <h1 className="section-title mb-5 px-4">
-              With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
-            </h1>
-            </div>
+        <div className="max-w-6xl mx-auto px-4">
+          <p className="section-subtitle px-4">Welcome to AEX Heat Shrink</p>
+          {/* H1 — one per page, keyword-rich. The HeroSlider uses <p> for visual titles. */}
+          <h1 className="section-title mb-5 px-4">
+            With Decades of Proven Experience, Our Team Is Prepared to Help You Achieve Your Goals, And Beyond.
+          </h1>
+        </div>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
 
-          
+
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -191,9 +191,9 @@ export default function HomePage() {
 
           {/* Content */}
 
-         
+
           <div>
-           
+
             <p className="text-gray-600 leading-relaxed mb-4">
               We have a deep advantage of many years of experience in processing a wide variety of
               <strong> Thermoplastics and Thermoset Polymers</strong> including Flame-retardant materials
@@ -249,7 +249,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:p-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
@@ -319,11 +319,11 @@ export default function HomePage() {
             <p className="section-subtitle">Why Choose AEX</p>
             <h2 className="section-title">Built on Quality & Trust</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:p-8">
             {whyChooseUs.map((item) => (
               <div
                 key={item.title}
-                className="group text-center p-8 rounded-2xl border border-gray-100 hover:border-brand-primary hover:shadow-xl transition-all duration-300"
+                className="group text-center p-5 lg:p-8 rounded-2xl border border-gray-100 hover:border-brand-primary hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mx-auto mb-5 transition-colors duration-300">
                   <FontAwesomeIcon

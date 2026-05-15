@@ -253,7 +253,7 @@ export default function AboutPage() {
             <p className="section-subtitle">Our Solutions</p>
             <h2 className="section-title mt-3">AEX International Engineering Solutions</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:p-5 lg:p-8 items-center">
             <div>
               <p className="text-gray-600 leading-relaxed mb-6 text-lg italic border-l-4 border-brand-primary pl-4 py-2 bg-brand-light rounded-r-xl">
                 &quot;AEX International, a group of Apple International, a remarkable history of over 30 years in manufacturing all the types of Metal Parts under the brand APPLE. The spirit of perseverance has served us well in the last 30 years, reason why our manufacturing unit is one of the largest of its kind in Asia. AEX is a leading manufacturer of high-quality Power Cable Accessories, Heat Shrinkable Products, Busbar Insulation Products, Products for Pre-insulated Pipe Sealing Systems and Metal fittings in India. We have emerged to become one of the largest heat shrink manufacturers in the world. AEX provides electrical and mechanical insulation solutions to the Electrical Utilities, Power and Telecom industries and Automotive and Electronics markets.&quot;
@@ -285,9 +285,9 @@ export default function AboutPage() {
             <h2 className="section-title mt-3">Pushing the Boundaries of Polymer Engineering</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:p-8">
             {/* R&D Card */}
-            <div className="group bg-brand-light rounded-2xl p-10 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
+            <div className="group bg-brand-light rounded-2xl p-5 lg:p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faFlask}
@@ -307,7 +307,7 @@ export default function AboutPage() {
             </div>
 
             {/* Advanced Tech Card */}
-            <div className="group bg-brand-light rounded-2xl p-10 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
+            <div className="group bg-brand-light rounded-2xl p-5 lg:p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faLightbulb}
@@ -327,7 +327,7 @@ export default function AboutPage() {
             </div>
 
             {/* Inclusion & Diversity */}
-            <div className="group bg-brand-light rounded-2xl p-10 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
+            <div className="group bg-brand-light rounded-2xl p-5 lg:p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faHandshake}
@@ -347,7 +347,7 @@ export default function AboutPage() {
             </div>
 
             {/* Global Impact */}
-            <div className="group bg-brand-light rounded-2xl p-10 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
+            <div className="group bg-brand-light rounded-2xl p-5 lg:p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300">
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faGlobe}
@@ -375,11 +375,11 @@ export default function AboutPage() {
             <p className="section-subtitle">Why Choose AEX</p>
             <h2 className="section-title mt-3">Our Core Strengths</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:p-8">
             {keyStrengths.map((s) => (
               <div
                 key={s.title}
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-brand-primary/40 transition-all duration-300"
+                className="group bg-white rounded-2xl p-5 lg:p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-brand-primary/40 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
                   <FontAwesomeIcon

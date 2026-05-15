@@ -39,7 +39,7 @@ export default function EnquiryPage() {
       />
 
       <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:p-5 lg:p-8">
           {/* Form */}
           <div className="lg:col-span-2">
             <p className="section-subtitle">Quick Enquiry</p>
@@ -53,7 +53,7 @@ export default function EnquiryPage() {
 
           {/* Sidebar */}
           <div>
-            <div className="bg-brand-primary rounded-2xl p-8 text-white mb-6">
+            <div className="bg-brand-primary rounded-2xl p-5 lg:p-8 text-white mb-6">
               <h3 className="text-xl font-bold mb-4">Need Help?</h3>
               <p className="text-gray-300 text-sm mb-6">
                 Our technical team is available to assist you in selecting the right product for

@@ -142,7 +142,7 @@ export default function ContactPage() {
 
       {/* Contact section */}
       <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:p-5 lg:p-8">
           {/* Form — 2 cols */}
           <div className="lg:col-span-2">
             <p className="section-subtitle">Get in Touch</p>

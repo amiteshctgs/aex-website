@@ -81,7 +81,7 @@ export default function Navbar() {
       <style dangerouslySetInnerHTML={{ __html: dropdownScrollbarStyle }} />
       {/* ── Top Announcement Strip ─────────────────────────────────── */}
       <div className="text-gray-600 text-xs bg-brand-secondary font-bold uppercase tracking-wider border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-[1300px] mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
           {/* Left: phone & email */}
           <div className="hidden sm:flex items-center gap-4">
             <a href="tel:+919321198038" className="flex items-center gap-1.5 hover:text-brand-primary transition-colors">
@@ -103,7 +103,7 @@ export default function Navbar() {
             </div>
             {/* Make in India */}
             <div className="flex items-center gap-1.5" title="Make in India">
-              <span className="text-lg leading-none">🇮🇳</span>
+              {/* <span className="text-lg leading-none">🇮🇳</span> */}
               <span>Make in India</span>
             </div>
             {/* Search Option */}

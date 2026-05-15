@@ -116,7 +116,7 @@ export default function IndustryPageContent({ industry }: Props) {
 
         {/* Sidebar */}
         <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
-          <div className="bg-brand-primary text-white rounded-2xl p-8">
+          <div className="bg-brand-primary text-white rounded-2xl p-5 lg:p-8">
             <h3 className="text-xl font-bold mb-3">Get a Custom Quote</h3>
             <p className="text-gray-300 text-sm mb-5">
               Our team will help you select the right product for your specific application.

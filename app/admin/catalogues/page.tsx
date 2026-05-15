@@ -26,7 +26,7 @@ export default function AdminCataloguesPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -36,7 +36,7 @@ export default function AdminCataloguesPage() {
   const generateCode = () => {
     const slug = generateSlug(formData.title);
     const tagsArray = formData.tags.split(',').map(t => t.trim()).filter(Boolean);
-    
+
     const code = `{
   id: "${slug}",
   slug: "${slug}",
@@ -69,13 +69,13 @@ export default function AdminCataloguesPage() {
     <div className="min-h-screen bg-gray-50 pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Catalogue Generator Helper</h1>
-        
-        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
+
+        <div className="bg-white p-5 lg:p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             <div className="col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
-              <input 
+              <input
                 type="text" name="title" value={formData.title} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg" placeholder="e.g. Heat Shrink End Caps"
               />
@@ -83,7 +83,7 @@ export default function AdminCataloguesPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-              <select 
+              <select
                 name="category" value={formData.category} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg"
               >
@@ -95,7 +95,7 @@ export default function AdminCataloguesPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Sub Category</label>
-              <input 
+              <input
                 type="text" name="subCategory" value={formData.subCategory} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg" placeholder="e.g. Moulded Components"
               />
@@ -103,7 +103,7 @@ export default function AdminCataloguesPage() {
 
             <div className="col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-              <textarea 
+              <textarea
                 name="description" value={formData.description} onChange={handleChange} rows={3}
                 className="w-full px-4 py-2 border rounded-lg"
               />
@@ -111,7 +111,7 @@ export default function AdminCataloguesPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">File Name (Exact PDF Name)</label>
-              <input 
+              <input
                 type="text" name="fileName" value={formData.fileName} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg" placeholder="Leave blank to use Title + .pdf"
               />
@@ -120,14 +120,14 @@ export default function AdminCataloguesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Pages</label>
-                <input 
+                <input
                   type="number" name="pages" value={formData.pages} onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Size (MB)</label>
-                <input 
+                <input
                   type="number" step="0.1" name="fileSizeMB" value={formData.fileSizeMB} onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg"
                 />
@@ -136,7 +136,7 @@ export default function AdminCataloguesPage() {
 
             <div className="col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Tags (Comma separated)</label>
-              <input 
+              <input
                 type="text" name="tags" value={formData.tags} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg" placeholder="e.g. high voltage, joints"
               />
@@ -155,7 +155,7 @@ export default function AdminCataloguesPage() {
           </div>
 
           <div className="mt-8 pt-6 border-t">
-            <button 
+            <button
               onClick={generateCode}
               className="bg-brand-primary text-white px-6 py-2 rounded-lg font-bold"
             >
@@ -168,7 +168,7 @@ export default function AdminCataloguesPage() {
           <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
             <div className="flex justify-between items-center bg-gray-800 px-4 py-2">
               <span className="text-white font-mono text-sm">lib/data/catalogues.ts</span>
-              <button 
+              <button
                 onClick={copyToClipboard}
                 className="text-sm bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded transition-colors"
               >

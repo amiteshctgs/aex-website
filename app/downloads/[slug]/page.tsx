@@ -52,18 +52,18 @@ export default async function CatalogueDetailPage(props: PageProps) {
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <Breadcrumbs 
+
+        <Breadcrumbs
           items={[
             { label: "Downloads & Catalogues", href: "/downloads" },
             { label: catalogue.category, href: `/downloads?category=${encodeURIComponent(catalogue.category)}` },
             { label: catalogue.title }
-          ]} 
+          ]}
         />
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12">
           {/* Header Area */}
-          <div className="p-8 md:p-10 border-b border-gray-100 flex flex-col md:flex-row gap-8 items-start justify-between">
+          <div className="p-5 lg:p-8 md:p-5 lg:p-5 lg:p-8 border-b border-gray-100 flex flex-col md:flex-row gap-5 lg:p-8 items-start justify-between">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -80,11 +80,11 @@ export default async function CatalogueDetailPage(props: PageProps) {
                   </span>
                 )}
               </div>
-              
+
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {catalogue.title}
               </h1>
-              
+
               {catalogue.description && (
                 <p className="text-lg text-gray-600 mb-6 max-w-3xl">
                   {catalogue.description}
@@ -138,7 +138,7 @@ export default async function CatalogueDetailPage(props: PageProps) {
           </div>
 
           {/* PDF Viewer Area */}
-          <div className="p-4 md:p-8 bg-gray-50">
+          <div className="p-4 md:p-5 lg:p-8 bg-gray-50">
             <h2 className="text-xl font-bold text-gray-900 mb-6">Document Preview</h2>
             <PdfViewer url={catalogue.fileUrl} title={catalogue.title} />
           </div>

@@ -91,7 +91,7 @@ export default function ValuesWeLiveByPage() {
             {values.map((v) => (
               <div
                 key={v.num}
-                className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+                className="group bg-white rounded-2xl p-5 lg:p-8 border border-gray-100 hover:border-brand-primary/40 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
                 {/* Big number watermark */}
                 <span className="absolute top-4 right-5 text-7xl font-extrabold text-gray-50 select-none pointer-events-none leading-none">

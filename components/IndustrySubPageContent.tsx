@@ -35,7 +35,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
               className="object-contain object-center"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5 lg:p-8">
               {/* Visual caption only — the page H1 is already in PageTitle above */}
               <span className="text-3xl font-bold text-white">{subItem.label}</span>
             </div>
@@ -72,7 +72,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
           )}
 
           {(subItem.features || subItem.applications) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:p-8 pt-8 border-t border-gray-100">
               {subItem.features && (
                 <div>
                   <h3 className="text-xl font-bold text-brand-primary mb-4 flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
             </div>
           )}
 
-          <div className="bg-brand-light rounded-2xl p-8 border border-brand-accent/20">
+          <div className="bg-brand-light rounded-2xl p-5 lg:p-8 border border-brand-accent/20">
             <h3 className="text-xl font-bold text-brand-primary mb-4">Need Technical Assistance?</h3>
             <p className="text-gray-600 mb-6">
               Our engineering team can provide detailed specifications and custom solutions for your {subItem.label} requirements.
@@ -125,7 +125,7 @@ export default function IndustrySubPageContent({ industry, subItem }: Props) {
           {/* Related Industry Info */}
 
 
-          <div className="bg-brand-primary text-white rounded-2xl p-8 shadow-lg">
+          <div className="bg-brand-primary text-white rounded-2xl p-5 lg:p-8 shadow-lg">
             <h3 className="text-xl font-bold mb-3">Quick Contact</h3>
             <p className="text-blue-100 text-sm mb-6">
               Looking for a bulk quote or specific configuration for your industrial project?

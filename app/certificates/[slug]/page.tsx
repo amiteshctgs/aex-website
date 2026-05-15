@@ -112,7 +112,7 @@ export default async function CertificatePage({ params }: Props) {
                 src={cert.image}
                 alt={`${cert.title} Certificate`}
                 fill
-                className="object-contain p-8"
+                className="object-contain p-5 lg:p-8"
                 priority
               />
             </div>
@@ -140,7 +140,7 @@ export default async function CertificatePage({ params }: Props) {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-brand-primary text-white rounded-2xl p-8">
+            <div className="bg-brand-primary text-white rounded-2xl p-5 lg:p-8">
               <h3 className="text-xl font-bold mb-3">Our Certifications</h3>
               <p className="text-gray-300 text-sm mb-5">
                 AEX holds three prestigious ISO certifications demonstrating our commitment to quality, sustainability, and safety.
@@ -151,8 +151,8 @@ export default async function CertificatePage({ params }: Props) {
                     key={c.slug}
                     href={`/certificates/${c.slug}`}
                     className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${c.slug === cert.slug
-                        ? "bg-brand-accent text-white"
-                        : "bg-white/10 text-gray-200 hover:bg-white/20"
+                      ? "bg-brand-accent text-white"
+                      : "bg-white/10 text-gray-200 hover:bg-white/20"
                       }`}
                   >
                     {c.title} — {c.subtitle}
